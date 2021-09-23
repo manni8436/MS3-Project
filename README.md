@@ -1,4 +1,4 @@
-# MS1 Project - Legend Of The Greek Gods
+# MS3 Project - 
 
 ![GitHub contributors](https://img.shields.io/github/contributors/manni8436/MS1-Project)
 ![GitHub last commit](https://img.shields.io/github/last-commit/manni8436/MS1-Project)
