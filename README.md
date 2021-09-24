@@ -125,7 +125,7 @@
 
 #### Heroku:
 
-[Heroku](https://www.heroku.com/) was used to deploy the live site
+[Heroku](https://www.heroku.com/) was used to deploy the live site.
 
 #### Firefox Developer Tools:
 [Firefox Developer](https://www.mozilla.org/en-GB/firefox/developer/) Tools was used for trouble shooting and trying new visual changes without it affecting the current code.
@@ -136,7 +136,7 @@
 
 #### Flask:
 
-[Flask](https://flask.palletsprojects.com/en/2.0.x/) 
+[Flask](https://flask.palletsprojects.com/en/2.0.x/) was used to create the templating for this site
 
 #### Materialize:
 
@@ -144,11 +144,13 @@
 
 #### jQuery:
 
-[jQuery](https://jquery.com/) 
+[jQuery](https://jquery.com/) was used to help make DOM traversal easier when using JavaScript.
 
 #### Jinja:
 
-[Jinja](https://jinja.palletsprojects.com/en/3.0.x/)
+[Jinja](https://jinja.palletsprojects.com/en/3.0.x/) use used to populate the site using the content from the site database.
+
+<!-- add random key generator here -->
 
 #### pip:
 
