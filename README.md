@@ -24,8 +24,8 @@
 * [Wireframes](#WIREFRAMES) 
 
 * [Technologies Used](#TECHNOLOGIES-USED) 
-    * [Languages Used](#LANGUAGES-USED)
-    * [Programs Used](#PROGRAMS-USED)
+    * [Languages](#LANGUAGES)
+    * [Version Control](#VERSION-CONTROL)
 
 * [Deployment](#DEPLOYMENT)
     * [Initial Deployment](#INITIAL-DEPLOYMENT)
@@ -66,39 +66,97 @@
 
 ## TECHNOLOGIES USED
 
-###  LANGUAGES USED
+###  LANGUAGES
 
-<img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-plain-wordmark.svg" alt="HTML logo" width="50px" height="50px" />  <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain-wordmark.svg" 
-alt="CSS logo" width="50px" height="50px" />   
+<img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-plain-wordmark.svg" alt="HTML logo" width="50px" height="50px" />  <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain-wordmark.svg" alt="CSS logo" width="50px" height="50px" />   
 
-### PROGRAMS USED:
+### WORKSPACE
+
+#### GitPod:
+
+[GitPod](https://gitpod.io) was used as an IDE whilst coding this site.
+
+### VERSION CONTROL:
+
+#### Git:
+
+[Git](https://git-scm.com/) was used for version control by using the Gitpod terminal to add and commit to GIt and push to Github.
+    
+#### GitHub:
+
+[GitHub](https://github.com/) is being used to store all the code for this project after being pushed from GitPod.
+
+### SITE DESIGN:
 
 #### Font Awesome:
+
 [Font Awesome](https://fontawesome.com/) was used for a few icons in the footer on all of this site's pages.
 
 #### Google Fonts:
+
 [Google Fonts](https://fonts.google.com/) was used for all the text content on the site pages.
 
-#### Git:
-Git was used for version control by using the Gitpod terminal to add and commit to GIt and push to Github.
+#### Balsamiq:
 
-#### GitPod:
-GitPod was used as an IDE whilst coding this site.
-    
-#### GitHub:
-GitHub is being used to store all the code for this project after being pushed from GitPod.
+[Balsamiq](https://balsamiq.com/) was used in the initial design process to make wireframes.
+
+### DOCUMENTATION
+
+#### Shields.io:
+
+[Shields.io](https://shields.io/) was used to create the GitHub badges at the top of the README.md file.
+
+### RESPONSIVENESS
 
 #### Am i Responsive:
 [Am i Responsive](http://ami.responsivedesign.is/) was used to create the image in my [Final Design](#FINAL-DESIGN) section.
 
-#### Balsamiq:
-[Balsamiq](https://balsamiq.com/) was used in the initial design process to make wireframes.
+### DATABASE
+
+#### MongoDB:
+
+[MongoDB](https://www.mongodb.com/) was used to store all contents of the database and allow full CRUD functionality.
+
+#### Flask-PyMongo:
+
+[Flask-Pymongo](https://flask-pymongo.readthedocs.io/en/latest/) was used to connect Python/Flask app to MongoDB.
+
+### FRAMEWORKS, LIBRARIES AND OTHERS
+
+#### Heroku:
+
+[Heroku](https://www.heroku.com/) was used to deploy the live site
 
 #### Firefox Developer Tools:
 [Firefox Developer](https://www.mozilla.org/en-GB/firefox/developer/) Tools was used for trouble shooting and trying new visual changes without it affecting the current code.
 
 #### Lighthouse:
 
+[Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to ensure that the site was perfoming well, confirming to best practises, SEO and Accessibility guidelines.
+
+#### Flask:
+
+[Flask](https://flask.palletsprojects.com/en/2.0.x/) 
+
+#### Materialize:
+
+[Materialize](https://materializecss.com/) was used to create an amazing, responsive site.
+
+#### jQuery:
+
+[jQuery](https://jquery.com/) 
+
+#### Jinja:
+
+[Jinja](https://jinja.palletsprojects.com/en/3.0.x/)
+
+#### pip:
+
+[pip](https://pip.pypa.io/en/stable/) was used to install all the required dependancies for this site.
+
+#### dnspython:
+
+[dnspython](https://pypi.org/project/dnspython/) was used to provide access to DNS.
 
 ## DEPLOYMENT:
 
@@ -107,12 +165,15 @@ GitHub is being used to store all the code for this project after being pushed f
 This site was deployed using Heroku with the following the steps below:
 
 
+
+
+
 ### HOW TO FORK A REPOSITORY
 
 If you need to make a copy of a repository:
 
 1. Login or Sign Up to [GitHub](www.github.com).
-2. On GitHub, go to [manni8436/MS1-Project](manni8436/MS1-Project).
+2. On GitHub, go to [manni8436/MS3-Project](manni8436/MS3-Project).
 3. In the top right corner, click "Fork".
 
 ### HOW TO CLONE A REPOSITORY
@@ -120,7 +181,7 @@ If you need to make a copy of a repository:
 If you need to make a clone:    
 
 1. Login in to [GitHub](www.github.com).
-2. Fork the repository manni8436/MS1-Project using the steps above in [How To Fork a Repository](#HOW-TO-FORK-A-REPOSITORY).
+2. Fork the repository manni8436/MS3-Project using the steps above in [How To Fork a Repository](#HOW-TO-FORK-A-REPOSITORY).
 3. Above the file list, click "Code".
 4. Choose if you want to close using HTTPS, SSH or GitHub CLI, then click the copy button to the right.
 5. Open Git Bash.
