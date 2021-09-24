@@ -1,11 +1,11 @@
 # MS3 Project - 
 
-![GitHub contributors](https://img.shields.io/github/contributors/manni8436/MS1-Project)
-![GitHub last commit](https://img.shields.io/github/last-commit/manni8436/MS1-Project)
-![GitHub language count](https://img.shields.io/github/languages/count/manni8436/MS1-Project)
-![GitHub top language](https://img.shields.io/github/languages/top/manni8436/MS1-Project)
+![GitHub contributors](https://img.shields.io/github/contributors/manni8436/MS3-Project)
+![GitHub last commit](https://img.shields.io/github/last-commit/manni8436/MS3-Project)
+![GitHub language count](https://img.shields.io/github/languages/count/manni8436/MS3-Project)
+![GitHub top language](https://img.shields.io/github/languages/top/manni8436/MS3-Project)
 
-[Here is a link to the final project](https://manni8436.github.io/MS1-Project/)
+[Here is a link to the final project](https://manni8436.github.io/MS3-Project/)
 
 ## INITIAL DESIGN
 
@@ -23,9 +23,19 @@
 
 * [Wireframes](#WIREFRAMES) 
 
+* [Features](#FEATURES)
+
+* [Solved Bugs](#SOLVED-BUGS)
+
 * [Technologies Used](#TECHNOLOGIES-USED) 
     * [Languages](#LANGUAGES)
+    * [Workspace](#WORKSPACE)
     * [Version Control](#VERSION-CONTROL)
+    * [Site Design](#SITE-DESIGN)
+    * [Documentation](#DOCUMENTATION)
+    * [Responsiveness](#RESPONSIVENSS)
+    * [Database](#DATABASE)
+    * [Frameworks, Libraries and Others](#FRAMEWORKS-LIBRARIES-AND-OTHERS)
 
 * [Deployment](#DEPLOYMENT)
     * [Initial Deployment](#INITIAL-DEPLOYMENT)
@@ -166,10 +176,6 @@
 
 This site was deployed using Heroku with the following the steps below:
 
-
-
-
-
 ### HOW TO FORK A REPOSITORY
 
 If you need to make a copy of a repository:
@@ -211,14 +217,16 @@ If you need to make a local clone:
 The W3C Markup Validator and W3C CSS Validator was used to validate my project to make sure there were no errors within the site.
 
 * W3C HTML Validator Results
- 
+    * [HMTL]()
+    
 * W3C CSS Validator Results
     * [CSS]()
 
 * JSHint 
+    * ![JavaScript]()
 
 * PEP8 Online
-
+    * ![PEP8]
 ### FULL TESTING
 
 [Click Here](testing.md) to view the full testing steps that were completed on every device and browser.
