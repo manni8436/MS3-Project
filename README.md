@@ -29,13 +29,8 @@
 
 * [Technologies Used](#TECHNOLOGIES-USED)
   * [Languages](#LANGUAGES)
-  * [Workspace](#WORKSPACE)
-  * [Version Control](#VERSION-CONTROL)
-  * [Site Design](#SITE-DESIGN)
-  * [Documentation](#DOCUMENTATION)
-  * [Responsiveness](#RESPONSIVENSS)
+  * [Design](#DESIGN)
   * [Database](#DATABASE)
-  * [Frameworks, Libraries and Others](#FRAMEWORKS-LIBRARIES-AND-OTHERS)
 
 * [Deployment](#DEPLOYMENT)
   * [Initial Deployment](#INITIAL-DEPLOYMENT)
