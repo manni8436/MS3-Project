@@ -23,5 +23,6 @@
    "files.autoSave": "afterDelay",
    "workbench.colorTheme": "Neon Dark Theme",
    "terminal.integrated.gpuAcceleration": "canvas",
-   "editor.defaultFormatter": "HookyQR.beautify"
+   "editor.defaultFormatter": "HookyQR.beautify",
+   "editor.tabSize": 2
 }
