@@ -24,7 +24,8 @@
 * [Wireframes](#WIREFRAMES)
 
 * [Features](#FEATURES)
-
+  * [Future Implementations](#FUTURE-IMPLEMENTATIONS)
+  
 * [Solved Bugs](#SOLVED-BUGS)
 
 * [Technologies Used](#TECHNOLOGIES-USED)
@@ -66,6 +67,8 @@
 [Here are my wireframes for desktop, mobile and tablet for this project]()
 
 ## FEATURES
+
+### FUTURE IMPLEMENTATIONS
 
 ## SOLVED BUGS
 
