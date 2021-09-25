@@ -129,19 +129,11 @@
 
 [Jinja](https://jinja.palletsprojects.com/en/3.0.x/) use used to populate the site using the content from the site database.
 
-### DEPLOYMENT
+## DEPLOYMENT:
 
 #### Heroku:
 
 [Heroku](https://www.heroku.com/) was used to deploy the live site.
-
-### TESTING
-
-#### Lighthouse:
-
-[Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to ensure that the site was perfoming well, confirming to best practises, SEO and Accessibility guidelines.
-
-## DEPLOYMENT:
 
 ### INITIAL DEPLOYMENT
 
@@ -197,7 +189,12 @@ The W3C Markup Validator and W3C CSS Validator was used to validate my project t
     * ![JavaScript]()
 
 * PEP8 Online
-    * ![PEP8]
+    * ![PEP8]()
+
+#### Lighthouse:
+
+[Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to ensure that the site was perfoming well, confirming to best practises, SEO and Accessibility guidelines.
+
 ### FULL TESTING
 
 [Click Here](testing.md) to view the full testing steps that were completed on every device and browser.
