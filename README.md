@@ -13,7 +13,7 @@
 
 ![Final project image home page]()
 
-## CONTENTS
+## :open_file_folder: CONTENTS
 
 * [User Experience](#USER-EXPERIENCE)  
   * [User Stories](#USER-STORIES)
@@ -48,7 +48,7 @@
 
 * [Acknowledgements](#ACKNOWLEDGEMENTS)
 
-## USER EXPERIENCE
+## :busts_in_silhouette: USER EXPERIENCE
 
 ## USER STORIES
 
@@ -70,9 +70,9 @@
 
 ### FUTURE IMPLEMENTATIONS
 
-## SOLVED BUGS
+## :bug: SOLVED BUGS
 
-## TECHNOLOGIES USED
+## :gear: TECHNOLOGIES USED
 
 ### LANGUAGES
 
@@ -127,7 +127,7 @@
 
 [Jinja](https://jinja.palletsprojects.com/en/3.0.x/) use used to populate the site using the content from the site database.
 
-## DEPLOYMENT:
+## :computer: DEPLOYMENT:
 
 #### Heroku:
 
@@ -171,7 +171,7 @@ If you need to make a local clone:
 7. Type git clone and then paste the URL you copied in step 4.
 8. Press Enter, and your local clone will be created.
 
-## TESTING
+## :test_tube: TESTING
 
 ### CODE VALIDATORS
 
