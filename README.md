@@ -178,20 +178,19 @@ If you need to make a local clone:
 The W3C Markup Validator and W3C CSS Validator was used to validate my project to make sure there were no errors within the site.
 
 * W3C HTML Validator Results
-    * [HMTL]()
+  * [HMTL]()
     
 * W3C CSS Validator Results
-    * [CSS]()
+  * [CSS]()
 
 * JSHint 
-    * ![JavaScript]()
+  * ![JavaScript]()
 
 * PEP8 Online
-    * ![PEP8]()
+  * ![PEP8]()
 
-#### Lighthouse:
-
-[Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to ensure that the site was perfoming well, confirming to best practises, SEO and Accessibility guidelines.
+* Lighthouse:
+  * [Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to ensure that the site was perfoming well, confirming to best practises, SEO and Accessibility guidelines.
 
 ### FULL TESTING
 
