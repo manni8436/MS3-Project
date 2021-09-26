@@ -66,7 +66,7 @@
 
 [Here are my wireframes for desktop, mobile and tablet for this project]()
 
-## FEATURES
+:star2: ## FEATURES
 
 ### FUTURE IMPLEMENTATIONS
 
