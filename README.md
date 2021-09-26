@@ -50,7 +50,7 @@
 
 ## :busts_in_silhouette: USER EXPERIENCE
 
-## USER STORIES
+### USER STORIES
 
 #### CLIENT GOALS
 
