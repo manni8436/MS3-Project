@@ -135,7 +135,26 @@
 
 ### INITIAL DEPLOYMENT
 
-This site was deployed using Heroku with the following the steps below:
+This project was developed using [GitPod](https://gitpod.io) and pushed to [GitHub](https://github.com/) then was deployed using [Heroku](https://www.heroku.com/) using the following steps below:
+
+1. Create a `requirements.txt` file using the command `pip3 freeze --local > requirements.txt` in the GitPod terminal.
+2. Create a `Procfile` with the command `echo web: python app.py > Procfile`.
+3. `git add` and `git commit` the new requirements and Procfile files and then `git push` them to the GitHub repository.
+4. Login or Sign up to [Heroku](https://www.heroku.com/).
+5. Create a new app upon Login by clicking the "New" button in your dashboard. Choose a unique name and set the region to the one closest to you.
+6. From the heroku dashboard of your newly created application, click on "Deploy" > "Deploymeny method" and select GitHub.
+7. Search for you GitHub repository and connect.
+8. In the heroku dashboard for the application, click on "settings" > "Reveal Config Vars".
+9. Set the folowing config vars:
+
+| Key | Value |
+| ----------|--------- |
+| PORT | 5000 |
+| IP | 0.0.0.0 |
+| DEBUG | False |
+| MONGO_URI | USER_MONGODB_URI |
+| MONGO_DBNAME | USER_MONGODB_NAME |
+| Secret_Key | USER_SECRET_KEY |
 
 ### HOW TO FORK A REPOSITORY
 
