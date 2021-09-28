@@ -147,7 +147,7 @@
 
 #### Jinja:
 
-[Jinja](https://jinja.palletsprojects.com/en/3.0.x/) use used to populate the site using the content from the site database.
+[Jinja](https://jinja.palletsprojects.com/en/3.0.x/) was used to populate the site using the content from the site database.
 
 ## :computer: DEPLOYMENT:
 
