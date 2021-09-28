@@ -139,7 +139,7 @@ This project was developed using [GitPod](https://gitpod.io) and pushed to [GitH
 
 1. Create a `requirements.txt` file using the command `pip3 freeze --local > requirements.txt` in the GitPod terminal.
 2. Create a `Procfile` with the command `echo web: python app.py > Procfile`.
-3. `git add` and `git commit` the new requirements and Procfile files and then `git push` them to the GitHub repository.
+3. `git add .` and `git commit -m` the new requirements and Procfile files and then `git push` them to the GitHub repository.
 4. Login or Sign up to [Heroku](https://www.heroku.com/).
 5. Create a new app upon Login by clicking the "New" button in your dashboard. Choose a unique name and set the region to the one closest to you.
 6. From the heroku dashboard of your newly created application, click on "Deploy" > "Deploymeny method" and select GitHub.
