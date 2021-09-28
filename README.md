@@ -109,15 +109,37 @@
 
 [Balsamiq](https://balsamiq.com/) was used in the initial design process to make wireframes.
 
-#### Materialize:
-
-[Materialize](https://materializecss.com/) was used to create an amazing, responsive site.
-
 ### DATABASE
 
 #### MongoDB:
 
 [MongoDB](https://www.mongodb.com/) was used to store all contents of the database and allow full CRUD functionality.
+
+### LIBRARIES
+
+#### Materialize:
+
+[Materialize](https://materializecss.com/) was used to create an amazing, responsive site.
+
+#### jQuery:
+
+[jQuery](https://developer.mozilla.org/en-US/docs/Glossary/jQuery) was used to initialisation of Materliazie CSS.
+
+#### Flask:
+
+[Flask](https://palletsprojects.com/p/flask/) was used for application framework.
+
+#### Werkzeug:
+
+[Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/#) was used for user information protection.
+
+#### PyMongo:
+
+[PyMongo](https://pymongo.readthedocs.io/en/stable/) was used to be able to work with MongoDB.
+
+#### DNSPython:
+
+[DNSPython](https://www.dnspython.org/) was used as a toolkit to use with Python.
 
 #### Flask-PyMongo:
 
