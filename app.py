@@ -21,14 +21,26 @@ mongo = PyMongo(app)
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        # checks if user already exists
+        # checks if user already exists in db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
-    if existing_user:
-        # tells the user already exists and directs them to log in page
-        flash("Username already exists, please log in")
-        return redirect(url_for("login"))
+        if existing_user:
+            # tells user already exists and directs them to registration page
+            flash("Username already exists")
+            return redirect(url_for("register"))
+
+        register = {
+            "username": request.form.get("username").lower(),
+            "password": generate_password_hash(request.form.get("password"))
+        }
+        mongo.db.users.insert_one(register)
+
+        # puts the new user into sessions cookie
+        session["user"] = request.form.get("username").lower()
+        flash("Registration Successfull!")
+        return redirect(url_for("profile", username=session["user"]))
+    return render_template("register.html")
 
 
 if __name__ == "__main__":
