@@ -5,7 +5,7 @@ from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
-  import env
+    import env
 
 
 app = Flask(__name__)
@@ -19,7 +19,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.rotue("/get_recipes")
 def get_recipes():
-    recipes = list(mongo.db.recipes.find())
+    recipes = mongo.db.recipes.find()
     return render_template("recipes.html", recipes=recipes)
 
 
@@ -27,3 +27,4 @@ if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
             debug=True)
+            
