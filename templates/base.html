@@ -24,25 +24,35 @@
   <link rel="canonical" href="https://manni8436.github.io/MS3-Project/">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Roboto:wght@500&display=swap">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    type="text/css">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
   {% block styles %}
   {% endblock %}
   <title>For the Love of Food</title>
 </head>
 
-  <nav>
-    <div class="nav-wrapper">
-      <a href="{{ url_for('home') }}" class="brand-logo">for the love of food</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="{{ url_for('home') }}">Home</a></li>
-        <li><a href="{{ url_for('login') }}">Log In</a></li>
-        <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-        <li><a href="{{ url_for('register') }}">Register</a></li>
-      </ul>
-    </div>
-  </nav>
+<nav>
+  <div class="nav-wrapper">
+    <a href="#!" class="brand-logo">Logo</a>
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">dehaze</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="{{ url_for('home') }}">Home</a></li>
+      <li><a href="{{ url_for('login') }}">Log In</a></li>
+      <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+      <li><a href="{{ url_for('register') }}">Register</a></li>
+    </ul>
+  </div>
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="{{ url_for('home') }}">Home</a></li>
+    <li><a href="{{ url_for('login') }}">Log In</a></li>
+    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+    <li><a href="{{ url_for('register') }}">Register</a></li>
+  </ul>
+</nav>
+
+
 
 <body>
   <footer class="page-footer">
