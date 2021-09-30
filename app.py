@@ -20,8 +20,13 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/home")
 def home():
-    recipe = mongo.db.recipe.find()
-    return render_template("home.html", home=home)
+    recipes = list(mongo.db.recipes.find())
+    categories = mongo.db.categories.find()
+    for recipe in recipes:
+        category_name = mongo.db.categories.find_one(
+            {"_id": ObjectId(recipe["category_id"])})["category_name"]
+        recipe["category_id"] = category_name
+    return render_template("home.html", recipes=recipes, categories=categories)
 
 @app.route("/profile")
 def profile():
