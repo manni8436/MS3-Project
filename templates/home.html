@@ -1,5 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
 
+{% for recipe in recipes %}
+  {{ recipe.prep_time }}
+  {{ recipe.name }}
+  {{ recipe.category_id }}
+  
+  <img src="{{ recipe.image }}" alt="">
+
+  {% for ingredient in recipe.ingredients %}
+  {{ ingredient }}
+  {% endfor %}
+
+{% endfor %}
 
 {% endblock %}
