@@ -23,16 +23,14 @@ def home():
     recipe = mongo.db.recipe.find()
     return render_template("home.html", home=home)
 
+@app.route("/profile")
+def profile():
+    return render_template("profile.html")
+
 
 @app.route("/login")
 def login():
     return render_template("login.html")
-
-
-@app.route("/logout")
-def logout():
-    return render_template("logout.html")
-
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -57,6 +55,7 @@ def register():
         session["user"] = request.form.get("username").lower()
         flash("Registration Successfull!")
         return redirect(url_for("profile", username=session["user"]))
+
     return render_template("register.html")
 
 
