@@ -33,28 +33,48 @@
   <title>For the Love of Food</title>
 </head>
 
-<nav>
-  <div class="nav-wrapper">
-    <a href="#!" class="brand-logo">Logo</a>
-    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    <ul class="right hide-on-med-and-down">
-      <li><a href="{{ url_for('home') }}">Home</a></li>
-      <li><a href="{{ url_for('login') }}">Log In</a></li>
-      <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-      <li><a href="{{ url_for('register') }}">Register</a></li>
-    </ul>
-  </div>
-  <ul class="sidenav" id="mobile-demo">
-    <li><a href="{{ url_for('home') }}">Home</a></li>
-    <li><a href="{{ url_for('login') }}">Log In</a></li>
-    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-    <li><a href="{{ url_for('register') }}">Register</a></li>
-  </ul>
-</nav>
-
-
-
 <body>
+  <header>
+    <nav>
+      <div class="nav-wrapper">
+        <!-- top navbar -->
+        <a href="#!" class="brand-logo">Logo</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="{{ url_for('login') }}">Log In</a></li>
+          <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+          <li><a href="{{ url_for('register') }}">Register</a></li>
+        </ul>
+      </div>
+      <!-- mobile navbar -->
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('login') }}">Log In</a></li>
+        <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+        <li><a href="{{ url_for('register') }}">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <!--flash messages-->
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    <div class="row flashes">
+      <h4 class="light-blue lighten-4 center-align">{{ message }}</h4>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith%}
+  </section>
+
+  <main class="container">
+      {% block content %}
+      {% endblock %}
+  </main>
+
   <footer class="page-footer">
     <div class="container">
       <div class="row">
@@ -65,7 +85,7 @@
         <div class="col l4 offset-l2 s12">
           <ul>
             <li><a class="grey-text text-lighten-3" href="https://en-gb.facebook.com/login/" target="_blank">facebook</a></li>
-            <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/accounts/login/" target="_blank">instagram</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/accounts/login/"target="_blank">instagram</a></li>
             <li><a class="grey-text text-lighten-3" href="https://www.youtube.com" target="_blank">youtube</a></li>
             <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/login" target="_blank">linkedin</a></li>
             <li><a class="grey-text text-lighten-3" href="https://www.twitter.com/login" target="_blank">twitter</a></li>
@@ -80,7 +100,6 @@
       </div>
     </div>
   </footer>
-
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
