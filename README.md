@@ -9,6 +9,18 @@
 
 ## INITIAL DESIGN
 
+* My initial idea for this project was to create a recipe site about food from around the world. My target audience is anyone
+who is interested in cooking and all aspects of food, this can cover a huge spectrum of ages, genders and skill levels.
+This ranges from children who want to learn how to cook, to anyone who wants to use the site for recipe ideas to create at home.
+
+* The main features that I wanted to include are:
+  
+  * Easy to use navigation menu.
+  * Easy to read content.
+  * Easy to register.
+  * Easy to login and logout.
+  <!-- talk about colour theme here -->
+
 ## FINAL DESIGN
 
 ![Final project image home page]()
