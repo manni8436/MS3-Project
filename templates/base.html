@@ -38,12 +38,13 @@
     <nav>
       <div class="nav-wrapper">
         <!-- top navbar -->
-        <a href="{{ url_for('home') }}" class="brand-logo">Logo</a>
+        <a href="{{ url_for('home') }}" class="brand-logo">for the love of food</a>
         <a href="{{ url_for('home') }}" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
           <li><a href="{{ url_for('home') }}">Home</a></li>
           <li><a href="{{ url_for('profile') }}">Profile</a></li>
           <li><a href="{{ url_for('login') }}">Log In</a></li>
+          <li><a href="{{ url_for('logout') }}">Log Out</a></li>
           <li><a href="{{ url_for('register') }}">Register</a></li>
         </ul>
       </div>
@@ -52,6 +53,7 @@
         <li><a href="{{ url_for('home') }}">Home</a></li>
         <li><a href="{{ url_for('profile') }}">Profile</a></li>
         <li><a href="{{ url_for('login') }}">Log In</a></li>
+        <li><a href="{{ url_for('logout') }}">Log Out</a></li>
         <li><a href="{{ url_for('register') }}">Register</a></li>
       </ul>
     </nav>
