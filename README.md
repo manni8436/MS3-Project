@@ -164,8 +164,8 @@ This project was developed using [GitPod](https://gitpod.io) and pushed to [GitH
 3. `git add .` and `git commit -m` the new requirements and Procfile files and then `git push` them to the GitHub repository.
 4. Login or Sign up to [Heroku](https://www.heroku.com/).
 5. Create a new app upon Login by clicking the "New" button in your dashboard. Choose a unique name and set the region to the one closest to you.
-6. From the heroku dashboard of your newly created application, click on "Deploy" > "Deploymeny method" and select GitHub.
-7. Search for you GitHub repository and connect.
+6. From the heroku dashboard of your newly created application, click on "Deploy" > "Deployment method" and select GitHub.
+7. Search for your GitHub repository and connect.
 8. In the heroku dashboard for the application, click on "settings" > "Reveal Config Vars".
 9. Set the folowing config vars:
 
