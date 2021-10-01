@@ -5,7 +5,7 @@
 ![GitHub language count](https://img.shields.io/github/languages/count/manni8436/MS3-Project)
 ![GitHub top language](https://img.shields.io/github/languages/top/manni8436/MS3-Project)
 
-[Here is a link to the final project](https://manni8436.github.io/MS3-Project/)
+[Here is a link to the final project](https://for-the-love-of-food.herokuapp.com/)
 
 ## INITIAL DESIGN
 
