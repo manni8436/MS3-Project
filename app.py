@@ -18,8 +18,8 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/home")
-def home():
+@app.route("/recipes")
+def recipes():
     recipes = list(mongo.db.recipes.find())
     categories = mongo.db.categories.find()
     for recipe in recipes:
@@ -28,9 +28,11 @@ def home():
         recipe["category_id"] = category_name
     return render_template("home.html", recipes=recipes, categories=categories)
 
+
 @app.route("/profile")
 def profile():
     return render_template("profile.html")
+
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -51,9 +53,8 @@ def login():
                 # invalid password match
                 flash("Incorrect Username and/or Password")
                 return redirect(url_for("login"))
-
         else:
-            #username doesnt exist
+            # username doesnt exist
             flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
 
