@@ -38,23 +38,29 @@
     <nav>
       <div class="nav-wrapper">
         <!-- top navbar -->
-        <a href="{{ url_for('home') }}" class="brand-logo">for the love of food</a>
-        <a href="{{ url_for('home') }}" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <a href="{{ url_for('recipes') }}" class="brand-logo">for the love of food</a>
+        <a href="{{ url_for('recipes') }}" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="{{ url_for('home') }}">Home</a></li>
-          <li><a href="{{ url_for('profile') }}">Profile</a></li>
-          <li><a href="{{ url_for('login') }}">Log In</a></li>
-          <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-          <li><a href="{{ url_for('register') }}">Register</a></li>
+          {% if session.user %}
+            <li><a href="{{ url_for('profile') }}">Profile</a></li>
+            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+          {% else %}
+            <li><a href="{{ url_for('recipes') }}">Recipes</a></li>
+            <li><a href="{{ url_for('login') }}">Log In</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
+          {% endif %}
         </ul>
       </div>
       <!-- mobile navbar -->
       <ul class="sidenav" id="mobile-demo">
-        <li><a href="{{ url_for('home') }}">Home</a></li>
-        <li><a href="{{ url_for('profile') }}">Profile</a></li>
-        <li><a href="{{ url_for('login') }}">Log In</a></li>
-        <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-        <li><a href="{{ url_for('register') }}">Register</a></li>
+        {% if session.user %}
+            <li><a href="{{ url_for('profile') }}">Profile</a></li>
+            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+          {% else %}
+            <li><a href="{{ url_for('recipes') }}">Recipes</a></li>
+            <li><a href="{{ url_for('login') }}">Log In</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
+          {% endif %}
       </ul>
     </nav>
   </header>
@@ -98,7 +104,7 @@
     <div class="footer-copyright">
       <div class="container">
         © 2021 Copyright
-        <a class="grey-text text-lighten-4 right" href="{{ url_for('home') }}">for the love of food</a>
+        <a class="grey-text text-lighten-4 right" href="{{ url_for('recipes') }}">for the love of food</a>
       </div>
     </div>
   </footer>
