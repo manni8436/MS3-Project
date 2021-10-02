@@ -1,29 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-{% for recipe in recipes %}
-  <!-- {{ recipe.prep_time }} -->
-  <!-- {{ recipe.category_id }} -->
-  <!-- {% for ingredient in recipe.ingredients %}
-            <p>{{ ingredient }}</p>
-          {% endfor %} -->
+<!-- add the welcome message here -->
 
-
-  <div class="card">
-    <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="{{ recipe.image }}">
-    </div>
-    <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">{{ recipe.name }}<i class="material-icons right">more_vert</i></span>
-      <p><a href="#">For the full recipe click here</a></p>
-    </div>
-    <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">{{ recipe.name }}<i class="material-icons right">close</i></span>
-      <p>preparation time: {{ recipe.prep_time }}</p>
-      <p>cook time: {{ recipe.cook_time }}</p>
-    </div>
-  </div>
-
-{% endfor %}
-          
 {% endblock %}
