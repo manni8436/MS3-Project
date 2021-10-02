@@ -60,7 +60,7 @@ This ranges from children who want to learn how to cook, to anyone who wants to 
 
 * [Acknowledgements](#ACKNOWLEDGEMENTS)
 
-## :busts_in_silhouette: USER EXPERIENCE
+## USER EXPERIENCE
 
 ### USER STORIES
 
@@ -78,92 +78,95 @@ This ranges from children who want to learn how to cook, to anyone who wants to 
 
 [Here are my wireframes for desktop, mobile and tablet for this project]()
 
-## :star2: FEATURES
+## FEATURES
 
 ### FUTURE IMPLEMENTATIONS
 
-## :bug: SOLVED BUGS
+## SOLVED BUGS
 
-## :gear: TECHNOLOGIES USED
+## TECHNOLOGIES USED
 
 ### LANGUAGES
 
-<img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-plain-wordmark.svg" alt="HTML logo" width="50px" height="50px" />  <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain-wordmark.svg" alt="CSS logo" width="50px" height="50px" /> <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" alt="JavaScript logo" width="50px" height="50px" /> <img src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg" alt="Python logo" width="50px" height="50px" />
+<img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-plain-wordmark.svg" alt="HTML logo" width="50px" height="50px" /> <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain-wordmark.svg" alt="CSS logo" width="50px" height="50px" /> <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" alt="JavaScript logo" width="50px" height="50px" /> <img src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg" alt="Python logo" width="50px" height="50px" />
 
-### PROGRAMS USED:
+### PROGRAMS USED
 
-#### Git:
+#### Git
+
 [Git](https://git-scm.com/) was used for version control by using the Gitpod terminal to add and commit to GIt and push to Github.
 
-#### GitPod:
+#### GitPod
+
 [GitPod](https://gitpod.io) was used as an IDE whilst coding this site.
-    
-#### GitHub:
+
+#### GitHub
+
 [GitHub](https://github.com/) is being used to store all the code for this project after being pushed from GitPod.
 
-#### Am i Responsive:
+#### Am i Responsive
+
 [Am i Responsive](http://ami.responsivedesign.is/) was used to create the image in my [Final Design](#FINAL-DESIGN) section.
 
-#### Firefox Developer Tools:
+#### Firefox Developer Tools
+
 [Firefox Developer](https://www.mozilla.org/en-GB/firefox/developer/) Tools was used for trouble shooting and trying new visual changes without it affecting the current code.
 
-### DESIGN:
+### DESIGN:-
 
-#### Font Awesome:
+#### Font Awesome
 
 [Font Awesome](https://fontawesome.com/) was used for a few icons in the footer on all of this site's pages.
 
-#### Google Fonts:
+#### Google Fonts
 
 [Google Fonts](https://fonts.google.com/) was used for all the text content on the site pages.
 
-#### Balsamiq:
+#### Balsamiq
 
 [Balsamiq](https://balsamiq.com/) was used in the initial design process to make wireframes.
 
 ### DATABASE
 
-#### MongoDB:
+#### MongoDB
 
 [MongoDB](https://www.mongodb.com/) was used to store all contents of the database and allow full CRUD functionality.
 
 ### LIBRARIES
 
-#### Materialize:
+#### Materialize
 
 [Materialize](https://materializecss.com/) was used to create an amazing, responsive site.
 
-#### jQuery:
+#### jQuery
 
 [jQuery](https://developer.mozilla.org/en-US/docs/Glossary/jQuery) was used to initialisation of Materliazie CSS.
 
-#### Flask:
+#### Flask
 
 [Flask](https://palletsprojects.com/p/flask/) was used for application framework.
 
-#### Werkzeug:
+#### Werkzeug
 
 [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/#) was used for user information protection.
 
-#### PyMongo:
+#### PyMongo
 
 [PyMongo](https://pymongo.readthedocs.io/en/stable/) was used to be able to work with MongoDB.
 
-#### DNSPython:
+#### DNSPython
 
 [DNSPython](https://www.dnspython.org/) was used as a toolkit to use with Python.
 
-#### Flask-PyMongo:
+#### Flask-PyMongo
 
 [Flask-Pymongo](https://flask-pymongo.readthedocs.io/en/latest/) was used to connect Python/Flask app to MongoDB.
 
-#### Jinja:
+#### Jinja
 
 [Jinja](https://jinja.palletsprojects.com/en/3.0.x/) was used to populate the site using the content from the site database.
 
-## :computer: DEPLOYMENT:
-
-#### Heroku:
+## DEPLOYMENT
 
 [Heroku](https://www.heroku.com/) was used to deploy the live site.
 
@@ -232,11 +235,11 @@ The W3C Markup Validator and W3C CSS Validator was used to validate my project t
 
 * W3C HTML Validator Results
   * [HMTL]()
-    
+
 * W3C CSS Validator Results
   * [CSS]()
 
-* JSHint 
+* JSHint
   * ![JavaScript]()
 
 * PEP8 Online
@@ -253,13 +256,13 @@ The W3C Markup Validator and W3C CSS Validator was used to validate my project t
 
 ### DESKTOP
 
-#### Performance:
+#### Performance
 
-#### Accessibility:
+#### Accessibility
 
-#### Best Practices:
+#### Best Practices
 
-#### SEO:
+#### SEO
 
 ## CONTENT
 
@@ -270,8 +273,8 @@ The W3C Markup Validator and W3C CSS Validator was used to validate my project t
 ### TEXT CONTENT
 
 * Text content on all Pages was copied and/or amended from the following sites:  
-    
-## ACKNOWLEDGEMENTS:
+
+## ACKNOWLEDGEMENTS
 
 <!-- I would like to give a big thanks to [Chris Quinn](https://github.com/10xOXR) for all his help, effort, guidance
 and patience he has provided during this project.
