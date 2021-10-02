@@ -25,7 +25,7 @@ This ranges from children who want to learn how to cook, to anyone who wants to 
 
 ![Final project image home page]()
 
-## :open_file_folder: CONTENTS
+## CONTENTS
 
 * [User Experience](#USER-EXPERIENCE)  
   * [User Stories](#USER-STORIES)
