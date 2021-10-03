@@ -32,7 +32,7 @@ def recipes():
 
 @app.route("/my_recipes")
 def my_recipes():
-    return render_template("recipes.html")
+    return render_template("my_recipes.html")
 
 
 @app.route("/favourites")
