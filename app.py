@@ -30,8 +30,20 @@ def recipes():
         "recipes.html", recipes=recipes, categories=categories)
 
 
-@app.route("/my_recipes")
+@app.route("/my_recipes", methods=["GET", "POST"])
 def my_recipes():
+    # my_recipes = {
+    #     "ingredients": request.form.get("ingredients"),
+    #     "method": request.form.get("method"),
+    #     "prep_time": request.form.get("prep_time"),
+    #     "name": request.form.get("name"),
+    #     "image": request.form.get("image"),
+    #     "image_alt": request.form.get("image_alt"),
+    #     "cook_time": request.form.get("cook_time"),
+    #     "created_by": session["user"]
+    # }
+    # mongo.db.my_recipes.insert_one(recipes)
+    # flash("Recipe Successfully Added")
     return render_template("my_recipes.html")
 
 
