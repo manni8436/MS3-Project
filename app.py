@@ -30,10 +30,19 @@ def recipes():
         "recipes.html", recipes=recipes, categories=categories)
 
 
+@app.route("/my_recipes")
+def my_recipes():
+    return render_template("recipes.html")
+
+
+@app.route("/favourites")
+def favourites():
+    return render_template("favourites.html")
+
+
 @app.route("/profile")
 def profile():
     return render_template("profile.html")
-
 
 
 @app.route("/login", methods=["GET", "POST"])
