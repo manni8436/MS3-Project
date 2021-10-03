@@ -26,7 +26,8 @@ def recipes():
         category_name = mongo.db.categories.find_one(
             {"_id": ObjectId(recipe["category_id"])})["category_name"]
         recipe["category_id"] = category_name
-    return render_template("home.html", recipes=recipes, categories=categories)
+    return render_template(
+        "recipes.html", recipes=recipes, categories=categories)
 
 
 @app.route("/profile")
