@@ -57,7 +57,8 @@
       <ul class="sidenav" id="mobile-demo">
         {% if session.user %}
             <li><a href="{{ url_for('recipes') }}">Recipes</a></li>
-            <li><a href="{{ url_for('profile') }}">Profile</a></li>
+            <li><a href="{{ url_for('my_recipes') }}">My Recipes</a></li>
+            <li><a href="{{ url_for('favourites') }}">Favourites</a></li>
             <li><a href="{{ url_for('logout') }}">Log Out</a></li>
           {% else %}
             <li><a href="{{ url_for('recipes') }}">Recipes</a></li>
