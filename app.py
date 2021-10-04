@@ -23,7 +23,6 @@ def home():
     return render_template("home.html")
 
 
-
 @app.route("/recipes")
 def recipes():
     recipes = list(mongo.db.recipes.find())
@@ -118,7 +117,7 @@ def register():
         # puts the new user into sessions cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration Successfull!")
-        return redirect(url_for("profile", username=session["user"]))
+        return redirect(url_for("home", username=session["user"]))
 
     return render_template("register.html")
 
