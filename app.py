@@ -32,29 +32,27 @@ def recipes():
 
 @app.route("/my_recipes", methods=["GET", "POST"])
 def my_recipes():
-    # my_recipes = {
-    #     "ingredients": request.form.get("ingredients"),
-    #     "method": request.form.get("method"),
-    #     "prep_time": request.form.get("prep_time"),
-    #     "name": request.form.get("name"),
-    #     "image": request.form.get("image"),
-    #     "image_alt": request.form.get("image_alt"),
-    #     "cook_time": request.form.get("cook_time"),
-    #     "created_by": session["user"]
-    # }
-    # mongo.db.my_recipes.insert_one(recipes)
-    # flash("Recipe Successfully Added")
+    if request.method == "POST":
+        my_recipes = {
+            "ingredients": request.form.get("ingredients"),
+            "method": request.form.get("method"),
+            "prep_time": request.form.get("prep_time"),
+            "name": request.form.get("name"),
+            "image": request.form.get("image"),
+            "image_alt": request.form.get("image_alt"),
+            "cook_time": request.form.get("cook_time"),
+            "my_recipes": request.form.get("my_recipes"),
+            "favourites": request.form.get("favourites"),
+            "created_by": session["user"]
+        }
+        mongo.db.my_recipes.insert_one(my_recipes)
+        flash("Recipe Successfully Added")
     return render_template("my_recipes.html")
 
 
 @app.route("/favourites")
 def favourites():
     return render_template("favourites.html")
-
-
-@app.route("/profile")
-def profile():
-    return render_template("profile.html")
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -104,6 +102,7 @@ def register():
             return redirect(url_for("register"))
 
         register = {
+            "my_recipes": [],
             "favourites": [],
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
