@@ -23,6 +23,11 @@ def home():
     return render_template("home.html")
 
 
+@app.route("/profile")
+def profile():
+    return render_template("profile.html")
+
+
 @app.route("/recipes")
 def recipes():
     recipes = list(mongo.db.recipes.find())
@@ -55,9 +60,28 @@ def add_recipes():
     return render_template("add_recipes.html")
 
 
+@app.route("/recipe/add_to_favourites/<recipe_id>", methods=["GET", "POST"])
+def save_to_favourites(recipe_id): 
+    print(recipe_id)
+    if session["user"]:
+        data = {
+            "recipe_name": recipe_id,
+            "username": session["user"]
+        }
+
+    mongo.db.favourites.insert_one(data)
+
+    return redirect(url_for("recipes"))
+
 @app.route("/favourites")
 def favourites():
-    return render_template("favourites.html")
+    user = list(mongo.db.favourites.find(
+    {"$and": [{"username": {'$eq': session["user"]}}]}))
+    favourites_list = []
+    for i in user:
+        favourites_list.append(mongo.db.recipes.find_one({"_id": ObjectId(i["recipe_name"])}))
+    print(favourites_list)
+    return render_template("favourites.html", favourites_list=favourites_list)
 
 
 @app.route("/login", methods=["GET", "POST"])
