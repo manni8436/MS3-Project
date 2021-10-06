@@ -1,31 +1,29 @@
 {% extends "base.html" %}
 {% block content %}
 
+<div class="row card-panel grey lighten-5">
+  <form action="{{ url_for('search') }}" method="POST" class="col s12">
+    <div class="row valign-wrapper center-align">
+      <div class="input-field s12 md8">
+        <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
+        <input type="text" name="query" minlength="3" id="query" class="validate" required>
+        <label for="query">Seach recipes</label>
+      </div>
+      <div class="col s12 m4">
+        <a href="{{ url_for('recipes') }}" class="red btn text-shadow">Reset</a>
+        <button type="submit" class="light-blue darken-1 btn text-shadow">
+          <i class="fas fa-search left"></i> Search
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+
 {% for recipe in recipes %}
-<!-- {{ recipe.prep_time }} -->
-<!-- {{ recipe.category_id }} -->
 <!-- {% for ingredient in recipe.ingredients %}
             <p>{{ ingredient }}</p>
           {% endfor %} -->
           
-  <div class="row card-panel grey lighten-5">
-    <form action="{{ url_for('search') }}" method="POST" class="col s12">
-      <div class="row valign-wrapper center-align">
-        <div class="input-field s12 md8">
-          <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
-          <input type="text" name="query" minlength="3" id="query" class="validate" required>
-          <label for="query">Seach recipes</label>
-        </div>
-        <div class="col s12 m4">
-          <a href="{{ url_for('recipes') }}" class="red btn text-shadow">Reset</a>
-          <button type="submit" class="light-blue darken-1 btn text-shadow">
-            <i class="fas fa-search left"></i> Search
-          </button>
-        </div>
-      </div>
-    </form>
-  </div>
-
   <div class="card">
     <div class="card-image waves-effect waves-block waves-light">
       <img class="activator" src="{{ recipe.image }}">
@@ -45,5 +43,6 @@
   </div>
 
 {% endfor %}
+
 
 {% endblock %}
