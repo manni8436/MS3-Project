@@ -32,6 +32,7 @@ def profile():
 def search():
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
+    flash("Here is a list of recipes you searched for")
     return render_template("recipes.html", recipes=recipes)
 
 
@@ -73,7 +74,7 @@ def add_recipes():
 
 
 @app.route("/recipe/add_to_favourites/<recipe_id>", methods=["GET", "POST"])
-def save_to_favourites(recipe_id): 
+def save_to_favourites(recipe_id):
     print(recipe_id)
     if session["user"]:
         data = {
@@ -85,13 +86,15 @@ def save_to_favourites(recipe_id):
 
     return redirect(url_for("recipes"))
 
+
 @app.route("/favourites")
 def favourites():
     user = list(mongo.db.favourites.find(
-    {"$and": [{"username": {'$eq': session["user"]}}]}))
+        {"$and": [{"username": {'$eq': session["user"]}}]}))
     favourites_list = []
     for i in user:
-        favourites_list.append(mongo.db.recipes.find_one({"_id": ObjectId(i["recipe_name"])}))
+        favourites_list.append(mongo.db.recipes.find_one(
+            {"_id": ObjectId(i["recipe_name"])}))
     return render_template("favourites.html", favourites_list=favourites_list)
 
 
@@ -159,4 +162,4 @@ if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
             debug=True)
-            
+                     
