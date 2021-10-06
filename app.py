@@ -28,6 +28,13 @@ def profile():
     return render_template("profile.html")
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
+    return render_template("recipes.html", recipes=recipes)
+
+
 @app.route("/recipes")
 def recipes():
     recipes = list(mongo.db.recipes.find())
@@ -38,6 +45,11 @@ def recipes():
         recipe["category_id"] = category_name
     return render_template(
         "recipes.html", recipes=recipes, categories=categories)
+
+
+@app.route("/my_recipes")
+def my_recipes():
+    return render_template("my_recipes.html")
 
 
 @app.route("/add_recipes", methods=["GET", "POST"])
@@ -80,7 +92,6 @@ def favourites():
     favourites_list = []
     for i in user:
         favourites_list.append(mongo.db.recipes.find_one({"_id": ObjectId(i["recipe_name"])}))
-    print(favourites_list)
     return render_template("favourites.html", favourites_list=favourites_list)
 
 
@@ -131,8 +142,6 @@ def register():
             return redirect(url_for("register"))
 
         register = {
-            "add_recipes": [],
-            "favourites": [],
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
         }
