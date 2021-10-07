@@ -39,18 +39,14 @@ def search():
 @app.route("/recipes")
 def recipes():
     recipes = list(mongo.db.recipes.find())
+    favourites = list(mongo.db.favourites.find())
     categories = mongo.db.categories.find()
     for recipe in recipes:
         category_name = mongo.db.categories.find_one(
             {"_id": ObjectId(recipe["category_id"])})["category_name"]
         recipe["category_id"] = category_name
     return render_template(
-        "recipes.html", recipes=recipes, categories=categories)
-
-
-@app.route("/my_recipes")
-def my_recipes():
-    return render_template("my_recipes.html")
+        "recipes.html", recipes=recipes, categories=categories, favourites=favourites)
 
 
 @app.route("/add_recipes", methods=["GET", "POST"])
@@ -75,16 +71,25 @@ def add_recipes():
 
 @app.route("/recipe/add_to_favourites/<recipe_id>", methods=["GET", "POST"])
 def save_to_favourites(recipe_id):
-    print(recipe_id)
     if session["user"]:
         data = {
             "recipe_name": recipe_id,
             "username": session["user"]
         }
-
     mongo.db.favourites.insert_one(data)
-
+    favourites = list(mongo.db.favourites.find())
     return redirect(url_for("recipes"))
+
+
+@app.route("/recipe/delete_from_favourites/<recipe_id>", methods=["GET", "POST"])
+def delete_from_favourites(recipe_id):
+    if session["user"]:
+        data = {
+            "recipe_name": recipe_id,
+            "username": session["user"]
+        }
+    mongo.db.favourites.delete_one(data)
+    return redirect(url_for("favourites"))
 
 
 @app.route("/favourites")
