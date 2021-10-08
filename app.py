@@ -147,6 +147,7 @@ def save_to_favourites(recipe_id):
             "recipe_name": recipe_id,
             "username": session["user"]
         }
+        ObjectId = require('mongodb').ObjectID
     mongo.db.favourites.insert_one(data)
     favourites = list(mongo.db.favourites.find())
     return redirect(url_for("recipes"))
