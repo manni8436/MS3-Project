@@ -75,17 +75,21 @@ def login():
     return render_template("login.html")
 
 
+@app.route("/profile", methods=["GET", "POST"])
+def profile():
+    if request.method == "POST":
+        user = mongo.db.users.find_one(
+                {"username": request.form.get("username").lower()}) 
+        flash("Welcome, {}".format(request.form.get("username")))
+    return render_template("profile.html")
+
+
 @app.route("/logout")
 def logout():
     # remove user from session cookies
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
-
-
-@app.route("/profile")
-def profile():
-    return render_template("profile.html")
 
 
 @app.route("/search", methods=["GET", "POST"])
