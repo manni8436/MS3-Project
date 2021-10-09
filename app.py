@@ -144,24 +144,20 @@ def favourites():
 def save_to_favourites(recipe_id):
     if session["user"]:
         data = {
-            "recipe_name": recipe_id,
-            "username": session["user"]
+            "recipe_name": ObjectId(recipe_id),
+            "username": session["user"],
         }
-        ObjectId = require('mongodb').ObjectID
+        # ObjectId = require('mongodb').ObjectID
     mongo.db.favourites.insert_one(data)
     favourites = list(mongo.db.favourites.find())
     return redirect(url_for("recipes"))
 
 
-@app.route("/recipe/delete_from_favourites/<recipe_id>", methods=["GET", "POST"])
-def delete_from_favourites(recipe_id):
+@app.route("/recipe/delete_from_favourites/<favourite_id>", methods=["GET", "POST"])
+def delete_from_favourites(favourite_id):
     if session["user"]:
-        data = {
-            "recipe_name": recipe_id,
-            "username": session["user"]
-        }
-    mongo.db.favourites.delete_one(data)
-    return redirect(url_for("favourites"))
+        mongo.db.favourites.delete_many({"_id": ObjectId(favourite_id)})
+        return redirect(url_for("recipes"))
 
 
 if __name__ == "__main__":
