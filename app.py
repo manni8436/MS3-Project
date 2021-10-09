@@ -129,11 +129,6 @@ def add_recipes():
     return render_template("add_recipes.html")
 
 
-@app.route("/my_recipes")
-def my_recipes():
-    return render_template("my_recipes.html")
-
-
 @app.route("/favourites")
 def favourites():
     user = list(mongo.db.favourites.find(
