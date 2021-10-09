@@ -32,11 +32,17 @@
     <span class="card-title activator grey-text text-darken-4">{{ recipe.name }}<i
         class="material-icons right">more_vert</i></span>
     <p><a href="{{ recipe.name }}">For the full recipe click here</a></p>
-    {% if recipe in favourites %}
-      <a href="{{ url_for ('delete_from_favourites', recipe_id=recipe._id) }}" class="favourites-button">remove from favourites<i class="material-icons right">favorite</i></a>
-    {% else %}
-      <a href="{{ url_for ('save_to_favourites', recipe_id=recipe._id) }}" class="favourites-button">add to favourites<i class="material-icons right">favorite_border</i></a>
-    {% endif %}
+    {% if favourites %}
+      {% for favourite in favourites %}
+        {% if recipe._id == favourite.recipe_name %}
+          <a href="{{ url_for('delete_from_favourites', favourite_id=favourite._id) }}">remove from favourites<i class="fas fa-heart"></i></a>
+        {% else %}
+          <a href="{{ url_for('save_to_favourites', recipe_id=recipe._id) }}">add to favourites<i class="far fa-heart"></i></a>
+        {% endif %}
+      {% endfor %}
+    {% else %}
+      <a href="{{ url_for('save_to_favourites', recipe_id=recipe._id) }}">add to favourites<i class="far fa-heart"></i></a>
+    {% endif %}
   </div>
   <div class="card-reveal">
     <span class="card-title grey-text text-darken-4">{{ recipe.name }}<i class="material-icons right">close</i></span>
