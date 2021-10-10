@@ -273,7 +273,7 @@ If you need to make a local clone:
 7. Type git clone and then paste the URL you copied in step 4.
 8. Press Enter, and your local clone will be created.
 
-## :test_tube: TESTING
+## TESTING
 
 ### CODE VALIDATORS
 
