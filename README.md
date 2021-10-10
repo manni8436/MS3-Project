@@ -95,6 +95,18 @@ them needing more knowledge.
 
 ## SOLVED BUGS
 
+1. while trying to solve my adding to favourites functionality, I found a bug relating to going to the favourites page as shown below with the error message.
+
+![add to favourites](static/docs/bug_images/go_to_favourites_page_bug.png)
+
+After looking closely at the bug and the error that was provided above, I worked that I had to add `favourite_id=favourite_id` to the href below.
+
+`<a href="{{ url_for ('delete_from_favourites', recipe_id=recipe._id) }}">remove from favourites<i class="material-icons right">favorite</i></a>`
+
+A second bug below was found while working on the same functionality mentioned above.
+
+![mulitple favourite heart and text bug](static/docs/bug_images/mulitple_favourite_heart_bug.png)
+
 ## TECHNOLOGIES USED
 
 ### LANGUAGES
