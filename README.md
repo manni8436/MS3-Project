@@ -79,18 +79,16 @@ them needing more knowledge.
 
 * The site needs to be easily accessible.
 * The navigation menu needs to be simple to use on a range of devices, including desktop, tablet and mobile.
-* Manoeuring around the site should be simple and straightforward.
+* Manoeuvring around the site should be simple and straightforward.
 * To be able to create an user account.
-* To be able to add recipes.
-* To be able to edit recipes.
-* To be able to delete recipes.
+* It should be easy to Create, Read, Update and Delete recipes.
 * The site should be informative and all the text should be easy to read.
 * The images should be clear and not stretched or squashed.
-* To be able to register, login and logout easily.
+* It should be easy to register, login and logout.
 
 #### FIRST TIME VISITORS
 
-* I want the site to be easy to understand how to navigate throughoout the site.
+* I want the site to be easy to understand how to navigate throughout the site.
 * I want to the content to be easily read and understanble.
 * I want images to be clearly visible.
 
@@ -98,9 +96,7 @@ them needing more knowledge.
 
 * To gather information for recipes.
 * To recommend the site to friends and family.
-* To add recipes to the site.
-* To edit recipes that exist on the site.
-* To delete recipes from the site.
+* To be able to Create, Read, Update and Delete recipes.
 * To save recipes to favourites section.
 * To delete recipes to favourites section.
 
