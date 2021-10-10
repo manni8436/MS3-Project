@@ -110,6 +110,11 @@ them needing more knowledge.
 
 ## FEATURES
 
+I have used the following features in this project:
+  
+* Changing navivation
+* Recipe search
+
 ### FUTURE IMPLEMENTATIONS
 
 This are a few ideas ive had and would like to implement in the future.
