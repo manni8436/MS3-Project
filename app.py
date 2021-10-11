@@ -106,10 +106,6 @@ def recipes():
     recipes = list(mongo.db.recipes.find())
     favourites = list(mongo.db.favourites.find())
     categories = mongo.db.categories.find()
-    for recipe in recipes:
-        category_name = mongo.db.categories.find_one(
-            {"_id": ObjectId(recipe["category_id"])})["category_name"]
-        recipe["category_id"] = category_name
     return render_template(
         "recipes.html", recipes=recipes, categories=categories, favourites=favourites)
 
