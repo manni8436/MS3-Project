@@ -152,10 +152,10 @@ def save_to_favourites(recipe_id):
     return redirect(url_for("recipes"))
 
 
-@app.route("/recipe/delete_from_favourites/<favourite_id>", methods=["GET", "POST"])
+@app.route("/recipe/delete_from_favourites/<favourite_id>")
 def delete_from_favourites(favourite_id):
     if session["user"]:
-        mongo.db.favourites.delete_many({"_id": ObjectId(favourite_id)})
+        mongo.db.favourites.remove({"recipe_name": ObjectId(favourite_id)})
         return redirect(url_for("recipes"))
 
 
