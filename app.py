@@ -25,6 +25,9 @@ def home():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    """
+    checks if user is in DB, if not then redirects to register page
+    """
     if request.method == "POST":
         # checks if user already exists in db
         existing_user = mongo.db.users.find_one(
@@ -51,6 +54,9 @@ def register():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    """
+    checks if user has username in DB.
+    """
     if request.method == "POST":
         # check if username exists in db
         existing_user = mongo.db.users.find_one(
@@ -77,6 +83,9 @@ def login():
 
 @app.route("/profile/<user>", methods=["GET", "POST"])
 def profile(user):
+    """
+    grabs user from DB and redirects them to profile page after login.
+    """
     # grab the session user's username from db
     user = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
@@ -87,6 +96,9 @@ def profile(user):
 
 @app.route("/logout")
 def logout():
+    """
+    logs user out of account, clears session cookie
+    """
     # remove user from session cookies
     flash("You have been logged out")
     session.pop("user")
@@ -95,6 +107,9 @@ def logout():
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
+    """
+    searches DB for recipes that user types into search field.
+    """
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     flash("Here is a list of recipes you searched for")
@@ -103,6 +118,9 @@ def search():
 
 @app.route("/recipes")
 def recipes():
+    """
+    checks for recipes on DB and renders them on HTML recipe page.
+    """
     recipes = list(mongo.db.recipes.find())
     favourites = list(mongo.db.favourites.find())
     categories = mongo.db.categories.find()
@@ -112,6 +130,9 @@ def recipes():
 
 @app.route("/add_recipes", methods=["GET", "POST"])
 def add_recipes():
+    """
+    adds user recipes into DB, renders them to profile page and recipe page.
+    """
     if request.method == "POST":
         add_recipes = {
             "ingredients": request.form.get("ingredients"),
@@ -143,6 +164,9 @@ def favourites():
 
 @app.route("/recipe/add_to_favourites/<recipe_id>", methods=["GET", "POST"])
 def save_to_favourites(recipe_id):
+    """
+    add recipes into favourites collection in DB.
+    """
     if session["user"]:
         data = {
             "recipe_name": ObjectId(recipe_id),
@@ -154,6 +178,9 @@ def save_to_favourites(recipe_id):
 
 @app.route("/recipe/delete_from_favourites/<favourite_id>")
 def delete_from_favourites(favourite_id):
+    """
+    deltes recipes into favourites collection in DB and from favourites HTML page.
+    """
     if session["user"]:
         mongo.db.favourites.remove({"recipe_name": ObjectId(favourite_id)})
         return redirect(url_for("recipes"))
