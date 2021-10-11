@@ -183,7 +183,7 @@ def delete_from_favourites(favourite_id):
     """
     if session["user"]:
         mongo.db.favourites.remove({"recipe_name": ObjectId(favourite_id)})
-        return redirect(url_for("recipes"))
+        return redirect(url_for("favourites"))
 
 
 if __name__ == "__main__":
