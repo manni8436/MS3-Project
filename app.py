@@ -75,13 +75,14 @@ def login():
 
 
 
-@app.route("/profile", methods=["GET", "POST"])
-def profile():
-    if request.method == "POST":
-        user = mongo.db.users.find_one(
-                {"username": request.form.get("username").lower()}) 
-        flash("Welcome, {}".format(request.form.get("username")))
-    return render_template("profile.html")
+@app.route("/profile/<user>", methods=["GET", "POST"])
+def profile(user):
+    # grab the session user's username from db
+    user = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+    my_recipes = list(mongo.db.recipes.find(
+        {"created_by": session["user"]}))
+    return render_template("profile.html", user=user, my_recipes=my_recipes)
 
 
 @app.route("/logout")
