@@ -125,7 +125,7 @@ def add_recipes():
             "favourites": request.form.get("favourites"),
             "created_by": session["user"]
         }
-        mongo.db.add_recipes.insert_one(add_recipes)
+        mongo.db.recipes.insert_one(add_recipes)
         flash("Recipe Successfully Added")
     return render_template("add_recipes.html")
 
