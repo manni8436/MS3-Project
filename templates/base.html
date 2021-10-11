@@ -46,8 +46,8 @@
         <ul class="right hide-on-med-and-down">
           {% if session.user %}
             <li><a href="{{ url_for('home') }}">Home</a></li>
-            <li><a href="{{ url_for('profile', user=session['user']) }}">Profile</a></li>
             <li><a href="{{ url_for('recipes') }}">Recipes</a></li>
+            <li><a href="{{ url_for('profile', user=session['user']) }}">Profile</a></li>
             <li><a href="{{ url_for('add_recipes') }}">Add Recipes</a></li>
             <li><a href="{{ url_for('favourites') }}">Favourites</a></li>
             <li><a href="{{ url_for('logout') }}">Log Out</a></li>
@@ -63,8 +63,8 @@
       <ul class="sidenav" id="mobile-demo">
         {% if session.user %}
             <li><a href="{{ url_for('home') }}">Home</a></li>
-            <li><a href="{{ url_for('profile', user=session['user']) }}">Profile</a></li>
             <li><a href="{{ url_for('recipes') }}">Recipes</a></li>
+            <li><a href="{{ url_for('profile', user=session['user']) }}">Profile</a></li>
             <li><a href="{{ url_for('add_recipes') }}">Add Recipes</a></li>
             <li><a href="{{ url_for('favourites') }}">Favourites</a></li>
             <li><a href="{{ url_for('logout') }}">Log Out</a></li>
