@@ -131,15 +131,14 @@ def recipes():
 @app.route("/full_recipes/<recipe_id>")
 # gets the information for the full_recipe function
 def full_recipes(recipe_id):
-    recipe = mongo.db.recipes.find({"_id": ObjectId(recipe_id)})
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     try:
         category_name = mongo.db.categories.find_one(
             {"_id": ObjectId(recipe["category_id"])})["category_name"]
-        recipe["category_name"] = category_name
+        recipe["category_id"] = category_name
     except BaseException:
-        recipe["category_name"] = "undefined"
-        print(recipe)
-    return render_template("full_recipe.html", recipe=recipe)
+        recipe["category_id"] = "undefined"
+    return render_template("full_recipes.html", recipe=recipe)
 
 
 @app.route("/add_recipes", methods=["GET", "POST"])
