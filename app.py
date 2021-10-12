@@ -142,13 +142,42 @@ def add_recipes():
             "image": request.form.get("image"),
             "image_alt": request.form.get("image_alt"),
             "cook_time": request.form.get("cook_time"),
-            "my_recipes": request.form.get("my_recipes"),
             "favourites": request.form.get("favourites"),
             "created_by": session["user"]
         }
         mongo.db.recipes.insert_one(add_recipes)
         flash("Recipe Successfully Added")
     return render_template("add_recipes.html")
+
+
+@app.route("/edit_recipes/<recipe_id>", methods=["GET", "POST"])
+def edit_recipes(recipe_id):
+    """
+    edits user recipes into DB.
+    """
+    if request.method == "POST":
+        edit_recipes = {
+            "ingredients": request.form.get("ingredients"),
+            "method": request.form.get("method"),
+            "prep_time": request.form.get("prep_time"),
+            "name": request.form.get("name"),
+            "image": request.form.get("image"),
+            "image_alt": request.form.get("image_alt"),
+            "cook_time": request.form.get("cook_time"),
+            "my_recipes": request.form.get("my_recipes"),
+            "favourites": request.form.get("favourites"),
+            "created_by": session["user"]
+        }
+        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, edit_recipes) 
+        flash("Recipe Successfully update")
+    return render_template("edit_recipes.html")
+
+
+@app.route("/delete_recipes/<recipe_id>")
+def delete_recipes(recipe_id):
+    mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
+    flash("Recipe Successfully Deleted")
+    return redirect(url_for("recipes"))
 
 
 @app.route("/favourites")
