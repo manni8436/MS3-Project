@@ -128,6 +128,20 @@ def recipes():
         "recipes.html", recipes=recipes, categories=categories, favourites=favourites)
 
 
+@app.route("/full_recipes/<recipe_id>")
+# gets the information for the full_recipe function
+def full_recipes(recipe_id):
+    recipe = mongo.db.recipes.find({"_id": ObjectId(recipe_id)})
+    try:
+        category_name = mongo.db.categories.find_one(
+            {"_id": ObjectId(recipe["category_id"])})["category_name"]
+        recipe["category_name"] = category_name
+    except BaseException:
+        recipe["category_name"] = "undefined"
+        print(recipe)
+    return render_template("full_recipe.html", recipe=recipe)
+
+
 @app.route("/add_recipes", methods=["GET", "POST"])
 def add_recipes():
     """
@@ -208,7 +222,7 @@ def save_to_favourites(recipe_id):
 @app.route("/recipe/delete_from_favourites/<favourite_id>")
 def delete_from_favourites(favourite_id):
     """
-    deltes recipes into favourites collection in DB and from favourites HTML page.
+    deletes recipes from favourites collection in DB and from favourites HTML page.
     """
     if session["user"]:
         mongo.db.favourites.remove({"recipe_name": ObjectId(favourite_id)})
