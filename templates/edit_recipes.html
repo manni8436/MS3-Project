@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="light-blue-text text-darken-4 center-align">Edit Recipes</h3>
+
+<div class="row card-panel grey lighten-5">
+    <form class="col s12" method="POST" action="{{ url_for('edit_recipes', recipe_id=recipe._id) }}">
+        <!-- recipe name -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
+                <input id="name" name="name" minlength="3" maxlength="50" type="text" class="validate" required>
+                <label for="name">Recipe Name</label>
+            </div>
+        </div>
+        <!-- recipe ingredients -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
+                <textarea id="ingredients" name="ingredients" minlength="3" maxlength="200"
+                    class="materialize-textarea"></textarea>
+                <label for="ingredients">Recipe ingredients</label>
+            </div>
+        </div>
+        <!-- recipe method -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
+                <textarea id="method" name="method" minlength="3" maxlength="200"
+                    class="materialize-textarea"></textarea>
+                <label for="method">Recipe Method</label>
+            </div>
+        </div>
+        <!-- recipe prep time-->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
+                <input id="prep_time" name="prep_time" minlength="3" maxlength="50" type="text"
+                    class="datepicker validate" required>
+                <label for="prep_time">Recipe Preparation Time</label>
+            </div>
+        </div>
+        <!-- recipe cook time -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
+                <input id="cook_time" name="cook_time" minlength="3" maxlength="50" type="text" validate" required>
+                <label for="cook_time">Recipe Cooking Time</label>
+            </div>
+        </div>
+        <!-- add recipe image -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
+                <input id="image" name="image" type="url" validate" required>
+                <label for="image">Recipe Image</label>
+            </div>
+        </div>
+        <!-- submit button  -->
+        <div class="row">
+            <div class="col s12 center-align">
+                <button type="submit" class="btn-large light-blue darken-1 text-shadow">
+                    Edit Recipe <i class="fas fa-plus-square right"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
