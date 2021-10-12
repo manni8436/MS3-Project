@@ -39,6 +39,7 @@
     {% else %}
       <a href="{{ url_for('save_to_favourites', recipe_id=recipe._id) }}">add to favourites<i class="far fa-heart"></i></a>
     {% endif %}
+      <a href="{{ url_for('delete_recipes', recipe_id=recipe._id) }}">Delete Recipe</a>
   </div>
   <div class="card-reveal">
     <span class="card-title grey-text text-darken-4">{{ recipe.name }}<i class="material-icons right">close</i></span>
