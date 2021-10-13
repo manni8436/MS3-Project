@@ -177,13 +177,12 @@ def edit_recipes(recipe_id):
             "image": request.form.get("image"),
             "image_alt": request.form.get("image_alt"),
             "cook_time": request.form.get("cook_time"),
-            "my_recipes": request.form.get("my_recipes"),
-            "favourites": request.form.get("favourites"),
             "created_by": session["user"]
         }
-        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, edit_recipes) 
+        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, edit_recipes)
         flash("Recipe Successfully update")
-    return render_template("edit_recipes.html")
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template("edit_recipes.html", recipe=recipe)
 
 
 @app.route("/delete_recipes/<recipe_id>")
