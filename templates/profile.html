@@ -11,6 +11,8 @@
           class="material-icons right">more_vert</i></span>
       <p><a href="{{ recipe.name }}">For the full recipe click here</a></p>
     </div>
+      <a href="{{ url_for('edit_recipes', recipe_id=recipe._id) }}">Edit Recipe</a>
+      <a href="{{ url_for('delete_recipes', recipe_id=recipe._id) }}">Delete Recipe</a>
     <div class="card-reveal">
       <span class="card-title grey-text text-darken-4">{{ recipe.name }}<i class="material-icons right">close</i></span>
       <p>preparation time: {{ recipe.prep_time }}</p>
