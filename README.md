@@ -1,4 +1,4 @@
-# MS3 Project -
+# MS3 Project - For The Love Of Food
 
 ![GitHub contributors](https://img.shields.io/github/contributors/manni8436/MS3-Project)
 ![GitHub last commit](https://img.shields.io/github/last-commit/manni8436/MS3-Project)
