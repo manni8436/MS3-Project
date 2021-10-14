@@ -20,7 +20,11 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/home")
 def home():
-    return render_template("home.html")
+    """
+    First page to load when user registers to site
+    """
+    quotes = list(mongo.db.quotes.find())
+    return render_template("home.html", quotes=quotes)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -38,11 +42,11 @@ def register():
             flash("Username already exists")
             return redirect(url_for("register"))
 
-        register = {
+        new_user = {
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
         }
-        mongo.db.users.insert_one(register)
+        mongo.db.users.insert_one(new_user)
 
         # puts the new user into sessions cookie
         session["user"] = request.form.get("username").lower()
