@@ -1,5 +1,7 @@
 
-  body {
+ /* footer */
+ 
+ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -9,11 +11,22 @@
     flex: 1 0 auto;
   }
       
+/* home page */
+
+.homepage {
+  background: url("../images/pancakes.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: calc(100vh - 5vh - 5vh);
+}
+
 .card {
   margin-top: 20px;
   padding: 10px;
 }
-
 
 /* media queries */
 
