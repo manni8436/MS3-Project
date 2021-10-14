@@ -4,17 +4,17 @@
 <h1>Welcome to for the love of food</h1>
 
 <div class="row carousel-row">
-  <div class="carousel carousel-slider">
-      {% for quote in quotes %}
-      <a class="carousel-item" href="{{ quote.href }}">
-          <div class="card-panel welcome-quote-panel">
-              <div class="quotes-panel">
-                  <h5>"{{ quote.quote }}"</h5><span> by {{ quote.author }}</span>
-              </div>
-          </div>
-      </a>
-      {% endfor %}
-  </div>
+    <div class="carousel carousel-slider">
+        {% for quote in quotes %}
+        <a class="carousel-item" href="{{ quote.href }}">
+            <div class="card-panel welcome-quote-panel">
+                <div class="quotes-panel">
+                    <h5>"{{ quote.quote }}"</h5><p> by {{ quote.author }}</p>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
 </div>
 
 {% endblock %}
