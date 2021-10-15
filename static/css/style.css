@@ -10,10 +10,6 @@
   main {
     flex: 1 0 auto;
   }
-
-  .page-footer {
-    padding-top: 5px;
-  }
       
 /* home page */
 
@@ -27,14 +23,13 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  min-height: 72vh;
+  min-height: 71vh;
 }
 
 .quotes-panel {
   text-align: center;
 }
 
- /* this isn't working? */
 .card-panel.welcome-quote-panel {
   background-color: #3e2723;
   
@@ -48,6 +43,13 @@
 }
 
 /* full recipe page */
+
+
+/* general */
+
+.row {
+  margin-bottom: 0;
+}
 
 
 /* media queries */
