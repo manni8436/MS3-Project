@@ -1,4 +1,9 @@
 /* home page */
+.nav-wrapper {
+  background-color: #131b23;
+  border-bottom: #f05d23 2px solid;
+}
+
 
 .homepage {
   padding-top: 30px;
@@ -62,6 +67,15 @@
 
 main {
   flex: 1 0 auto;
+}
+
+.page-footer{
+  background-color: #131b23;
+  border-top: #f05d23 2px solid;
+}
+
+.footer-copyright {
+  background-color: #131b23 !important;
 }
 
 /* media queries */
