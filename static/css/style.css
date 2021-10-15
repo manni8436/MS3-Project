@@ -26,7 +26,7 @@ nav a {
 
 /* welcome message panel on home page */
 
-.card-panel {
+.home-card-panel {
   background-color: #f05d23;
   color: #131b23;
   border-radius: 20px;
@@ -46,8 +46,8 @@ nav a {
 }
 
 .welcome-quote-panel {
-  background-color: #f05d23;
-  color: #131b23;
+  background-color: #131b23;
+  color: #f05d23;
   padding: 10px !important;
 }
 
@@ -61,8 +61,6 @@ nav a {
   margin-top: 20px;
   padding: 10px;
 }
-
-/* full recipe page */
 
  /* footer */
  
