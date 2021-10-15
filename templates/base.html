@@ -81,7 +81,7 @@
     </nav>
   </header>
 
-  <section>
+  <main>
     <!--flash messages-->
     {% with messages = get_flashed_messages() %}
     {% if messages %}
@@ -92,12 +92,14 @@
     {% endfor %}
     {% endif %}
     {% endwith%}
-  </section>
-
-  <main class="container">
-      {% block content %}
-      {% endblock %}
   </main>
+
+  <div class="container-fluid">
+      {% block content %}
+
+
+      {% endblock %}
+  </div>
 
   <footer class="page-footer">
     <div class="container">
