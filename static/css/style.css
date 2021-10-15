@@ -55,6 +55,10 @@ nav a {
   margin-bottom: 0;
 }
 
+.carousel.carousel-slider {
+  top: 210px;
+}
+
 /* recipes page */
 
 .card {
