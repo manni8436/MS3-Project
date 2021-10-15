@@ -4,6 +4,10 @@
   border-bottom: #f05d23 2px solid;
 }
 
+nav .brand-logo,
+nav a {
+  text-transform: uppercase;
+}
 
 .homepage {
   padding-top: 30px;
@@ -24,11 +28,13 @@
 
 .card-panel {
   background-color: #f05d23;
-  color: #fff;
+  color: #131b23;
   border-radius: 20px;
 }
 
 .homepage-welcome-button {
+  background-color: #131b23;
+  color: #f05d23;
   margin-top: 15px;
   border-radius: 8px;
 }
@@ -40,8 +46,9 @@
 }
 
 .welcome-quote-panel {
+  background-color: #f05d23;
+  color: #131b23;
   padding: 10px !important;
-  background-color: #3e2723;
 }
 
 .row {
