@@ -28,14 +28,21 @@
   border-radius: 8px;
 }
 
+/* quotes panel on home page */
+
 .quotes-panel {
   text-align: center;
 }
 
-.card-panel.welcome-quote-panel {
+.welcome-quote-panel {
+  padding: 10px !important;
   background-color: #3e2723;
-  
 }
+
+.row {
+  margin-bottom: 0;
+}
+
 
 /* recipes page */
 
