@@ -4,13 +4,28 @@
   padding-top: 30px;
 }
 
+/* background image on home page */
 .welcome-hero {
+  background-color: #131b23;
   background: url("../images/pancakes.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   min-height: 71vh;
+}
+
+/* welcome message panel on home page */
+
+.card-panel {
+  background-color: #f05d23;
+  color: #fff;
+  border-radius: 20px;
+}
+
+.homepage-welcome-button {
+  margin-top: 15px;
+  border-radius: 8px;
 }
 
 .quotes-panel {
