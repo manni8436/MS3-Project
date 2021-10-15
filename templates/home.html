@@ -1,10 +1,25 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1>Welcome to for the love of food</h1>
-<div class="row homepage">
-
-</div>
+<div class="welcome-hero">
+    <div class="row homepage">
+        <div class="col s12 m8 offset-m2">
+            <div class="card-panel center-align">
+                <div class="row">
+                    <h3 class="title"></h3>
+                </div>
+                <div class="row">
+                    <h5 class="paragraph"></h5>
+                </div>
+                <div class="row">
+                    <h6></h6>
+                </div>
+                <div class="row">
+                    <a href="{{ url_for('login') }}" class="waves-effect darken-3 btn-large">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 <div class="row carousel-row">
     <div class="carousel carousel-slider">
