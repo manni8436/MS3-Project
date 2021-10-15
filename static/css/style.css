@@ -62,6 +62,12 @@ nav a {
   padding: 10px;
 }
 
+/* login page */
+
+.login-form {
+  margin-bottom: 190px;
+}
+
  /* footer */
  
  body {
