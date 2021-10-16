@@ -8,7 +8,7 @@
         <!-- recipe name -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
+                <i class="material-icons prefix">create</i>
                 <input id="name" name="name" minlength="3" maxlength="50" type="text" class="validate" value="{{ recipe.name }}" required>
                 <label for="name">Recipe Name</label>
             </div>
@@ -16,7 +16,7 @@
         <!-- recipe ingredients -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
+                <i class="material-icons prefix">format_align_left</i>
                 <textarea id="ingredients" name="ingredients" minlength="3" class="materialize-textarea">{{ recipe.ingredients }}</textarea>
                 <label for="ingredients">Recipe ingredients</label>
             </div>
@@ -24,7 +24,7 @@
         <!-- recipe method -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
+                <i class="material-icons prefix">local_dining</i>
                 <textarea id="method" name="method" minlength="3" class="materialize-textarea">{{ recipe.method }}</textarea>
                 <label for="method">Recipe Method</label>
             </div>
@@ -32,7 +32,7 @@
         <!-- recipe prep time-->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
+                <i class="material-icons prefix">access_time</i>
                 <input id="prep_time" name="prep_time" minlength="3" maxlength="50" type="text" class="validate" class="datepicker validate" value="{{ recipe.prep_time }}" required>
                 <label for="prep_time">Recipe Preparation Time</label>
             </div>
@@ -40,16 +40,16 @@
         <!-- recipe cook time -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
-                <input id="cook_time" name="cook_time" minlength="3" maxlength="50" type="text" validate" value="{{ recipe.cook_time }}" required>
+                <i class="material-icons prefix">access_time</i>
+                <input id="cook_time" name="cook_time" minlength="3" maxlength="50" type="text" class="validate" value="{{ recipe.cook_time }}" required>
                 <label for="cook_time">Recipe Cooking Time</label>
             </div>
         </div>
         <!-- add recipe image -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
-                <input id="image" name="image" type="url" validate" value="{{ recipe.image }}" required>
+                <i class="material-icons prefix">image</i>
+                <input id="image" name="image" type="url" class="validate" value="{{ recipe.image }}" required>
                 <label for="image">Recipe Image</label>
             </div>
         </div>
