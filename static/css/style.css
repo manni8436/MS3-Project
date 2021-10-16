@@ -55,6 +55,20 @@ nav a {
   max-height: 250px;
 }
 
+/* login page */
+
+.login-card-panel {
+  background-color: #131b23;
+}
+
+.login-button {
+  background-color: #2176ae;
+}
+
+.login-icons {
+  color: #2176ae;
+}
+
 /* recipes page */
 
 .card {
