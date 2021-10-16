@@ -21,7 +21,7 @@ nav a {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  min-height: 71vh;
+  min-height: 80vh;
 }
 
 /* welcome message panel on home page */
@@ -39,7 +39,7 @@ nav a {
   border-radius: 8px;
 }
 
-/* quotes panel on home page */
+/* carousel on home page */
 
 .quotes-panel {
   text-align: center;
@@ -51,12 +51,8 @@ nav a {
   padding: 10px !important;
 }
 
-.row {
-  margin-bottom: 0;
-}
-
-.carousel.carousel-slider {
-  top: 210px;
+.row.carousel-row, .carousel-item-active, .carousel-item {
+  max-height: 250px;
 }
 
 /* recipes page */
@@ -64,12 +60,6 @@ nav a {
 .card {
   margin-top: 20px;
   padding: 10px;
-}
-
-/* login page */
-
-.login-form {
-  margin-bottom: 190px;
 }
 
  /* footer */
@@ -88,16 +78,7 @@ main {
   background-color: #131b23;
   border-top: #f05d23 2px solid;
   text-transform: uppercase;
-}
-
-.footer-copyright {
-  background-color: #131b23 !important;
+  padding-top: 5px;
 }
 
 /* media queries */
-
-@media (min-width: 1200px) {
-  .card {
-    width: 300px;
-  }
-}
