@@ -1,32 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="center-align login-header">Log In</h3>
-
-<div class="row login-form">
+<div class="row">
   <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
     <div class="card-panel login-card-panel">
       <!-- username -->
       <div class="row">
         <div class="input-field col s12">
-          <i class="material-icons prefix">account_circle</i>
-          <input id="username" name="username" type="text" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$"
-            class="validate" required>
+          <i class="material-icons prefix login-icons">account_circle</i>
+          <input id="username" name="username" type="text" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
           <label for="username">Username</label>
         </div>
       </div>
       <!-- password -->
       <div class="row">
         <div class="input-field col s12">
-          <i class="material-icons prefix">enhanced_encryption</i>
-          <input id="password" name="password" type="password" minlength="5" maxlength="15"
-            pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+          <i class="material-icons prefix login-icons">enhanced_encryption</i>
+          <input id="password" name="password" type="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
           <label for="password">Password</label>
         </div>
       </div>
       <!-- register -->
       <div class="row">
-        <button type="submit" class="col s12 btn-large light-blue darken-4 text-shadow login-button">
+        <button type="submit" class="col s12 btn-large text-shadow login-button">
           Log In <i class="fas fa-sign-in-alt"></i>
         </button>
       </div>
