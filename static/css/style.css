@@ -1,4 +1,4 @@
-/* home page */
+/* navigation */
 .nav-wrapper {
   background-color: #131b23;
   border-bottom: #f05d23 2px solid;
@@ -9,12 +9,13 @@ nav a {
   text-transform: uppercase;
 }
 
+/* homepage */
+
 .homepage {
   padding-top: 30px;
   text-transform: uppercase;
 }
 
-/* background image on home page */
 .welcome-hero {
   background-color: #131b23;
   background: url("../images/pancakes.jpg") no-repeat center center;
@@ -24,8 +25,6 @@ nav a {
   background-size: cover;
   min-height: 80vh;
 }
-
-/* welcome message panel on home page */
 
 .home-card-panel {
   background-color: #f05d23;
@@ -39,8 +38,6 @@ nav a {
   margin-top: 15px;
   border-radius: 8px;
 }
-
-/* carousel on home page */
 
 .quotes-panel {
   text-align: center;
@@ -71,6 +68,18 @@ nav a {
   padding: 10px;
 }
 
+/* login page */
+
+.login-hero {
+  background-color: #131b23;
+  background: url("../images/dim-sum.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 81vh;
+}
+
  /* footer */
  
  body {
@@ -92,6 +101,20 @@ main {
 
 /* general styling */
 
+.login-form {
+  position: relative;
+  top: 210px;
+  opacity: 0.9;
+}
+
+.login-register {
+  color: #fff;
+}
+
+input, select, textarea{
+  color: #fff;
+}
+
 /* login and register forms */
 
 .login-card-panel,
@@ -108,6 +131,8 @@ main {
 .register-icons {
   color: #2176ae;
 }
+
+
 
 
 /* media queries */
