@@ -104,6 +104,10 @@ them needing more knowledge.
 
 ### COLOR SCHEME
 
+My overall colour scheme used through the site was a variety of colours in the image below.
+
+![site colours](static/docs/readme_images/site-colour.png)
+
 ## WIREFRAMES
 
 [Here are my wireframes for desktop, mobile and tablet for this project]()
