@@ -5,11 +5,11 @@
 
 <div class="row">
     <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
-        <div class="card-panel">
+        <div class="card-panel register-card-panel">
             <!-- username -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="material-icons prefix">account_circle</i>
+                    <i class="material-icons prefix register-icons">account_circle</i>
                     <input id="username" name="username" type="text" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
                     <label for="username">Username</label>
                 </div>
@@ -17,14 +17,14 @@
             <!-- password -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="material-icons prefix">enhanced_encryption</i>
+                    <i class="material-icons prefix register-icons">enhanced_encryption</i>
                     <input id="password" name="password" type="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
                     <label for="password">Password</label>
                 </div>
             </div>
             <!-- register -->
             <div class="row">
-                <button type="submit" class="col s12 btn-large light-blue darken-4 text-shadow">
+                <button type="submit" class="col s12 btn-large darken-4 text-shadow register-button">
                     Register <i class="fas fa-sign-in-alt"></i>
                 </button>
             </div>
