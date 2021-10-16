@@ -68,6 +68,27 @@ nav a {
   padding: 10px;
 }
 
+
+/* add recipe page */
+
+.add-recipe-hero {
+  background-color: #131b23;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 81vh;
+}
+
+.add-recipe-form {
+  height: 70vh;
+  width: 80vw;
+  border: black 2px solid;
+  position: relative;
+  left: 200px;
+  top: 50px;
+}
+
 /* login page */
 
 .login-hero {
@@ -117,7 +138,7 @@ input, select, textarea{
   color: #fff;
 }
 
-/* login and register forms */
+/* forms */
 
 .login-form,
 .register-form {
