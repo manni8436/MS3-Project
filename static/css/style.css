@@ -80,6 +80,18 @@ nav a {
   min-height: 81vh;
 }
 
+/* register page */
+
+.register-hero {
+  background-color: #131b23;
+  background: url("../images/dessert.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 81vh;
+}
+
  /* footer */
  
  body {
@@ -101,21 +113,23 @@ main {
 
 /* general styling */
 
-.login-form {
-  position: relative;
-  top: 210px;
-  opacity: 0.9;
-}
-
-.login-register {
-  color: #fff;
-}
-
 input, select, textarea{
   color: #fff;
 }
 
 /* login and register forms */
+
+.login-form,
+.register-form {
+  position: relative;
+  top: 210px;
+  opacity: 0.9;
+}
+
+.login-register,
+.register-login {
+  color: #fff;
+}
 
 .login-card-panel,
 .register-card-panel {
