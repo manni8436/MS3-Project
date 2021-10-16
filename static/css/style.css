@@ -55,20 +55,6 @@ nav a {
   max-height: 250px;
 }
 
-/* login page */
-
-.login-card-panel {
-  background-color: #131b23;
-}
-
-.login-button {
-  background-color: #2176ae;
-}
-
-.login-icons {
-  color: #2176ae;
-}
-
 /* recipes page */
 
 .card {
@@ -94,5 +80,25 @@ main {
   text-transform: uppercase;
   padding-top: 5px;
 }
+
+/* general styling */
+
+/* login and register forms */
+
+.login-card-panel,
+.register-card-panel {
+  background-color: #131b23;
+}
+
+.login-button,
+.register-button {
+  background-color: #2176ae;
+}
+
+.login-icons,
+.register-icons {
+  color: #2176ae;
+}
+
 
 /* media queries */
