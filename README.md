@@ -104,9 +104,11 @@ them needing more knowledge.
 
 ### COLOR SCHEME
 
-My overall colour scheme used through the site was a variety of colours in the image below.
+My overall colour scheme used throughout the site was a variety of colours in the image below.
 
 ![site colours](static/docs/readme_images/site-colour.png)
+
+I chose these colours for my theme to add hints of brightness throughout the site as a wow factor while the user is visiting the site.
 
 ## WIREFRAMES
 
