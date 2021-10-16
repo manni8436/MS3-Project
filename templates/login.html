@@ -1,11 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="center-align">Log In</h3>
+<div class="login-hero"></div>
+
+<h3 class="center-align login-header">Log In</h3>
 
 <div class="row login-form">
   <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
-    <div class="card-panel">
+    <div class="card-panel login-card-panel">
       <!-- username -->
       <div class="row">
         <div class="input-field col s12">
@@ -26,7 +28,7 @@
       </div>
       <!-- register -->
       <div class="row">
-        <button type="submit" class="col s12 btn-large light-blue darken-4 text-shadow">
+        <button type="submit" class="col s12 btn-large light-blue darken-4 text-shadow login-button">
           Log In <i class="fas fa-sign-in-alt"></i>
         </button>
       </div>
@@ -34,7 +36,7 @@
   </form>
 </div>
 
-<div class="row">
+<div class="row login-register">
   <div class="col-12">
     <p class="center-align">
       Not Yet Registered?
