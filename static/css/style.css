@@ -83,8 +83,6 @@ nav a {
   margin: 1px;
 }
 
-
-
 /* login page */
 
 .login-hero {
@@ -177,8 +175,7 @@ input, select, textarea{
 
 .add-recipes-form {
   position: relative;
-  bottom: 8vh;
-  bottom: 100px;
+  top: 1vh;
   background-color: #131b23;
   opacity: 0.9;
 }
