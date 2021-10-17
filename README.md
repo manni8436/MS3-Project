@@ -120,7 +120,9 @@ while using the colour white for the content throughout the site.
 I have used the following features in this project:
   
 * Changing navigation
-* Recipe search
+* Recipe search bar
+* Add recipes to site
+* Add to favourites
 
 ### FUTURE IMPLEMENTATIONS
 
