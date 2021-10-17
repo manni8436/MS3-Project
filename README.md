@@ -108,7 +108,8 @@ My overall colour scheme used throughout the site was a variety of colours in th
 
 ![site colours](static/docs/readme_images/site-colour.png)
 
-I chose these colours for my theme to add hints of brightness throughout the site as a wow factor while the user is visiting the site.
+I chose these colours for my theme to add hints of brightness throughout the site as a wow factor while the user is visiting the site,
+while using the colour white for the content throughout the site.
 
 ## WIREFRAMES
 
