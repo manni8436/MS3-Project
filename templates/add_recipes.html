@@ -1,66 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="add-recipe-hero">
-    <div class="row card-panel grey lighten-5 add-recipe-form">
-        <form class="col s12" method="POST" action="{{ url_for('add_recipes') }}">
-            <!-- recipe name -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">create</i>
-                    <input id="name" name="name" minlength="3" maxlength="50" type="text" class="validate" required>
-                    <label for="name">Recipe Name</label>
-                </div>
-            </div>
-            <!-- recipe ingredients -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">format_align_left</i>
-                    <textarea id="ingredients" name="ingredients" minlength="3" class="materialize-textarea"></textarea>
-                    <label for="ingredients">Recipe ingredients</label>
-                </div>
-            </div>
-            <!-- recipe method -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">local_dining</i>
-                    <textarea id="method" name="method" minlength="3" class="materialize-textarea"></textarea>
-                    <label for="method">Recipe Method</label>
-                </div>
-            </div>
-            <!-- recipe prep time-->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">access_time</i>
-                    <input id="prep_time" name="prep_time" minlength="3" maxlength="50" type="text" class="datepicker validate" required>
-                    <label for="prep_time">Recipe Preparation Time</label>
-                </div>
-            </div>
-            <!-- recipe cook time -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">access_time</i>
-                    <input id="cook_time" name="cook_time" minlength="3" maxlength="50" type="text" class="validate" required>
-                    <label for="cook_time">Recipe Cooking Time</label>
-                </div>
-            </div>
-            <!-- add recipe image -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">image</i>
-                    <input id="image" name="image" type="url" class="validate">
-                    <label for="image">Recipe Image</label>
-                </div>
-            </div>
-            <!-- submit button  -->
-            <div class="row">
-                <div class="col s12 center-align">
-                    <button type="submit" class="btn-large light-blue darken-1 text-shadow">
-                        Add Recipe <i class="fas fa-plus-square right"></i>
-                    </button>
-                </div>
-            </div>
-        </form>
-    </div>
+<div class="row card-panel add-recipe-hero">
+   
 </div>
+
 {% endblock %}
