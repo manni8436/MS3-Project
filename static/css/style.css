@@ -107,6 +107,8 @@ nav a {
   min-height: 81vh;
 }
 
+/* add recipe page */
+
 .add-recipe-hero {
   background-color: #131b23;
   background: url("../images/ice-cream.jpg") no-repeat center center;
@@ -138,7 +140,8 @@ main {
 
 /* general styling */
 
-input, select, textarea{
+input, select, textarea,
+.input-field > label {
   color: #fff;
 }
 
