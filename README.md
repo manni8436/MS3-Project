@@ -128,8 +128,6 @@ I have used the following features in this project:
 
 This are a few ideas ive had and would like to implement in the future.
 
-* Recipe qoutes from famous chefs.
-
 ## SOLVED BUGS
 
 1. While trying to solve my adding to favourites functionality, I found a bug relating to going to the favourites page as shown below with the error message.
