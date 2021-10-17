@@ -18,9 +18,9 @@ This ranges from children who want to learn how to cook, to anyone who wants to 
   * Easy to use navigation menu.
   * Easy to read content.
   * Easy to see images.
-  * Easy to register.
-  * Easy to login and logout.
-  <!-- talk about colour theme here -->
+  * Easy to register, login and logout.
+  * Easy to Create, Read, Update and Delete recipes.
+  * A subtle hint of colour while not being over powering.
 
 ## FINAL DESIGN
 
