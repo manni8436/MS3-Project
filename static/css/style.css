@@ -9,6 +9,12 @@ nav a {
   text-transform: uppercase;
 }
 
+.sidenav,
+.sidenav li > a {
+  background-color: #131b23;
+  color: #fff;
+}
+
 /* homepage */
 
 .homepage {
@@ -68,7 +74,6 @@ nav a {
   padding: 10px;
 }
 
-
 /* add recipe page */
 
 .add-recipe-hero {
@@ -78,15 +83,6 @@ nav a {
   -o-background-size: cover;
   background-size: cover;
   min-height: 81vh;
-}
-
-.add-recipe-form {
-  height: 70vh;
-  width: 80vw;
-  border: black 2px solid;
-  position: relative;
-  left: 200px;
-  top: 50px;
 }
 
 /* login page */
@@ -166,8 +162,5 @@ input, select, textarea{
 .register-icons {
   color: #2176ae;
 }
-
-
-
 
 /* media queries */
