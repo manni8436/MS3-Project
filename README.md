@@ -64,8 +64,8 @@ This ranges from children who want to learn how to cook, to anyone who wants to 
 ## USER EXPERIENCE
 
 The structure of the site was designed to be simple and easy to use. It has a good balance of images and content, so it does not overload the user,
-while giving them enough information to create recipes. The step by step structure ensures the user knows what the next steps are does not leave
-them needing more knowledge.
+while giving them enough information to create recipes. The step by step structure ensures the user knows what the next steps are and doesn't leave
+the user needing more knowledge.
 
 * The website is for the following user types:
   * Users with no previous experience about cooking, or experience on how to cook food, and would like to start learning.
@@ -89,7 +89,7 @@ them needing more knowledge.
 #### FIRST TIME VISITORS
 
 * I want the site to be easy to understand how to navigate throughout the site.
-* I want to the content to be easily read and understanble.
+* I want the content to be easily read and understanble.
 * I want images to be clearly visible.
 
 #### RETURNING USER
@@ -118,7 +118,7 @@ I chose these colours for my theme to add hints of brightness throughout the sit
 
 I have used the following features in this project:
   
-* Changing navivation
+* Changing navigation
 * Recipe search
 
 ### FUTURE IMPLEMENTATIONS
