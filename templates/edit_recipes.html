@@ -2,11 +2,11 @@
 {% block content %}
 
 <div class="row card-panel grey lighten-5">
-    <form class="col s12" method="POST" action="{{ url_for('edit_recipes', recipe_id=recipe._id) }}">
+    <form class="col s6 m6 offset-m3 edit-recipes-form" method="POST" action="{{ url_for('edit_recipes', recipe_id=recipe._id) }}">
         <!-- recipe name -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="material-icons prefix">create</i>
+                <i class="material-icons prefix edit-recipes-icons">create</i>
                 <input id="name" name="name" minlength="3" maxlength="50" type="text" class="validate" value="{{ recipe.name }}" required>
                 <label for="name">Recipe Name</label>
             </div>
@@ -14,7 +14,7 @@
         <!-- recipe ingredients -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="material-icons prefix">format_align_left</i>
+                <i class="material-icons prefix edit-recipes-icons">format_align_left</i>
                 <textarea id="ingredients" name="ingredients" minlength="3" class="materialize-textarea">{{ recipe.ingredients }}</textarea>
                 <label for="ingredients">Recipe ingredients</label>
             </div>
@@ -22,14 +22,14 @@
         <!-- recipe method -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="material-icons prefix">local_dining</i>
+                <i class="material-icons prefix edit-recipes-icons">local_dining</i>
                 <textarea id="method" name="method" minlength="3" class="materialize-textarea">{{ recipe.method }}</textarea>
                 <label for="method">Recipe Method</label>
             </div>
         </div>
         <!-- recipe prep time-->
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field col s12 edit-recipes-icons">
                 <i class="material-icons prefix">access_time</i>
                 <input id="prep_time" name="prep_time" minlength="3" maxlength="50" type="text" class="validate" class="datepicker validate" value="{{ recipe.prep_time }}" required>
                 <label for="prep_time">Recipe Preparation Time</label>
@@ -38,7 +38,7 @@
         <!-- recipe cook time -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="material-icons prefix">access_time</i>
+                <i class="material-icons prefix edit-recipes-icons">access_time</i>
                 <input id="cook_time" name="cook_time" minlength="3" maxlength="50" type="text" class="validate" value="{{ recipe.cook_time }}" required>
                 <label for="cook_time">Recipe Cooking Time</label>
             </div>
@@ -46,7 +46,7 @@
         <!-- add recipe image -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="material-icons prefix">image</i>
+                <i class="material-icons prefix edit-recipes-icons">image</i>
                 <input id="image" name="image" type="url" class="validate" value="{{ recipe.image }}" required>
                 <label for="image">Recipe Image</label>
             </div>
@@ -54,7 +54,7 @@
         <!-- submit button  -->
         <div class="row">
             <div class="col s12 center-align">
-                <button type="submit" class="btn-large light-blue darken-1 text-shadow">
+                <button type="submit" class="btn-large light-blue darken-1 text-shadow edit-recipes-button">
                     Edit Recipe <i class="fas fa-plus-square right"></i>
                 </button>
             </div>
