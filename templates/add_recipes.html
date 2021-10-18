@@ -2,7 +2,7 @@
 {% block content %}
 
 <div class="row card-panel add-recipe-hero">
-    <form class="col s12 add-recipes-form" method="POST" action="{{ url_for('add_recipes') }}">
+    <form class="col s6 m6 offset-m3 add-recipes-form" method="POST" action="{{ url_for('add_recipes') }}">
         <!-- recipe name -->
         <div class="row">
             <div class="input-field col s12">
@@ -17,6 +17,7 @@
                 <i class="material-icons prefix add-recipes-icons">format_align_left</i>
                 <textarea id="ingredients" name="ingredients" minlength="3" class="materialize-textarea"></textarea>
                 <label for="ingredients">Recipe ingredients</label>
+                <button type="submit" class="btn-small darken-1 text-shadow add-recipes-button">Add New Ingredient <i class="fas fa-plus-square right"></i></button>
             </div>
         </div>
         <!-- recipe method -->
