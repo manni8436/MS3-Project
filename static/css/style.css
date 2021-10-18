@@ -150,7 +150,7 @@ input, select, textarea,
 .login-form,
 .register-form {
   position: relative;
-  top: 210px;
+  top: 165px;
   opacity: 0.9;
 }
 
@@ -166,19 +166,20 @@ input, select, textarea,
 
 .login-button,
 .register-button,
-.add-recipes-button {
+.add-recipes-button,
+.edit-recipes-button {
   background-color: #2176ae;
 }
 
 .login-icons,
 .register-icons,
-.add-recipes-icons {
+.add-recipes-icons,
+.edit-recipes-icons {
   color: #2176ae;
 }
 
-.add-recipes-form {
-  position: relative;
-  top: 1vh;
+.add-recipes-form,
+.edit-recipes-form {
   background-color: #131b23;
   opacity: 0.9;
 }
