@@ -159,6 +159,10 @@ input, select, textarea,
 
 /* forms */
 
+.grey.lighten-5 {
+  background-color: #131b23 !important;
+}
+
 .login-form,
 .register-form {
   position: relative;
