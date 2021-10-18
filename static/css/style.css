@@ -195,7 +195,7 @@ input, select, textarea,
 .add-recipes-form,
 .edit-recipes-form {
   background-color: #131b23;
-  opacity: 0.94;
+  opacity: 0.9;
 }
 
 /* media queries */
