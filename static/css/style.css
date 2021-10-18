@@ -36,6 +36,7 @@ nav a {
 .home-card-panel {
   background-color: #f05d23;
   color: #131b23;
+  border: #131b23 3px solid;
   border-radius: 20px;
 }
 
@@ -199,3 +200,4 @@ input, select, textarea,
 }
 
 /* media queries */
+
