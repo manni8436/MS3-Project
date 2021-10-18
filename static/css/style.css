@@ -116,7 +116,18 @@ nav a {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  min-height: 81vh;
+}
+
+.edit-recipe-hero {
+  background-color: #131b23;
+  background: url("../images/fruit.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   min-height: 79vh;
+  opacity: 0.9;
 }
 
  /* footer */
@@ -160,8 +171,11 @@ input, select, textarea,
 }
 
 .login-card-panel,
-.register-card-panel {
+.register-card-panel,
+.edit-recipe-card-panel {
   background-color: #131b23;
+  margin-top: 0;
+  margin-bottom: 1px;
 }
 
 .login-button,
