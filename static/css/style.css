@@ -121,13 +121,13 @@ nav a {
 
 .edit-recipe-hero {
   background-color: #131b23;
-  background: url("../images/fruit.jpg") no-repeat center center;
+  background: url("../images/chillies.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   min-height: 79vh;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
  /* footer */
@@ -195,7 +195,7 @@ input, select, textarea,
 .add-recipes-form,
 .edit-recipes-form {
   background-color: #131b23;
-  opacity: 0.9;
+  opacity: 0.94;
 }
 
 /* media queries */
