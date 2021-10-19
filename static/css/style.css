@@ -250,4 +250,8 @@ input, select, textarea,
   .card-image {
     height: 290px;
   }
+
+  nav .brand-logo {
+    font-size: 1.9rem;
+  }
 }
