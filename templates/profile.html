@@ -2,7 +2,8 @@
 {% block content %}
 
 {% for recipe in my_recipes %}
-  <div class="card">
+<div class="container row">
+  <div class="col s12 m6 l3 card">
     <div class="card-image waves-effect waves-block waves-light">
       <img class="activator" src="{{ recipe.image }}">
     </div>
@@ -19,6 +20,7 @@
       <p>cook time: {{ recipe.cook_time }}</p>
     </div>
   </div>
+</div>
 {% endfor %}
 
 <div class="row">
