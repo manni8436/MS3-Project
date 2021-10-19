@@ -68,8 +68,18 @@ nav a {
 /* recipes page */
 
 .card {
-  margin-top: 20px;
+  margin: 20px;
   padding: 10px;
+  background-color: #131b23;
+}
+
+.card-image {
+  max-height: 135px;
+  padding-top: 10px;
+}
+
+.card-title {
+  color: #2176ae;
 }
 
 /* add recipe page */
@@ -131,6 +141,16 @@ nav a {
   opacity: 0.8;
 }
 
+.recipes-hero {
+  background-color: #131b23;
+  background: url("../images/olive-oil.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 81vh;
+}
+
  /* footer */
  
  body {
@@ -155,6 +175,10 @@ main {
 input, select, textarea,
 .input-field > label {
   color: #fff;
+}
+
+.recipes-row {
+  margin-bottom: 0;
 }
 
 /* forms */
