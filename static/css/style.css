@@ -150,6 +150,26 @@ nav a {
   min-height: 81vh;
 }
 
+.profile-hero {
+  background-color: #131b23;
+  background: url("../images/burger.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 81vh;
+}
+
+.favourites-hero {
+  background-color: #131b23;
+  background: url("../images/chocolate.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 81vh;
+}
+
  /* footer */
  
  body {
