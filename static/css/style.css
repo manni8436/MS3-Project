@@ -244,6 +244,10 @@ input, select, textarea,
   .card-image {
     height: 210px;
   }
+
+  nav .brand-logo {
+    font-size: 1.9rem;
+  }
 }
 
 @media (max-width: 600px) {
