@@ -84,7 +84,6 @@ def login():
     return render_template("login.html")
 
 
-
 @app.route("/profile/<user>", methods=["GET", "POST"])
 def profile(user):
     """
@@ -129,12 +128,15 @@ def recipes():
     favourites = list(mongo.db.favourites.find())
     categories = mongo.db.categories.find()
     return render_template(
-        "recipes.html", recipes=recipes, categories=categories, favourites=favourites)
+        "recipes.html", recipes=recipes, categories=categories,
+        favourites=favourites)
 
 
 @app.route("/full_recipes/<recipe_id>")
-# gets the information for the full_recipe function
 def full_recipes(recipe_id):
+    """
+    gets full recipe from db to render on site
+    """
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     try:
         category_name = mongo.db.categories.find_one(
@@ -191,6 +193,9 @@ def edit_recipes(recipe_id):
 
 @app.route("/delete_recipes/<recipe_id>")
 def delete_recipes(recipe_id):
+    """
+    deletes recipes from database
+    """
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe Successfully Deleted")
     return redirect(url_for("recipes"))
@@ -198,6 +203,9 @@ def delete_recipes(recipe_id):
 
 @app.route("/favourites")
 def favourites():
+    """
+    adds recipes to favourites
+    """
     user = list(mongo.db.favourites.find(
         {"$and": [{"username": {'$eq': session["user"]}}]}))
     favourites_list = []
@@ -224,11 +232,11 @@ def save_to_favourites(recipe_id):
 @app.route("/recipe/delete_from_favourites/<favourite_id>")
 def delete_from_favourites(favourite_id):
     """
-    deletes recipes from favourites collection in DB and from favourites HTML page.
+    deletes recipes from favourites collection in DB and favourites HTML page.
     """
     if session["user"]:
         mongo.db.favourites.remove({"recipe_name": ObjectId(favourite_id)})
-        return redirect(url_for("favourites"))
+    return redirect(url_for("favourites"))
 
 
 if __name__ == "__main__":
