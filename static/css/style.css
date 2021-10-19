@@ -74,7 +74,6 @@ nav a {
 }
 
 .card-image {
-  max-height: 135px;
   padding-top: 10px;
 }
 
@@ -229,3 +228,26 @@ input, select, textarea,
 
 /* media queries */
 
+@media (min-width: 1200px) {
+  .card-image {
+    height: 135px;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-image {
+    height: 300px;
+  }
+}
+
+@media (min-width: 600px) {
+  .card-image {
+    height: 210px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-image {
+    height: 290px;
+  }
+}
