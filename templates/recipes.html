@@ -2,51 +2,55 @@
 {% block content %}
 
 <div class="recipes-hero">
-<div class="col s12 offset-s1 m12 l3 row search-card-panel grey lighten-5">
-  <form class="col s12 offset-s1 m12 offset-m1 l12 offset-l1 search-panel" action="{{ url_for('search') }}" method="POST"> 
-    <div class="row valign-wrapper center-align">
-      <div class="col s12 input-field">
-        <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
-        <input type="text" name="query" minlength="3" id="query" class="validate" required>
-        <label for="query">Seach recipes</label>
+  <div class="col s12 offset-s1 m12 l3 row search-card-panel grey lighten-5">
+    <form class="col s12 offset-s1 m12 offset-m1 l12 offset-l1 search-panel" action="{{ url_for('search') }}"
+      method="POST">
+      <div class="row valign-wrapper center-align">
+        <div class="col s12 input-field">
+          <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
+          <input type="text" name="query" minlength="3" id="query" class="validate" required>
+          <label for="query">Seach recipes</label>
+        </div>
+        <div class="col s12 m6">
+          <a href="{{ url_for('recipes') }}" class="red btn text-shadow">Reset</a>
+          <button type="submit" class="light-blue darken-1 btn text-shadow">
+            <i class="fas fa-search left"></i> Search
+          </button>
+        </div>
       </div>
-      <div class="col s12 m6">
-        <a href="{{ url_for('recipes') }}" class="red btn text-shadow">Reset</a>
-        <button type="submit" class="light-blue darken-1 btn text-shadow">
-          <i class="fas fa-search left"></i> Search
-        </button>
-      </div>
-    </div>
-  </form>
-</div>
+    </form>
+  </div>
 
-<div class="container row recipes-row">
-  {% for recipe in recipes %}
+  <div class="container row recipes-row">
+    {% for recipe in recipes %}
     <div class="col s12 m6 l4 offset-l1 card">
       <div class="card-image waves-effect waves-block waves-light">
         <img class="activator" src="{{ recipe.image }}">
       </div>
       <div class="card-content">
         <span class="card-title activator">{{ recipe.name }}
-        <a href="{{ url_for('full_recipes', recipe_id=recipe._id) }}">For the full recipe click here</a>
-        {% if favourites %}
-        {% for favourite in favourites %}
-        {% if recipe._id == favourite.recipe_name %}
-        <a href="{{ url_for('delete_from_favourites', favourite_id=favourite._id) }}">remove from favourites<i
-            class="fas fa-heart"></i></a>
-              {% else %}
-        <a href="{{ url_for('save_to_favourites', recipe_id=recipe._id) }}">add to favourites<i
-            class="far fa-heart"></i></a>
-              {% endif %}
-            {% endfor %}
-        {% else %}
-        <a href="{{ url_for('save_to_favourites', recipe_id=recipe._id) }}">add to favourites<i
-            class="far fa-heart"></i></a>
-        {% endif %}
+          <a href="{{ url_for('full_recipes', recipe_id=recipe._id) }}">For the full recipe click here</a>
+          {% if favourites %}
+          {% for favourite in favourites %}
+          {% if recipe._id == favourite.recipe_name %}
+          <a href="{{ url_for('delete_from_favourites', favourite_id=favourite._id) }}">
+            remove from favourites<i class="fas fa-heart"></i>
+          </a>
+          {% else %}
+          <a href="{{ url_for('save_to_favourites', recipe_id=recipe._id) }}">
+            add to favourites<i class="far fa-heart"></i>
+          </a>
+          {% endif %}
+          {% endfor %}
+          {% else %}
+          <a href="{{ url_for('save_to_favourites', recipe_id=recipe._id) }}">
+            add to favourites<i class="far fa-heart"></i>
+          </a>
+          {% endif %}
       </div>
     </div>
-  {% endfor %}
-</div>
+    {% endfor %}
+  </div>
 
 
-{% endblock %}
+  {% endblock %}
