@@ -20,33 +20,34 @@
 </div>
 
 {% for recipe in recipes %}
-<div class="card">
-  <div class="card-image waves-effect waves-block waves-light">
-    <img class="activator" src="{{ recipe.image }}">
-  </div>
-  <div class="card-content">
-    <span class="card-title activator grey-text text-darken-4">{{ recipe.name }}<i
-        class="material-icons right">more_vert</i></span>
-        <a href="{{ url_for('full_recipes', recipe_id=recipe._id) }}">For the full recipe click here</a>
-    {% if favourites %}
-      {% for favourite in favourites %}
-        {% if recipe._id == favourite.recipe_name %}
-          <a href="{{ url_for('delete_from_favourites', favourite_id=favourite._id) }}">remove from favourites<i class="fas fa-heart"></i></a>
-        {% else %}
-          <a href="{{ url_for('save_to_favourites', recipe_id=recipe._id) }}">add to favourites<i class="far fa-heart"></i></a>
-        {% endif %}
-      {% endfor %}
-    {% else %}
-      <a href="{{ url_for('save_to_favourites', recipe_id=recipe._id) }}">add to favourites<i class="far fa-heart"></i></a>
-    {% endif %}
-  </div>
-  <div class="card-reveal">
-    <span class="card-title grey-text text-darken-4">{{ recipe.name }}<i class="material-icons right">close</i></span>
-    <p>preparation time: {{ recipe.prep_time }}</p>
-    <p>cook time: {{ recipe.cook_time }}</p>
+<div class="container row">
+  <div class="col s12 m6 l3 card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="{{ recipe.image }}">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">{{ recipe.name }}<i
+          class="material-icons right">more_vert</i></span>
+          <a href="{{ url_for('full_recipes', recipe_id=recipe._id) }}">For the full recipe click here</a>
+      {% if favourites %}
+        {% for favourite in favourites %}
+          {% if recipe._id == favourite.recipe_name %}
+            <a href="{{ url_for('delete_from_favourites', favourite_id=favourite._id) }}">remove from favourites<i class="fas fa-heart"></i></a>
+          {% else %}
+            <a href="{{ url_for('save_to_favourites', recipe_id=recipe._id) }}">add to favourites<i class="far fa-heart"></i></a>
+          {% endif %}
+        {% endfor %}
+      {% else %}
+        <a href="{{ url_for('save_to_favourites', recipe_id=recipe._id) }}">add to favourites<i class="far fa-heart"></i></a>
+      {% endif %}
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">{{ recipe.name }}<i class="material-icons right">close</i></span>
+      <p>preparation time: {{ recipe.prep_time }}</p>
+      <p>cook time: {{ recipe.cook_time }}</p>
+    </div>
   </div>
 </div>
-
 {% endfor %}
 
 
