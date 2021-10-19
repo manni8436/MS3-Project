@@ -2,14 +2,14 @@
 {% block content %}
 
 <div class="row card-panel grey lighten-5">
-  <form action="{{ url_for('search') }}" method="POST" class="col s12 search-panel"> 
+  <form class="search-panel" action="{{ url_for('search') }}" method="POST"> 
     <div class="row valign-wrapper center-align">
-      <div class="input-field s12 md8">
+      <div class="input-field s12">
         <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
         <input type="text" name="query" minlength="3" id="query" class="validate" required>
         <label for="query">Seach recipes</label>
       </div>
-      <div class="col s12 m4">
+      <div class="col s12 m6">
         <a href="{{ url_for('recipes') }}" class="red btn text-shadow">Reset</a>
         <button type="submit" class="light-blue darken-1 btn text-shadow">
           <i class="fas fa-search left"></i> Search
