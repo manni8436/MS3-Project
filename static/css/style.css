@@ -256,23 +256,17 @@ input, select, textarea,
 
 @media (min-width: 992px) {
   .card-image {
-    height: 300px;
+    height: 210px;
   }
 }
 
 @media (min-width: 600px) {
   .card-image {
-    height: 210px;
+    height: 130px;
   }
 
   nav .brand-logo {
     font-size: 1.9rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .card-image {
-    height: 290px;
   }
 
   nav .brand-logo {
