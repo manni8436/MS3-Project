@@ -268,8 +268,10 @@ input, select, textarea,
   nav .brand-logo {
     font-size: 1.9rem;
   }
+}
 
+@media (max-width: 600px) {
   nav .brand-logo {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
   }
 }
