@@ -256,13 +256,13 @@ input, select, textarea,
 
 @media (min-width: 992px) {
   .card-image {
-    height: 210px;
+    height: 135px;
   }
 }
 
 @media (min-width: 600px) {
   .card-image {
-    height: 130px;
+    height: 185px;
   }
 
   nav .brand-logo {
@@ -271,6 +271,10 @@ input, select, textarea,
 }
 
 @media (max-width: 600px) {
+  .card-image {
+    height: 300px;
+  }
+
   nav .brand-logo {
     font-size: 1.8rem;
   }
