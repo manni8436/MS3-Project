@@ -44,7 +44,8 @@ def register():
 
         new_user = {
             "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get("password"))
+            "password": generate_password_hash(request.form.get("password")),
+            "favourites": []
         }
         mongo.db.users.insert_one(new_user)
 
@@ -125,11 +126,13 @@ def recipes():
     checks for recipes on DB and renders them on HTML recipe page.
     """
     recipes = list(mongo.db.recipes.find())
-    favourites = list(mongo.db.favourites.find())
     categories = mongo.db.categories.find()
+    if "user" in session:
+        user = mongo.db.users.find_one({"username": session["user"]})
+    else:
+        user = False
     return render_template(
-        "recipes.html", recipes=recipes, categories=categories,
-        favourites=favourites)
+        "recipes.html", recipes=recipes, categories=categories, user=user)
 
 
 @app.route("/full_recipes/<recipe_id>")
@@ -204,37 +207,38 @@ def favourites():
     """
     adds recipes to favourites
     """
-    user = list(mongo.db.favourites.find(
-        {"$and": [{"username": {'$eq': session["user"]}}]}))
-    favourites_list = []
-    for i in user:
-        favourites_list.append(mongo.db.recipes.find_one(
-            {"_id": ObjectId(i["recipe_name"])}))
-    return render_template("favourites.html", favourites_list=favourites_list)
+    return render_template("favourites.html")
 
 
-@app.route("/recipe/add_to_favourites/<recipe_id>", methods=["GET", "POST"])
+@app.route("/recipe/add_to_favourites/<recipe_id>")
 def save_to_favourites(recipe_id):
     """
     add recipes into favourites collection in DB.
     """
-    if session["user"]:
-        data = {
-            "recipe_name": ObjectId(recipe_id),
-            "username": session["user"],
-        }
-    mongo.db.favourites.insert_one(data)
+    if "user" in session:
+        user = mongo.db.users.find_one(
+            {"username": session["user"]})["_id"]
+        mongo.db.users.update_one(
+            {"_id": ObjectId(user)},
+            {"$push": {"favourites": ObjectId(recipe_id)}})
+    else:
+        flash("Sorry, you are unable to do this, please log in")
+        return redirect(url_for("login"))
     return redirect(url_for("recipes"))
 
 
-@app.route("/recipe/delete_from_favourites/<favourite_id>")
-def delete_from_favourites(favourite_id):
+@app.route("/recipe/delete_from_favourites/<recipe_id>")
+def delete_from_favourites(recipe_id):
     """
     deletes recipes from favourites collection in DB and favourites HTML page.
     """
     if session["user"]:
-        mongo.db.favourites.remove({"recipe_name": ObjectId(favourite_id)})
-    return redirect(url_for("favourites"))
+        user = mongo.db.users.find_one(
+            {"username": session["user"]})["_id"]
+        mongo.db.users.update_one(
+            {"_id": ObjectId(user)},
+            {"$pull": {"favourites": ObjectId(recipe_id)}})
+    return redirect(url_for("recipes"))
 
 
 if __name__ == "__main__":

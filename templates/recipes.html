@@ -30,22 +30,14 @@
       <div class="card-content">
         <span class="card-title activator">{{ recipe.name }}
           <a href="{{ url_for('full_recipes', recipe_id=recipe._id) }}">For the full recipe click here</a>
-          {% if favourites %}
-          {% for favourite in favourites %}
-          {% if recipe._id == favourite.recipe_name %}
-          <a href="{{ url_for('delete_from_favourites', favourite_id=favourite._id) }}">
-            remove from favourites<i class="fas fa-heart"></i>
-          </a>
+          {% if user %}
+            {% if recipe._id in user.favourites %}
+              <a href="{{ url_for('delete_from_favourites', recipe_id=recipe._id) }}">remove from favourites<i class="fas fa-heart"></i></a>
+            {% else %}
+              <a href="{{ url_for('save_to_favourites', recipe_id=recipe._id) }}">add to favourites<i class="far fa-heart"></i></a>
+            {% endif %}
           {% else %}
-          <a href="{{ url_for('save_to_favourites', recipe_id=recipe._id) }}">
-            add to favourites<i class="far fa-heart"></i>
-          </a>
-          {% endif %}
-          {% endfor %}
-          {% else %}
-          <a href="{{ url_for('save_to_favourites', recipe_id=recipe._id) }}">
-            add to favourites<i class="far fa-heart"></i>
-          </a>
+            <a href="{{ url_for('save_to_favourites', recipe_id=recipe._id) }}">add to favourites<i class="far fa-heart"></i></a>
           {% endif %}
       </div>
     </div>
