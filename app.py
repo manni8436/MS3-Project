@@ -207,7 +207,13 @@ def favourites():
     """
     adds recipes to favourites
     """
-    return render_template("favourites.html")
+    recipes = list(mongo.db.recipes.find())
+    categories = mongo.db.categories.find()
+    if "user" in session:
+        user = mongo.db.users.find_one({"username": session["user"]})
+    else:
+        user = False
+    return render_template("favourites.html", recipes=recipes, categories=categories, user=user)
 
 
 @app.route("/recipe/add_to_favourites/<recipe_id>")
