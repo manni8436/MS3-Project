@@ -247,6 +247,20 @@ def delete_from_favourites(recipe_id):
     return redirect(url_for("recipes"))
 
 
+@app.route("/recipe/delete_from_favourites_page/<recipe_id>")
+def delete_from_favourites_page(recipe_id):
+    """
+    deletes recipes from favourites collection in DB and favourites HTML page.
+    """
+    if session["user"]:
+        user = mongo.db.users.find_one(
+            {"username": session["user"]})["_id"]
+        mongo.db.users.update_one(
+            {"_id": ObjectId(user)},
+            {"$pull": {"favourites": ObjectId(recipe_id)}})
+    return redirect(url_for("favourites"))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
