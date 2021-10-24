@@ -81,6 +81,16 @@ nav a {
   color: #2176ae;
 }
 
+.card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content > * {
+  display: block;
+  font-size: 16px;
+}
+
 /* add recipe page */
 
 .add-recipe-hero {
