@@ -142,6 +142,10 @@ A second bug below was found while working on the same functionality mentioned a
 
 ![mulitple favourite heart and text bug](static/docs/bug_images/mulitple_favourite_heart_bug.png)
 
+After trying various ways to get the add to favourites functions to work, I have found a way to solve this bug by making the following changes below.
+
+![recipes html code](static/docs/bug_images/recipes.html.png)
+
 2. While working on my remove from favourites functionality, I found a bug with my favourites functionality. Adding the recipe to the favourites worked
 correctly. When I tried to remove the recipe while in the favourites page, it would give me the error below:
 
