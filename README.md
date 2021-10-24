@@ -142,9 +142,23 @@ A second bug below was found while working on the same functionality mentioned a
 
 ![mulitple favourite heart and text bug](static/docs/bug_images/mulitple_favourite_heart_bug.png)
 
-After trying various ways to get the add to favourites functions to work, I have found a way to solve this bug by making the following changes below.
+After trying various ways to get the `add to favourites` functions to work, I have found a solution to this bug which has been added below.
 
-![recipes html code](static/docs/bug_images/recipes.html.png)
+Due to the way the code was written, when a user clicks to add a second recipe to favourites, each recipe card would render multiple `add to favourites`
+text and heart icon.
+
+The following steps have been taken during the process to solve the bug mentioned above.
+
+* Delete entire code below from the `recipes.html` template.
+
+![old jinja code](static/docs/bug_images/recipes_jinja_code.png)
+
+* Add the following code below to replace the code that was deleted.
+
+![new jinja code](static/docs/bug_images/new_jinja_code.png)
+
+In support of the changes that were made in the html template above a few steps were taken in the `app.py` which can be seen in the commit 368b140.
+This involved using an empty array in `users` document in the `users` collection.
 
 2. While working on my remove from favourites functionality, I found a bug with my favourites functionality. Adding the recipe to the favourites worked
 correctly. When I tried to remove the recipe while in the favourites page, it would give me the error below:
