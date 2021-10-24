@@ -157,8 +157,7 @@ The following steps have been taken during the process to solve the bug mentione
 
 ![new jinja code](static/docs/bug_images/new_jinja_code.png)
 
-In support of the changes that were made in the html template above a few steps were taken in the `app.py` which can be seen in the commit [368b140](https://github.com/manni8436/MS3-Project/commit/368b140d657b9403e13e1366fd869750875d2b50)
-This involved using an empty array in `users` document in the `users` collection.
+In support of the changes that were made in the html template above a few steps were taken in the `app.py` which can be seen in the commit [368b140](https://github.com/manni8436/MS3-Project/commit/368b140d657b9403e13e1366fd869750875d2b50), this involved using an empty array in `users` document in the `users` collection.
 
 2. While working on my remove from favourites functionality, I found a bug with my favourites functionality. Adding the recipe to the favourites worked
 correctly. When I tried to remove the recipe while in the favourites page, it would give me the error below:
