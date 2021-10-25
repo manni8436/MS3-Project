@@ -180,6 +180,16 @@ nav a {
   min-height: 81vh;
 }
 
+.full_recipes-hero {
+  background-color: #131b23;
+  background: url("../images/vegetables.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 81vh;
+}
+
  /* footer */
  
  body {
