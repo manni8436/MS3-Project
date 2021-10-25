@@ -155,18 +155,22 @@ def add_recipes():
     """
     adds user recipes into DB, renders them to profile page and recipe page.
     """
-    if request.method == "POST":
-        add_recipes = {
-            "ingredients": request.form.get("ingredients").splitlines(),
-            "method": request.form.get("method").splitlines(),
-            "prep_time": request.form.get("prep_time"),
-            "name": request.form.get("name"),
-            "image": request.form.get("image"),
-            "cook_time": request.form.get("cook_time"),
-            "created_by": session["user"]
-        }
-        mongo.db.recipes.insert_one(add_recipes)
-        flash("Recipe Successfully Added")
+    if "user" in session:
+        if request.method == "POST":
+            add_recipes = {
+                "ingredients": request.form.get("ingredients").splitlines(),
+                "method": request.form.get("method").splitlines(),
+                "prep_time": request.form.get("prep_time"),
+                "name": request.form.get("name"),
+                "image": request.form.get("image"),
+                "cook_time": request.form.get("cook_time"),
+                "created_by": session["user"]
+            }
+            mongo.db.recipes.insert_one(add_recipes)
+            flash("Recipe Successfully Added")
+    else:
+        flash("Sorry, you are unable to do this, please log in")
+        return redirect(url_for("login"))
     return render_template("add_recipes.html")
 
 
@@ -175,20 +179,24 @@ def edit_recipes(recipe_id):
     """
     edits user recipes into DB.
     """
-    if request.method == "POST":
-        edit_recipes = {
-            "ingredients": request.form.get("ingredients"),
-            "method": request.form.get("method"),
-            "prep_time": request.form.get("prep_time"),
-            "name": request.form.get("name"),
-            "image": request.form.get("image"),
-            "image_alt": request.form.get("image_alt"),
-            "cook_time": request.form.get("cook_time"),
-            "created_by": session["user"]
-        }
-        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, edit_recipes)
-        flash("Recipe Successfully update")
-    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    if "user" in session:
+        if request.method == "POST":
+            edit_recipes = {
+                "ingredients": request.form.get("ingredients"),
+                "method": request.form.get("method"),
+                "prep_time": request.form.get("prep_time"),
+                "name": request.form.get("name"),
+                "image": request.form.get("image"),
+                "image_alt": request.form.get("image_alt"),
+                "cook_time": request.form.get("cook_time"),
+                "created_by": session["user"]
+            }
+            mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, edit_recipes)
+            flash("Recipe Successfully update")
+        recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    else:
+        flash("Sorry, you are unable to do this, please log in")
+        return redirect(url_for("login"))
     return render_template("edit_recipes.html", recipe=recipe)
 
 
