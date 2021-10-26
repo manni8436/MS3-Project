@@ -204,13 +204,21 @@ nav a {
   position: relative;
   left: 5px;
   bottom: 12px;
-  height: 40px;
+  height: 42px;
   width: 150px;
   margin: 10px;
   padding: 6px;
+  display: inline;
   text-transform: uppercase;
   border-radius: 8px;
   border: #f05d23 2px solid;
+}
+
+.modal {
+  background-color: #f05d23;
+  color: #131b23;
+  border: #131b23 3px solid;
+  border-radius: 20px;
 }
 
  /* footer */
