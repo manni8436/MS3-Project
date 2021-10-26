@@ -1,5 +1,6 @@
 $(document).ready(function(){
   $('.sidenav').sidenav();
+  $('.modal').modal();
   $('.carousel.carousel-slider').carousel({
       numVisible: 1
   }, {
