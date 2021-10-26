@@ -60,7 +60,7 @@ def register():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     """
-    checks if user has username in DB.
+    checks if user has username and passowrd in DB.
     """
     if request.method == "POST":
         # check if username exists in db
@@ -90,11 +90,14 @@ def profile(user):
     """
     grabs user from DB and redirects them to profile page after login.
     """
-    # grab the session user's username from db
-    user = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
-    my_recipes = list(mongo.db.recipes.find(
-        {"created_by": session["user"]}))
+    if "user" in session:
+        user = mongo.db.users.find_one(
+            {"username": session["user"]})["username"]
+        my_recipes = list(mongo.db.recipes.find(
+            {"created_by": session["user"]}))
+    else: 
+        flash("Sorry, you are unable to do this, please log in")
+        return redirect(url_for("login"))
     return render_template("profile.html", user=user, my_recipes=my_recipes)
 
 
@@ -103,7 +106,6 @@ def logout():
     """
     logs user out of account, clears session cookie
     """
-    # remove user from session cookies
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
@@ -205,8 +207,12 @@ def delete_recipes(recipe_id):
     """
     deletes recipes from database
     """
-    mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
-    flash("Recipe Successfully Deleted")
+    if "user" in session:
+        mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
+        flash("Recipe Successfully Deleted")
+    else:
+        flash("Sorry, you are unable to do this, please log in")
+        return redirect(url_for("Login"))
     return redirect(url_for("recipes"))
 
 
@@ -246,12 +252,14 @@ def delete_from_favourites(recipe_id):
     """
     deletes recipes from favourites collection in DB and favourites HTML page.
     """
-    if session["user"]:
+    if "user" in session:
         user = mongo.db.users.find_one(
             {"username": session["user"]})["_id"]
         mongo.db.users.update_one(
             {"_id": ObjectId(user)},
             {"$pull": {"favourites": ObjectId(recipe_id)}})
+    else:
+        return redirect(url_for("login"))
     return redirect(url_for("recipes"))
 
 
@@ -260,12 +268,14 @@ def delete_from_favourites_page(recipe_id):
     """
     deletes recipes from favourites collection in DB and favourites HTML page.
     """
-    if session["user"]:
+    if "user" in session:
         user = mongo.db.users.find_one(
-            {"username": session["user"]})["_id"]
+            {"username": session["user"]})["_id"] 
         mongo.db.users.update_one(
             {"_id": ObjectId(user)},
             {"$pull": {"favourites": ObjectId(recipe_id)}})
+    else:
+        return redirect(url_for("login"))
     return redirect(url_for("favourites"))
 
 
