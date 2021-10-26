@@ -15,7 +15,8 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix edit-recipes-icons">format_align_left</i>
-                <textarea id="ingredients" name="ingredients" minlength="3" class="materialize-textarea">{{ recipe.ingredients }}</textarea>
+                <textarea id="ingredients" name="ingredients" minlength="3" class="materialize-textarea">{% 
+                    for line in recipe.ingredients %}{{ line }}&#10;{% endfor %}</textarea>
                 <label for="ingredients">Recipe ingredients</label>
             </div>
         </div>
@@ -23,7 +24,8 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix edit-recipes-icons">local_dining</i>
-                <textarea id="method" name="method" minlength="3" class="materialize-textarea">{{ recipe.method }}</textarea>
+                <textarea id="method" name="method" minlength="3" class="materialize-textarea">{% 
+                    for line in recipe.method %}{{ line }}&#10;{% endfor %}</textarea>
                 <label for="method">Recipe Method</label>
             </div>
         </div>
