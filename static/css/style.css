@@ -78,12 +78,17 @@ nav a {
 }
 
 .card-title {
-  color: #2176ae;
+  color: #fff;
+  text-transform: uppercase;
 }
 
 .card-content {
   display: flex;
   flex-direction: column;
+}
+
+.card-content a {
+  color: #fff;
 }
 
 .card-content > * {
@@ -188,6 +193,24 @@ nav a {
   -o-background-size: cover;
   background-size: cover;
   min-height: 81vh;
+}
+
+/* profile page  */
+
+.edit-button,
+.delete-button {
+  background-color: #131b23;
+  color: #fff;
+  position: relative;
+  left: 5px;
+  bottom: 12px;
+  height: 40px;
+  width: 150px;
+  margin: 10px;
+  padding: 6px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  border: #f05d23 2px solid;
 }
 
  /* footer */

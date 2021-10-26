@@ -13,11 +13,11 @@
         {% endif %}
       </div>
       <div class="card-content">
-        <span class="card-title activator grey-text text-darken-4">{{ recipe.name }}</span>
+        <span class="card-title activator text-darken-4">{{ recipe.name }}</span>
         <p><a href="{{ url_for('full_recipes', recipe_id=recipe._id) }}">For the full recipe click here</a></p>
       </div>
-        <a href="{{ url_for('edit_recipes', recipe_id=recipe._id) }}">Edit Recipe</a>
-        <a href="{{ url_for('delete_recipes', recipe_id=recipe._id) }}">Delete Recipe</a>
+        <a href="{{ url_for('edit_recipes', recipe_id=recipe._id) }}" class="edit-button">Edit Recipe</a>
+        <a href="{{ url_for('delete_recipes', recipe_id=recipe._id) }}" class="delete-button">Delete Recipe</a>
     </div>
   </div>
   {% endfor %}
