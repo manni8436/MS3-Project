@@ -96,6 +96,10 @@ nav a {
   font-size: 16px;
 }
 
+.recipes-row {
+  display: inline;
+}
+
 /* add recipe page */
 
 .add-recipe-hero {
@@ -313,12 +317,6 @@ input, select, textarea,
 }
 
 /* media queries */
-
-@media (min-width: 1200px) {
-  .card-image {
-    height: 135px;
-  }
-}
 
 @media (min-width: 992px) {
   .card-image {
