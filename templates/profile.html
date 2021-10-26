@@ -23,12 +23,12 @@
     <!-- Modal Structure -->
     <div id="modal1{{ recipe._id }}" class="modal">
       <div class="modal-content">
-        <h4>Are you sure you want to delete this {{ recipe.name }} recipe?</h4>
-        <p>This action can not be undone</p>
+        <h4>Are you sure you want to delete the {{ recipe.name }} recipe?</h4>
+        <h5 class="cant-be-undone-header">This action can not be undone!!</h5>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn-small modal-close" onclick="document.getElementById('modal1{{ recipe._id }}').style.display='none'">Cancel</button>
-        <a href="{{ url_for('delete_recipes', recipe_id=recipe._id) }}" class="modal-close waves-effect waves-green btn-flat">Confirm Delete</a>
+        <button type="button" class="btn-small modal-close modal-cancel-button" onclick="document.getElementById('modal1{{ recipe._id }}').style.display='none'">Cancel</button>
+        <a href="{{ url_for('delete_recipes', recipe_id=recipe._id) }}" class="btn-small modal-close waves-effect waves-green btn-flat modal-delete-button">Confirm Delete</a>
       </div>
     </div>
   {% endfor %}

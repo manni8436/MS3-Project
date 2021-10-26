@@ -221,6 +221,21 @@ nav a {
   border-radius: 20px;
 }
 
+.modal .modal-footer {
+  background-color: #f05d23;
+}
+
+.modal-cancel-button,
+.modal-delete-button {
+  background-color: #131b23;
+  color: #f05d23;
+  border-radius: 8px
+}
+
+.cant-be-undone-header {
+  text-transform: uppercase;
+}
+
  /* footer */
  
  body {
