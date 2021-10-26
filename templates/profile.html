@@ -27,7 +27,7 @@
         <p>This action can not be undone</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn-small" onclick="document.getElementById('modal1{{ recipe._id }}').style.display='none'">Cancel</button>
+        <button type="button" class="btn-small modal-close" onclick="document.getElementById('modal1{{ recipe._id }}').style.display='none'">Cancel</button>
         <a href="{{ url_for('delete_recipes', recipe_id=recipe._id) }}" class="modal-close waves-effect waves-green btn-flat">Confirm Delete</a>
       </div>
     </div>
