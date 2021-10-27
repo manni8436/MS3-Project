@@ -113,7 +113,7 @@ while using the colour white for the content throughout the site.
 
 ## WIREFRAMES
 
-[Here are my wireframes for desktop, mobile and tablet for this project]()
+[Here are my wireframes for desktop, mobile and tablet for this project](static/docs/wireframes/MS3Project-Wireframes.pdf)
 
 ## FEATURES
 
