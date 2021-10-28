@@ -65,41 +65,6 @@ nav a {
   max-height: 250px;
 }
 
-/* recipes page */
-
-.card {
-  margin: 20px;
-  padding: 10px;
-  background-color: #131b23;
-}
-
-.card-image {
-  padding-top: 10px;
-}
-
-.card-title {
-  color: #fff;
-  text-transform: uppercase;
-}
-
-.card-content {
-  display: flex;
-  flex-direction: column;
-}
-
-.card-content a {
-  color: #fff;
-}
-
-.card-content > * {
-  display: block;
-  font-size: 16px;
-}
-
-.recipes-row {
-  display: inline;
-}
-
 /* add recipe page */
 
 .add-recipe-hero {
@@ -176,7 +141,7 @@ nav a {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  min-height: 90vh;
+  min-height: 79vh;
 }
 
 .favourites-hero {
@@ -217,6 +182,8 @@ nav a {
   border-radius: 8px;
   border: #f05d23 2px solid;
 }
+
+/* modal */
 
 .modal {
   background-color: #f05d23;
@@ -266,7 +233,37 @@ input, select, textarea,
   color: #fff;
 }
 
+.card {
+  margin: 20px;
+  padding: 10px;
+  background-color: #131b23;
+}
+
+.card-image {
+  padding-top: 10px;
+}
+
+.card-title {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content a {
+  color: #fff;
+}
+
+.card-content > * {
+  display: block;
+  font-size: 16px;
+}
+
 .recipes-row {
+  display: inline;
   margin-bottom: 0;
 }
 
