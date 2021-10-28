@@ -207,6 +207,12 @@ nav a {
   text-transform: uppercase;
 }
 
+/* full recipe page */
+
+ul > li.ingredients-list {
+  list-style: disc;
+}
+
  /* footer */
  
  body {
@@ -253,6 +259,7 @@ input, select, textarea,
   flex-direction: column;
 }
 
+.card .card-content,
 .card-content a {
   color: #fff;
 }
