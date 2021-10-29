@@ -256,7 +256,7 @@ input, select, textarea,
 
 .card-title {
   color: #fff;
-  text-transform: uppercase;
+  font-variant: small-caps;
 }
 
 .card-content {
