@@ -3,6 +3,7 @@ from flask import (
   Flask, flash, render_template, redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from flask_paginate import Pagination, get_page_args
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
@@ -15,6 +16,12 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
+
+
+def get_recipes(offset=0, per_page=6):
+    # Give pagination information about recipes
+    recipes = list(mongo.db.recipes.find())
+    return recipes[offset: offset + per_page]
 
 
 @app.route("/")
@@ -128,13 +135,22 @@ def recipes():
     checks for recipes on DB and renders them on HTML recipe page.
     """
     recipes = list(mongo.db.recipes.find())
+    # Pagination
+    # pylint: disable=unbalanced-tuple-unpacking
+    page, per_page, offset = get_page_args(page_parameter='page',
+                                           per_page_parameter='per_page')
+    # pylint: enable=unbalanced-tuple-unpacking
+    total = len(recipes)
+    pagination_recipes = get_recipes(offset=offset, per_page=per_page)
+    pagination = Pagination(page=page, per_page=per_page, total=total)
     categories = mongo.db.categories.find()
     if "user" in session:
         user = mongo.db.users.find_one({"username": session["user"]})
     else:
         user = False
     return render_template(
-        "recipes.html", recipes=recipes, categories=categories, user=user)
+        "recipes.html", recipes=pagination_recipes, categories=categories,
+        user=user, page=page, per_page=per_page, pagination=pagination)
 
 
 @app.route("/full_recipes/<recipe_id>")
