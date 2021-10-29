@@ -211,6 +211,23 @@ nav a {
 
 ul > li.ingredients-list {
   list-style: disc;
+  margin-left: 20px;
+}
+
+ul > h3,
+ol > h3 {
+  text-decoration: underline;
+}
+
+.ingredients-list {
+ padding: 10px;
+ font-size: larger;
+}
+
+.ingredients-method {
+  padding: 5px;
+  text-indent: 10px;
+  font-size: large;
 }
 
  /* footer */
