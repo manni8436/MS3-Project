@@ -6,7 +6,7 @@
     {% for favourite in user.favourites %}
       {% for recipe in recipes %}
         {% if favourite == recipe._id %}
-          <div class="col s12 m9 offset-m2 l4 offset-l1 card">
+          <div class="col s12 m9 offset-m2 l3 card">
             <div class="card-image waves-effect waves-block waves-light">
               {% if recipe.image|length %}
                 <img class="activator" src="{{ recipe.image }}">
