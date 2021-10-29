@@ -373,9 +373,9 @@ input, select, textarea,
     height: 300px;
   }
 
-  .brand-logo a {
+  nav .brand-logo {
     width: 100%;
-    text-align: right;
+    text-align: center;
     padding-right: 10px;
   }
 }
