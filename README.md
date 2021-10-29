@@ -24,7 +24,7 @@ This ranges from children who want to learn how to cook, to anyone who wants to 
 
 ## FINAL DESIGN
 
-![Final project image home page]()
+![Final project image home page](static/docs/readme_images/ms3-responsive-image.png)
 
 ## CONTENTS
 
