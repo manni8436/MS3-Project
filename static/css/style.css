@@ -239,6 +239,11 @@ input, select, textarea,
   color: #fff;
 }
 
+.row .col.l3,
+.row .col.l4 {
+  padding-top: 10px;
+}
+
 .card {
   margin: 20px;
   padding: 10px;
@@ -270,8 +275,16 @@ input, select, textarea,
 }
 
 .recipes-row {
-  display: inline;
   margin-bottom: 0;
+}
+
+.recipes-row .card {
+  padding-top: 10px;
+}
+
+.card .card-image img {
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /* forms */
