@@ -237,6 +237,8 @@ ol > h3 {
   background-color: #131b23;
   color: #f05d23;
   height: 100px;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 1px 20px;
   margin-top: 20px;
   text-align: center;
