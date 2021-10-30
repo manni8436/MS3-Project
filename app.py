@@ -18,8 +18,10 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-def get_recipes(offset=0, per_page=6):
-    # Give pagination information about recipes
+def get_recipes(recipes, offset=0, per_page=6):
+    """
+    Give pagination information about recipes
+    """
     recipes = list(mongo.db.recipes.find())
     return recipes[offset: offset + per_page]
 
@@ -125,8 +127,18 @@ def search():
     """
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
+    # Pagination
+    # pylint: disable=unbalanced-tuple-unpacking
+    page, per_page, offset = get_page_args(page_parameter='page',
+                                           per_page_parameter='per_page')
+    # pylint: enable=unbalanced-tuple-unpacking
+    total = len(recipes)
+    pagination_recipes = get_recipes(recipes, offset=offset, per_page=per_page)
+    pagination = Pagination(page=page, per_page=per_page, total=total)
+    categories = mongo.db.categories.find()
     flash("Here is a list of recipes you searched for")
-    return render_template("recipes.html", recipes=recipes)
+    return render_template(
+        "recipes.html", recipes=pagination_recipes, categories=categories, page=page, per_page=per_page, pagination=pagination)
 
 
 @app.route("/recipes")
@@ -141,7 +153,7 @@ def recipes():
                                            per_page_parameter='per_page')
     # pylint: enable=unbalanced-tuple-unpacking
     total = len(recipes)
-    pagination_recipes = get_recipes(offset=offset, per_page=per_page)
+    pagination_recipes = get_recipes(recipes, offset=offset, per_page=per_page)
     pagination = Pagination(page=page, per_page=per_page, total=total)
     categories = mongo.db.categories.find()
     if "user" in session:
