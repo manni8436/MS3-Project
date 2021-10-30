@@ -230,6 +230,21 @@ ol > h3 {
   font-size: large;
 }
 
+/* flash messages */
+
+.flashes {
+  position: fixed;
+  background-color: #131b23;
+  color: #f05d23;
+  height: 100px;
+  padding: 1px 20px;
+  margin-top: 20px;
+  text-align: center;
+  border-radius: 10px;
+  border: #f05d23 2px solid;
+  font-variant: small-caps;
+}
+
  /* footer */
  
  body {
