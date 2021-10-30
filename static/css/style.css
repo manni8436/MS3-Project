@@ -247,6 +247,19 @@ ol > h3 {
   font-variant: small-caps;
 }
 
+/* hover */
+.homepage-welcome-button:hover,
+.edit-button:hover,
+.delete-button:hover,
+.modal-cancel-button:hover,
+.modal-delete-button:hover,
+.add-recipes-button:hover,
+.edit-recipes-button:hover {
+  background-color: #f1d302;
+  color: #131b23;
+  font-weight: bold;
+}
+
  /* footer */
  
  body {
