@@ -346,6 +346,7 @@ nav {
 .pagination-page-info {
   background-color: #131b23;
   color: #fff;
+  text-align: center;
 }
 
 .pagination li.active {
