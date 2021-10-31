@@ -218,8 +218,8 @@ def edit_recipes(recipe_id):
     if "user" in session:
         if request.method == "POST":
             edit_recipes = {
-                "ingredients": request.form.get("ingredients"),
-                "method": request.form.get("method"),
+                "ingredients": request.form.get("ingredients").splitlines(),
+                "method": request.form.get("method").splitlines(),
                 "prep_time": request.form.get("prep_time"),
                 "name": request.form.get("name"),
                 "image": request.form.get("image"),
