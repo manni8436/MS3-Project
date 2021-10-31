@@ -123,10 +123,14 @@ I have used the following features in this project:
 * Recipe search bar
 * Add recipes to site
 * Add to favourites
+* Pagination
 
 ### FUTURE IMPLEMENTATIONS
 
 This are a few ideas ive had and would like to implement in the future.
+
+* Admin user
+* Exclusive search
 
 ## SOLVED BUGS
 
