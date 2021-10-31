@@ -104,7 +104,7 @@ def profile(user):
             {"username": session["user"]})["username"]
         my_recipes = list(mongo.db.recipes.find(
             {"created_by": session["user"]}))
-    else: 
+    else:
         flash("Sorry, you are unable to do this, please log in")
         return redirect(url_for("login"))
     return render_template("profile.html", user=user, my_recipes=my_recipes)
@@ -144,7 +144,8 @@ def search():
     categories = mongo.db.categories.find()
     flash("Here is a list of recipes you searched for")
     return render_template(
-        "recipes.html", recipes=pagination_recipes, categories=categories, page=page, per_page=per_page, pagination=pagination)
+        "recipes.html", recipes=pagination_recipes, categories=categories,
+        page=page, per_page=per_page, pagination=pagination)
 
 
 @app.route("/recipes")
@@ -217,7 +218,7 @@ def edit_recipes(recipe_id):
     """
     if "user" in session:
         if request.method == "POST":
-            edit_recipes = {
+            change_recipes = {
                 "ingredients": request.form.get("ingredients").splitlines(),
                 "method": request.form.get("method").splitlines(),
                 "prep_time": request.form.get("prep_time"),
@@ -227,7 +228,8 @@ def edit_recipes(recipe_id):
                 "cook_time": request.form.get("cook_time"),
                 "created_by": session["user"]
             }
-            mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, edit_recipes)
+            mongo.db.recipes.update(
+                {"_id": ObjectId(recipe_id)}, change_recipes)
             flash("Recipe Successfully update")
         recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     else:
@@ -304,7 +306,7 @@ def delete_from_favourites_page(recipe_id):
     """
     if "user" in session:
         user = mongo.db.users.find_one(
-            {"username": session["user"]})["_id"] 
+            {"username": session["user"]})["_id"]
         mongo.db.users.update_one(
             {"_id": ObjectId(user)},
             {"$pull": {"favourites": ObjectId(recipe_id)}})
