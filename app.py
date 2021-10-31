@@ -120,6 +120,12 @@ def logout():
     return redirect(url_for("login"))
 
 
+def get_search_recipes(offset=0, per_page=6):
+    query = request.form.get("query")
+    recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
+    return recipes[offset: offset + per_page]
+
+
 @app.route("/search", methods=["GET", "POST"])
 def search():
     """
@@ -133,7 +139,7 @@ def search():
                                            per_page_parameter='per_page')
     # pylint: enable=unbalanced-tuple-unpacking
     total = len(recipes)
-    pagination_recipes = get_recipes(recipes, offset=offset, per_page=per_page)
+    pagination_recipes = get_search_recipes(offset=offset, per_page=per_page)
     pagination = Pagination(page=page, per_page=per_page, total=total)
     categories = mongo.db.categories.find()
     flash("Here is a list of recipes you searched for")
