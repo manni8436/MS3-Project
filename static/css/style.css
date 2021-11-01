@@ -373,10 +373,24 @@ nav {
   background-color: #131b23;
 }
 
-.pagination-page-info {
+.pagination-container {
   background-color: #131b23;
   color: #fff;
   text-align: center;
+}
+
+.pagination {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.pagination li:not(.disabled):first-of-type *, 
+.pagination li:not(.disabled):last-of-type * {
+  color: #fff;
+}
+
+.pagination li * {
+  color: #444;
 }
 
 .pagination li.active {
