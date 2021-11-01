@@ -2,20 +2,24 @@
 {% block content %}
 
 <div class="full_recipes-hero">
-  <div class="col s12 m12 l9 card" id="full-recipes-card">
-    <div class="card-image waves-effect waves-block waves-light">
-      {% if recipe.image|length %}
-        <img class="activator" src="{{ recipe.image }}">
-      {% else %}
-        <img class="activator" src="../static/images/two-forks.jpg">
-      {% endif %}
-    </div>
-    <div class="card-content">
-      <span class="card-title activator text-darken-4">{{ recipe.name }}</span>
-      <div class="row">
-        <div class="col s12 m6">
+  <div class="col s12 m12 l6 card full-recipes-card">
+    <div class="row">
+      <div class="column image-column">
+          <div class="card-image waves-effect waves-block waves-light">
+            {% if recipe.image|length %}
+              <img class="activator" src="{{ recipe.image }}">
+            {% else %}
+              <img class="activator" src="../static/images/two-forks.jpg">
+            {% endif %}
+          </div>
+          <div class="card-content">
+            <span class="card-title activator text-darken-4">{{ recipe.name }}</span>
+          </div>
+      </div>
+      <div class="column ingredients-column">
+        <div class="col s12 m6 l6">
           <ul>
-            <h3>Ingredients</h3>
+            <h3 class="recipe-ingredients">Ingredients</h3>
             {% for line in recipe.ingredients %}
               <li class="ingredients-list">
                 {{line}}
@@ -23,16 +27,16 @@
             {% endfor %}
           </ul>
         </div>
-        <div>
-          <ol>
-            <h3>Steps</h3>
-            {% for line in recipe.method %}
-              <li class="ingredients-method">
-                {{line}}
-              </li>
-            {% endfor %}
-          </ol>
-        </div>
+      </div>
+      <div>
+        <ol>
+          <h3 class="recipe-steps">Steps</h3>
+          {% for line in recipe.method %}
+            <li class="recipe-method">
+              {{line}}
+            </li>
+          {% endfor %}
+        </ol>
       </div>
     </div>
   </div>
