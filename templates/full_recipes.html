@@ -2,42 +2,42 @@
 {% block content %}
 
 <div class="full_recipes-hero">
-  <div class="col s12 m12 l6 card full-recipes-card">
-    <div class="row">
-      <div class="column image-column">
-          <div class="card-image waves-effect waves-block waves-light">
-            {% if recipe.image|length %}
-              <img class="activator" src="{{ recipe.image }}">
-            {% else %}
-              <img class="activator" src="../static/images/two-forks.jpg">
-            {% endif %}
-          </div>
-          <div class="card-content">
+  <div class="card row full-recipes-card flex-container">
+    <div class="col l8">
+      <div class="row">
+        <div class="col card-image waves-effect full-recipe-image waves-block waves-light">
+          {% if recipe.image|length %}
+          <img class="activator" src="{{ recipe.image }}">
+          {% else %}
+          <img class="activator" src="../static/images/two-forks.jpg">
+          {% endif %}
+        </div>
+        <div class="row">
+          <div class="col l6 card-content">
             <span class="card-title activator text-darken-4">{{ recipe.name }}</span>
           </div>
-      </div>
-      <div class="column ingredients-column">
-        <div class="col s12 m6 l6">
-          <ul>
-            <h3 class="recipe-ingredients">Ingredients</h3>
-            {% for line in recipe.ingredients %}
+          <div class="col l6">
+            <ul>
+              <h3 class="recipe-ingredients">Ingredients</h3>
+              {% for line in recipe.ingredients %}
               <li class="ingredients-list">
                 {{line}}
               </li>
-            {% endfor %}
-          </ul>
+              {% endfor %}
+            </ul>
+          </div>
         </div>
       </div>
-      <div>
-        <ol>
-          <h3 class="recipe-steps">Steps</h3>
-          {% for line in recipe.method %}
-            <li class="recipe-method">
-              {{line}}
-            </li>
-          {% endfor %}
-        </ol>
-      </div>
+    </div>
+    <div class="col l4">
+      <ol>
+        <h3 class="recipe-steps">Steps</h3>
+        {% for line in recipe.method %}
+        <li class="recipe-method">
+          {{line}}
+        </li>
+        {% endfor %}
+      </ol>
     </div>
   </div>
 </div>
