@@ -275,6 +275,7 @@ ol > h3 {
   border-radius: 10px;
   border: #f05d23 2px solid;
   font-variant: small-caps;
+  z-index: 2;
 }
 
 /* hover */
