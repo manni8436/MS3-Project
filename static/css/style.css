@@ -209,6 +209,25 @@ nav a {
 
 /* full recipe page */
 
+#full-recipe-image {
+  height: 400px;
+  width: 100%;
+}
+
+#full-recipe-image > img {
+  height: 400px;
+  width: auto;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+#full-recipe-title {
+  margin-right: 100px;
+  text-align: right;
+  font-size: 4rem;
+  line-height: 4rem;
+}
+
 ul > li.ingredients-list {
   list-style: disc;
   margin-left: 20px;
