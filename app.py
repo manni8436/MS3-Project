@@ -277,6 +277,7 @@ def save_to_favourites(recipe_id):
         mongo.db.users.update_one(
             {"_id": ObjectId(user)},
             {"$push": {"favourites": ObjectId(recipe_id)}})
+        flash("recipe added to favourites")
     else:
         flash("Sorry, you are unable to do this, please log in")
         return redirect(url_for("login"))
@@ -294,6 +295,7 @@ def delete_from_favourites(recipe_id):
         mongo.db.users.update_one(
             {"_id": ObjectId(user)},
             {"$pull": {"favourites": ObjectId(recipe_id)}})
+        flash("recipe removed from favourites")
     else:
         return redirect(url_for("login"))
     return redirect(url_for("recipes"))
