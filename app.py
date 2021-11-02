@@ -18,7 +18,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-def get_recipes(recipes, offset=0, per_page=6):
+def get_recipes(recipes, offset=0, per_page=12):
     """
     Give pagination information about recipes
     """
@@ -120,7 +120,7 @@ def logout():
     return redirect(url_for("login"))
 
 
-def get_search_recipes(offset=0, per_page=6):
+def get_search_recipes(offset=0, per_page=12):
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     return recipes[offset: offset + per_page]
@@ -139,8 +139,8 @@ def search():
                                            per_page_parameter='per_page')
     # pylint: enable=unbalanced-tuple-unpacking
     total = len(recipes)
-    pagination_recipes = get_search_recipes(offset=offset, per_page=per_page)
-    pagination = Pagination(page=page, per_page=per_page, total=total)
+    pagination_recipes = get_search_recipes(offset=offset, per_page=12)
+    pagination = Pagination(page=page, per_page=12, total=total)
     categories = mongo.db.categories.find()
     flash("Here is a list of recipes you searched for")
     return render_template(
@@ -160,8 +160,8 @@ def recipes():
                                            per_page_parameter='per_page')
     # pylint: enable=unbalanced-tuple-unpacking
     total = len(recipes)
-    pagination_recipes = get_recipes(recipes, offset=offset, per_page=per_page)
-    pagination = Pagination(page=page, per_page=per_page, total=total)
+    pagination_recipes = get_recipes(recipes, offset=offset, per_page=12)
+    pagination = Pagination(page=page, per_page=12, total=total)
     categories = mongo.db.categories.find()
     if "user" in session:
         user = mongo.db.users.find_one({"username": session["user"]})
