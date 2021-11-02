@@ -208,6 +208,9 @@ nav a {
 }
 
 /* full recipe page */
+#full-recipe-title-ingredients {
+  margin-left: 20px;
+}
 
 #full-recipe-image {
   height: 400px;
@@ -400,6 +403,7 @@ nav {
 
 .flex-container {
   display: flex;
+  flex-direction: column;
 }
 
 .align-center {
@@ -454,9 +458,18 @@ nav {
 
 /* media queries */
 
-@media (min-width: 992px) {
+@media (min-width: 993px) {
   .card-image {
     height: 135px;
+  }
+
+  .flex-container {
+    flex-direction: row;
+  }
+
+  #full-recipe-title-ingredients {
+    margin-left: -.75rem;
+    margin-right: -.75rem;
   }
 }
 
