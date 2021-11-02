@@ -5,16 +5,16 @@
   <div class="card row full-recipes-card flex-container">
     <div class="col l8">
       <div class="row">
-        <div class="col card-image waves-effect waves-block waves-light" id="full-recipe-image">
+        <div class="col card-image" id="full-recipe-image">
           {% if recipe.image|length %}
-          <img class="activator" src="{{ recipe.image }}">
+          <img src="{{ recipe.image }}">
           {% else %}
-          <img class="activator" src="../static/images/two-forks.jpg">
+          <img src="../static/images/two-forks.jpg">
           {% endif %}
         </div>
         <div class="row" id="full-recipe-title-ingredients">
           <div class="col l6 card-content">
-            <h2 class="card-title activator text-darken-4" id="full-recipe-title">{{ recipe.name }}</h2>
+            <h2 class="card-title text-darken-4" id="full-recipe-title">{{ recipe.name }}</h2>
           </div>
           <div class="col l6">
             <ul>
