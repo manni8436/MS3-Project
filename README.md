@@ -1,4 +1,4 @@
-# MS3 Project - For The Love Of Food
+# FOR THE LOVE OF FOOD
 
 ![GitHub contributors](https://img.shields.io/github/contributors/manni8436/MS3-Project)
 ![GitHub last commit](https://img.shields.io/github/last-commit/manni8436/MS3-Project)
@@ -28,38 +28,40 @@ This ranges from children who want to learn how to cook, to anyone who wants to 
 
 ## CONTENTS
 
-* [User Experience](#USER-EXPERIENCE)  
-  * [User Stories](#USER-STORIES)
+* [User Experience](#user-experience)  
+  * [User Stories](#user-stories)
 
-* [Design](#DESIGN)
-  * [Color Scheme](#COLOR-SCHEME)
+* [Design](#design)
+  * [Color Scheme](#color-scheme)
 
-* [Wireframes](#WIREFRAMES)
+* [Wireframes](#wireframes)
 
-* [Features](#FEATURES)
-  * [Future Implementations](#FUTURE-IMPLEMENTATIONS)
+* [Features](#features)
+  * [Future Implementations](#future-implementations)
   
-* [Solved Bugs](#SOLVED-BUGS)
+* [Solved Bugs](#solved-bugs)
 
-* [Technologies Used](#TECHNOLOGIES-USED)
-  * [Languages](#LANGUAGES)
-  * [Design](#DESIGN)
-  * [Database](#DATABASE)
+* [Technologies Used](#technologies-used)
+  * [Languages](#languages)
+  * [Design](#design)
+  * [Database](#database)
 
-* [Deployment](#DEPLOYMENT)
-  * [Initial Deployment](#INITIAL-DEPLOYMENT)
-  * [How To Fork A Repository](#HOW-TO-FORK-A-REPOSITORY)
-  * [How To Clone A Repository](#HOW-TO-CLONE-A-REPOSITORY)
-  * [How To Make A Local Clone](#HOW-TO-MAKE-A-LOCAL-CLONE)
+* [Deployment](#deployment)
+  * [Initial Deployment](#initial-deployment)
+  * [How To Fork A Repository](#how-to-fork-a-repository)
+  * [How To Clone A Repository](#how-to-clone-a-repository)
+  * [How To Make A Local Clone](#how-to-make-a-local-clone)
 
-* [Testing](#TESTING)
-  * [Code Validators](#CODE-VALIDATORS)
+* [Testing](#testing)
+  * [Code Validators](#code-validators)
 
-* [Content](#CONTENT)
-  * [Images](#IMAGES)
-  * [Text Content](#TEXT-CONTENT)
+* [Content](#content)
+  * [Images](#images)
+  * [Text Content](#text-content)
 
-* [Acknowledgements](#ACKNOWLEDGEMENTS)
+* [Acknowledgements](#acknowledgements)
+
+[Back To Top](#for-the-love-of-food)
 
 ## USER EXPERIENCE
 
@@ -73,24 +75,30 @@ the user needing more knowledge.
   * Users with advanced experience in cooking, who are feeling adventurous and looking for some new recipes.
   * Users who are highly skilled and are looking to add their own twist on recipes that already exist.
 
+[Back To Top](#for-the-love-of-food)
+
 ### USER STORIES
 
 #### CLIENT GOALS
 
 * The site needs to be easily accessible.
 * The navigation menu needs to be simple to use on a range of devices, including desktop, tablet and mobile.
-* Manoeuvring around the site should be simple and straightforward.
+* Manoeuvering around the site should be simple and straightforward.
 * To be able to create an user account.
 * It should be easy to Create, Read, Update and Delete recipes.
 * The site should be informative and all the text should be easy to read.
 * The images should be clear and not stretched or squashed.
 * It should be easy to register, login and logout.
 
+[Back To Top](#for-the-love-of-food)
+
 #### FIRST TIME VISITORS
 
 * I want the site to be easy to understand how to navigate throughout the site.
-* I want the content to be easily read and understanble.
+* I want the content to be easily read and understandable.
 * I want images to be clearly visible.
+
+[Back To Top](#for-the-love-of-food)
 
 #### RETURNING USER
 
@@ -100,20 +108,26 @@ the user needing more knowledge.
 * To save recipes to favourites section.
 * To delete recipes to favourites section.
 
+[Back To Top](#for-the-love-of-food)
+
 ## DESIGN
 
 ### COLOR SCHEME
 
-My overall colour scheme used throughout the site was a variety of colours in the image below.
+My overall colour scheme used throughout the site was the variety of colours in the image below.
 
 ![site colours](static/docs/readme_images/site-colour.png)
 
 I chose these colours for my theme to add hints of brightness throughout the site as a wow factor while the user is visiting the site,
 while using the colour white for the content throughout the site.
 
+[Back To Top](#for-the-love-of-food)
+
 ## WIREFRAMES
 
 [Here are my wireframes for desktop, mobile and tablet for this project](static/docs/wireframes/MS3Project-Wireframes.pdf)
+
+[Back To Top](#for-the-love-of-food)
 
 ## FEATURES
 
@@ -125,12 +139,16 @@ I have used the following features in this project:
 * Add to favourites
 * Pagination
 
+[Back To Top](#for-the-love-of-food)
+
 ### FUTURE IMPLEMENTATIONS
 
 This are a few ideas ive had and would like to implement in the future.
 
 * Admin user
 * Exclusive search
+
+[Back To Top](#for-the-love-of-food)
 
 ## SOLVED BUGS
 
@@ -174,11 +192,15 @@ I decided to contact tutor support, after a lengthy discussion with Kevin from t
 * Delete `recipe_id=recipe._id` and change `favourites=favourites_id` to `favourite_id=recipe._id`.
 * From the following code `mongo.db.favourites.remove({"_id": ObjectId(favourite_id)})`, I changed `_id` to `recipe_name`.
 
+[Back To Top](#for-the-love-of-food)
+
 ## TECHNOLOGIES USED
 
 ### LANGUAGES
 
 <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-plain-wordmark.svg" alt="HTML logo" width="50px" height="50px" /> <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain-wordmark.svg" alt="CSS logo" width="50px" height="50px" /> <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" alt="JavaScript logo" width="50px" height="50px" /> <img src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg" alt="Python logo" width="50px" height="50px" />
+
+[Back To Top](#for-the-love-of-food)
 
 ### PROGRAMS USED
 
@@ -196,7 +218,7 @@ I decided to contact tutor support, after a lengthy discussion with Kevin from t
 
 #### Am i Responsive
 
-[Am i Responsive](http://ami.responsivedesign.is/) was used to create the image in my [Final Design](#FINAL-DESIGN) section.
+[Am i Responsive](http://ami.responsivedesign.is/) was used to create the image in my [Final Design](#final-design) section.
 
 #### Firefox Developer Tools
 
@@ -215,6 +237,8 @@ I decided to contact tutor support, after a lengthy discussion with Kevin from t
 #### Balsamiq
 
 [Balsamiq](https://balsamiq.com/) was used in the initial design process to make wireframes.
+
+[Back To Top](#for-the-love-of-food)
 
 ### DATABASE
 
@@ -256,9 +280,13 @@ I decided to contact tutor support, after a lengthy discussion with Kevin from t
 
 [Jinja](https://jinja.palletsprojects.com/en/3.0.x/) was used to populate the site using the content from the site database.
 
+[Back To Top](#for-the-love-of-food)
+
 ## DEPLOYMENT
 
 [Heroku](https://www.heroku.com/) was used to deploy the live site.
+
+[Back To Top](#for-the-love-of-food)
 
 ### INITIAL DEPLOYMENT
 
@@ -283,6 +311,8 @@ This project was developed using [GitPod](https://gitpod.io) and pushed to [GitH
 | MONGO_DBNAME | USER_MONGODB_NAME |
 | Secret_Key | USER_SECRET_KEY |
 
+[Back To Top](#for-the-love-of-food)
+
 ### HOW TO FORK A REPOSITORY
 
 If you need to make a copy of a repository:
@@ -290,6 +320,8 @@ If you need to make a copy of a repository:
 1. Login or Sign Up to [GitHub](www.github.com).
 2. On GitHub, go to [manni8436/MS3-Project](manni8436/MS3-Project).
 3. In the top right corner, click "Fork".
+
+[Back To Top](#for-the-love-of-food)
 
 ### HOW TO CLONE A REPOSITORY
 
@@ -304,6 +336,8 @@ If you need to make a clone:
 7. Type git clone and then paste the URL you copied in step 4.
 8. Press Enter to create your clone.
 
+[Back To Top](#for-the-love-of-food)
+
 ### HOW TO MAKE A LOCAL CLONE
 
 If you need to make a local clone:
@@ -317,6 +351,8 @@ If you need to make a local clone:
 7. Type git clone and then paste the URL you copied in step 4.
 8. Press Enter, and your local clone will be created.
 
+[Back To Top](#for-the-love-of-food)
+
 ## TESTING
 
 ### CODE VALIDATORS
@@ -324,7 +360,15 @@ If you need to make a local clone:
 The W3C Markup Validator and W3C CSS Validator was used to validate my project to make sure there were no errors within the site.
 
 * W3C HTML Validator Results
-  * [HMTL]()
+  * [Home Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffor-the-love-of-food.herokuapp.com%2F)
+  * [Recipes Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffor-the-love-of-food.herokuapp.com%2Frecipes)
+  * [Login Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffor-the-love-of-food.herokuapp.com%2Flogin)
+  * [Register Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffor-the-love-of-food.herokuapp.com%2Flogin)
+  * [Profile Page](https://validator.w3.org/nu/?doc=http%3A%2F%2Ffor-the-love-of-food.herokuapp.com%2Fprofile%2Fmanni84)
+  * [Add Recipes Page](https://validator.w3.org/nu/?doc=http%3A%2F%2Ffor-the-love-of-food.herokuapp.com%2Fadd_recipes)
+  * [Edit Recipes Page](https://validator.w3.org/nu/?doc=http%3A%2F%2Ffor-the-love-of-food.herokuapp.com%2Fedit_recipes%2F61841f92405dd976f8434400)
+  * [Favourites Page](https://validator.w3.org/nu/?doc=http%3A%2F%2Ffor-the-love-of-food.herokuapp.com%2Ffavourites)
+  * [Full Recipes Page](https://validator.w3.org/nu/?doc=http%3A%2F%2Ffor-the-love-of-food.herokuapp.com%2Ffull_recipes%2F6153663ef346ce776f3a5f86)
 
 * W3C CSS Validator Results
   * [CSS]()
@@ -337,6 +381,8 @@ The W3C Markup Validator and W3C CSS Validator was used to validate my project t
 
 * Lighthouse:
   * [Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to ensure that the site was perfoming well, confirming to best practises, SEO and Accessibility guidelines.
+
+[Back To Top](#for-the-love-of-food)
 
 ### FULL TESTING
 
@@ -356,13 +402,19 @@ The W3C Markup Validator and W3C CSS Validator was used to validate my project t
 
 ## CONTENT
 
+[Back To Top](#for-the-love-of-food)
+
 ### IMAGES
 
 * Images mainly provided by Wikipedia and Pinterest, but a full list have been provided below:
 
+[Back To Top](#for-the-love-of-food)
+
 ### TEXT CONTENT
 
 * Text content on all Pages was copied and/or amended from the following sites:  
+
+[Back To Top](#for-the-love-of-food)
 
 ## ACKNOWLEDGEMENTS
 
