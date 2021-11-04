@@ -21,7 +21,7 @@
             <ul>
               {% for line in recipe.ingredients %}
               <li class="ingredients-list">
-                {{line}}
+                {{ line[0]|upper}}{{line[1:] }}
               </li>
               {% endfor %}
             </ul>
@@ -34,7 +34,7 @@
       <ol>
         {% for line in recipe.method %}
         <li class="recipe-method">
-          {{line}}
+          {{ line[0]|upper}}{{line[1:] }}
         </li>
         {% endfor %}
       </ol>
