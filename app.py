@@ -273,7 +273,8 @@ def favourites():
         user = mongo.db.users.find_one({"username": session["user"]})
     else:
         user = False
-    return render_template("favourites.html", recipes=recipes, categories=categories, user=user)
+    return render_template(
+        "favourites.html", recipes=recipes, categories=categories, user=user)
 
 
 @app.route("/recipe/add_to_favourites/<recipe_id>")
@@ -331,4 +332,4 @@ if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
             debug=True)
-                     
+                   
