@@ -183,6 +183,22 @@ nav a {
   border: #f05d23 2px solid;
 }
 
+.add-profile-message,
+.add-favourites-message {
+  background-color: #f05d23;
+  color: #131b23;
+  width: 650px;
+  border: #131b23 3px solid;
+  border-radius: 20px;
+  font-variant: small-caps;
+  margin-top: 20px;
+}
+
+.add-profile-message a,
+.add-favourites-message a {
+  color: #f1d302;
+}
+
 /* modal */
 
 .modal {
