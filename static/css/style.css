@@ -186,6 +186,9 @@ nav a {
 
 .add-profile-message,
 .add-favourites-message {
+  position: fixed;
+  top: 350px;
+  left: 500px;
   background-color: #f05d23;
   color: #131b23;
   width: 740px;
@@ -336,6 +339,7 @@ main {
 input, select, textarea,
 .input-field > label {
   color: #fff;
+  font-size: 20px;
 }
 
 .row .col.l3,
