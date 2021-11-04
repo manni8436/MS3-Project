@@ -225,21 +225,32 @@ def edit_recipes(recipe_id):
     edits user recipes into DB.
     """
     if "user" in session:
-        if request.method == "POST":
-            change_recipes = {
-                "ingredients": request.form.get("ingredients").splitlines(),
-                "method": request.form.get("method").splitlines(),
-                "prep_time": request.form.get("prep_time"),
-                "name": request.form.get("name"),
-                "image": request.form.get("image"),
-                "image_alt": request.form.get("image_alt"),
-                "cook_time": request.form.get("cook_time"),
-                "created_by": session["user"]
-            }
-            mongo.db.recipes.update(
-                {"_id": ObjectId(recipe_id)}, change_recipes)
-            flash("Recipe Successfully update")
+        user = session["user"]
         recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+        if recipe["created_by"]:
+            if recipe["created_by"] == user:
+                if request.method == "POST":
+                    change_recipes = {
+                        "ingredients": request.form.get(
+                            "ingredients").splitlines(),
+                        "method": request.form.get("method").splitlines(),
+                        "prep_time": request.form.get("prep_time"),
+                        "name": request.form.get("name"),
+                        "image": request.form.get("image"),
+                        "image_alt": request.form.get("image_alt"),
+                        "cook_time": request.form.get("cook_time"),
+                        "created_by": session["user"]
+                    }
+                    mongo.db.recipes.update(
+                        {"_id": ObjectId(recipe_id)}, change_recipes)
+                    flash("Recipe Successfully update")
+            else:
+                flash(
+                    "Sorry, you are not authorised to do this")
+                return redirect(url_for("recipes"))
+        else:
+            flash("Sorry, you are not authorised to do this")
+            return redirect(url_for("recipes"))
     else:
         flash("Sorry, you are unable to do this, please log in")
         return redirect(url_for("login"))
@@ -252,13 +263,24 @@ def delete_recipes(recipe_id):
     deletes recipes from database
     """
     if "user" in session:
-        mongo.db.users.update_many(
-            {}, {"$pull": {"favourites": ObjectId(recipe_id)}})
-        mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
-        flash("Recipe Successfully Deleted")
+        user = session["user"]
+        recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+        if recipe["created_by"]:
+            if recipe["created_by"] == user:
+                mongo.db.users.update_many(
+                    {}, {"$pull": {"favourites": ObjectId(recipe_id)}})
+                mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
+                flash("Recipe Successfully Deleted")
+            else:
+                flash(
+                    "Sorry, you are not authorised to do this")
+                return redirect(url_for("recipes"))
+        else:
+            flash("Sorry, you are not authorised to do this")
+            return redirect(url_for("recipes"))
     else:
         flash("Sorry, you are unable to do this, please log in")
-        return redirect(url_for("Login"))
+        return redirect(url_for("login"))
     return redirect(url_for("recipes"))
 
 
