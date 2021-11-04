@@ -7,7 +7,7 @@
       <div class="row">
         <div class="col card-image" id="full-recipe-image">
           {% if recipe.image|length %}
-          <img src="{{ recipe.image }}">
+          <img src="{{ recipe.image }}" alt="{{ recipe.image_alt }}">
           {% else %}
           <img src="../static/images/two-forks.jpg">
           {% endif %}

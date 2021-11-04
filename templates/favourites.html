@@ -10,7 +10,7 @@
             <div class="col s12 m9 offset-m2 l3 card">
               <div class="card-image">
                 {% if recipe.image|length %}
-                  <img src="{{ recipe.image }}">
+                  <img src="{{ recipe.image }}" alt="{{ recipe.image_alt }}">
                 {% else %}
                   <img src="../static/images/two-forks.jpg">
                 {% endif %}
