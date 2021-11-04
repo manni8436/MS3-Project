@@ -23,6 +23,18 @@ nav a {
   text-transform: uppercase;
 }
 
+.home-welcome-title {
+  font-size: 50px;
+}
+
+.home-welcome-header {
+  font-size: 40px;
+}
+
+.home-welcome-header-three {
+  font-size: 30px;
+}
+
 .welcome-hero {
   background-color: #131b23;
   background: url("../images/pancakes.jpg") no-repeat center center;
