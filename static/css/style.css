@@ -8,6 +8,7 @@
 nav .brand-logo,
 nav a {
   text-transform: uppercase;
+  margin-left: 30px;
 }
 
 .sidenav,
