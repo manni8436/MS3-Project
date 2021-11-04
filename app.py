@@ -138,9 +138,7 @@ def search():
     # page, per_page, offset = get_page_args(page_parameter='page',
     #                                        per_page_parameter='per_page')
     page = int(request.args.get('page', 1))
-
     per_page = 12
-
     offset = (page - 1) * per_page
     # pylint: enable=unbalanced-tuple-unpacking
     total = len(recipes)
