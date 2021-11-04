@@ -8,7 +8,6 @@
 nav .brand-logo,
 nav a {
   text-transform: uppercase;
-  margin-left: 30px;
 }
 
 .sidenav,
@@ -303,10 +302,27 @@ ol > h3 {
 .modal-cancel-button:hover,
 .modal-delete-button:hover,
 .add-recipes-button:hover,
-.edit-recipes-button:hover {
+.edit-recipes-button:hover,
+.homepage-welcome-button:focus,
+.edit-button:focus,
+.delete-button:focus,
+.modal-cancel-button:focus,
+.modal-delete-button:focus,
+.add-recipes-button:focus,
+.edit-recipes-button:focus {
   background-color: #f1d302;
   color: #131b23;
   font-weight: bold;
+}
+
+.nav-wrapper li a:hover,
+.nav-wrapper li a:focus {
+  background-color: #f05d23;
+}
+
+.card-content a:hover,
+.card-content a:focus {
+  color: #f05d23;
 }
 
  /* footer */
@@ -321,7 +337,7 @@ main {
   flex: 1 0 auto;
 }
 
-.page-footer{
+.page-footer {
   background-color: #131b23;
   border-top: #f05d23 2px solid;
   text-transform: uppercase;
@@ -330,7 +346,9 @@ main {
 
 /* general styling */
 
-input, select, textarea,
+input, 
+select, 
+textarea,
 .input-field > label {
   color: #fff;
   font-size: 20px;
@@ -497,6 +515,11 @@ nav {
 
   nav .brand-logo {
     font-size: 1.7rem;
+  }
+
+  nav .brand-logo,
+  nav a {
+    margin-left: 30px;
   }
 }
 
