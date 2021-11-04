@@ -187,7 +187,7 @@ nav a {
 .add-favourites-message {
   background-color: #f05d23;
   color: #131b23;
-  width: 650px;
+  width: 740px;
   border: #131b23 3px solid;
   border-radius: 20px;
   font-variant: small-caps;
@@ -196,7 +196,7 @@ nav a {
 
 .add-profile-message a,
 .add-favourites-message a {
-  color: #f1d302;
+  color: #fff;
 }
 
 /* modal */
