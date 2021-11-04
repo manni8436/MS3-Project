@@ -371,16 +371,16 @@ The W3C Markup Validator and W3C CSS Validator was used to validate my project t
   * [Full Recipes Page](https://validator.w3.org/nu/?doc=http%3A%2F%2Ffor-the-love-of-food.herokuapp.com%2Ffull_recipes%2F6153663ef346ce776f3a5f86)
 
 * W3C CSS Validator Results
-  * [CSS]()
+  * [CSS](https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Ffor-the-love-of-food.herokuapp.com%2Fhome&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
 * JSHint
-  * ![JavaScript]()
+  * ![JavaScript](static/docs/readme_images/JS-Code_validator.png)
 
 * PEP8 Online
-  * ![PEP8]()
+  * ![PEP8](static/docs/readme_images/pep8-code-validator.png)
 
 * Lighthouse:
-  * [Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to ensure that the site was perfoming well, confirming to best practises, SEO and Accessibility guidelines.
+  * [Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to ensure that the site was performing well, confirming to best practices, SEO and Accessibility guidelines.
 
 [Back To Top](#for-the-love-of-food)
 
