@@ -535,3 +535,23 @@ nav {
     font-size: 1.7rem;
   }
 }
+
+@media (max-width: 400px) {
+  #full-recipe-title {
+    margin-right: 0;
+    text-align: left;
+    font-size: 3.5rem;
+  }
+
+  #full-recipe-title-ingredients {
+    margin-left: 0;
+  }
+
+  #full-recipe-title-ingredients > .card-content {
+    padding: 0 !important; 
+  }
+
+  .recipe-method {
+    text-align: left;
+  }
+}
