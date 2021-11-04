@@ -3,35 +3,43 @@
 
 <div class="profile-hero">
   <div class="container row profile-row">
-  {% for recipe in my_recipes %}
-    <div class="col s12 m9 offset-m2 l3 card">
-      <div class="card-image">
-        {% if recipe.image|length %}
-          <img src="{{ recipe.image }}">
-        {% else %}
-          <img src="../static/images/two-forks.jpg">
-        {% endif %}
+    {% if my_recipes %}  
+      {% for recipe in my_recipes %}
+        <div class="col s12 m9 offset-m2 l3 card">
+          <div class="card-image">
+            {% if recipe.image|length %}
+              <img src="{{ recipe.image }}">
+            {% else %}
+              <img src="../static/images/two-forks.jpg">
+            {% endif %}
+          </div>
+          <div class="card-content">
+            <p class="card-title text-darken-4">{{ recipe.name }}</p>
+            <p><a href="{{ url_for('full_recipes', recipe_id=recipe._id) }}">For the full recipe click here</a></p>
+          </div>
+            <a href="{{ url_for('edit_recipes', recipe_id=recipe._id) }}" class="btn edit-button">Edit Recipe</a>
+            <a class="btn modal-trigger delete-button" href="#modal1{{ recipe._id }}">Delete Recipe</a>
+        </div>
+        <!-- Modal Structure -->
+        <div id="modal1{{ recipe._id }}" class="modal">
+          <div class="modal-content">
+            <h4>Are you sure you want to delete the {{ recipe.name }} recipe?</h4>
+            <h5 class="cant-be-undone-header">This action can not be undone!!</h5>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn-small modal-close modal-cancel-button" onclick="document.getElementById('modal1{{ recipe._id }}').style.display='none'">Cancel</button>
+            <a href="{{ url_for('delete_recipes', recipe_id=recipe._id) }}" class="btn-small modal-close waves-effect waves-green btn-flat modal-delete-button">Confirm Delete</a>
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <div class="row center-align">
+        <div class="col s12 m12">
+          <h5>you dont have any recipes, click <a href="{{ url_for('add_recipes') }}">here</a> to add some</h5>
+        </div>  
       </div>
-      <div class="card-content">
-        <p class="card-title text-darken-4">{{ recipe.name }}</p>
-        <p><a href="{{ url_for('full_recipes', recipe_id=recipe._id) }}">For the full recipe click here</a></p>
-      </div>
-        <a href="{{ url_for('edit_recipes', recipe_id=recipe._id) }}" class="btn edit-button">Edit Recipe</a>
-        <a class="btn modal-trigger delete-button" href="#modal1{{ recipe._id }}">Delete Recipe</a>
-    </div>
-    <!-- Modal Structure -->
-    <div id="modal1{{ recipe._id }}" class="modal">
-      <div class="modal-content">
-        <h4>Are you sure you want to delete the {{ recipe.name }} recipe?</h4>
-        <h5 class="cant-be-undone-header">This action can not be undone!!</h5>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn-small modal-close modal-cancel-button" onclick="document.getElementById('modal1{{ recipe._id }}').style.display='none'">Cancel</button>
-        <a href="{{ url_for('delete_recipes', recipe_id=recipe._id) }}" class="btn-small modal-close waves-effect waves-green btn-flat modal-delete-button">Confirm Delete</a>
-      </div>
-    </div>
-  {% endfor %}
-</div>
+    {% endif %}
+  </div>
 </div>
 
 {% endblock %}
