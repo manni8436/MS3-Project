@@ -192,6 +192,11 @@ nav a {
   color: #fff;
 }
 
+.no-favourites-header,
+.no-recipes-header {
+  margin: 15px 0 20px 0;
+}
+
 /* modal */
 
 .modal {
