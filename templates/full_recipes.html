@@ -17,8 +17,8 @@
             <h2 class="card-title text-darken-4" id="full-recipe-title">{{ recipe.name }}</h2>
           </div>
           <div class="col l6">
+            <h2 class="recipe-ingredients">Ingredients</h2>
             <ul>
-              <h3 class="recipe-ingredients">Ingredients</h3>
               {% for line in recipe.ingredients %}
               <li class="ingredients-list">
                 {{line}}
@@ -30,8 +30,8 @@
       </div>
     </div>
     <div class="col l4">
+      <h3 class="recipe-steps">Steps</h3>
       <ol>
-        <h3 class="recipe-steps">Steps</h3>
         {% for line in recipe.method %}
         <li class="recipe-method">
           {{line}}
