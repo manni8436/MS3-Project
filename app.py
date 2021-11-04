@@ -135,8 +135,13 @@ def search():
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     # Pagination
     # pylint: disable=unbalanced-tuple-unpacking
-    page, per_page, offset = get_page_args(page_parameter='page',
-                                           per_page_parameter='per_page')
+    # page, per_page, offset = get_page_args(page_parameter='page',
+    #                                        per_page_parameter='per_page')
+    page = int(request.args.get('page', 1))
+
+    per_page = 12
+
+    offset = (page - 1) * per_page
     # pylint: enable=unbalanced-tuple-unpacking
     total = len(recipes)
     pagination_recipes = get_search_recipes(offset=offset, per_page=12)
@@ -156,8 +161,13 @@ def recipes():
     recipes = list(mongo.db.recipes.find())
     # Pagination
     # pylint: disable=unbalanced-tuple-unpacking
-    page, per_page, offset = get_page_args(page_parameter='page',
-                                           per_page_parameter='per_page')
+    # page, per_page, offset = get_page_args(page_parameter='page',
+    #                                        per_page_parameter='per_page')
+    page = int(request.args.get('page', 1))
+
+    per_page = 12
+
+    offset = (page - 1) * per_page
     # pylint: enable=unbalanced-tuple-unpacking
     total = len(recipes)
     pagination_recipes = get_recipes(recipes, offset=offset, per_page=12)
@@ -244,6 +254,8 @@ def delete_recipes(recipe_id):
     deletes recipes from database
     """
     if "user" in session:
+        mongo.db.users.update_many(
+            {}, {"$pull": {"favourites": ObjectId(recipe_id)}})
         mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
         flash("Recipe Successfully Deleted")
     else:
