@@ -566,4 +566,8 @@ nav {
   .recipe-method {
     text-align: left;
   }
+
+  .flashes {
+    width: 90%;
+  }
 }
