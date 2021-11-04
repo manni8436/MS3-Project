@@ -224,6 +224,8 @@ I decided to contact tutor support, after a lengthy discussion with Kevin from t
 
 [Firefox Developer](https://www.mozilla.org/en-GB/firefox/developer/) Tools was used for trouble shooting and trying new visual changes without it affecting the current code.
 
+[Favicon](https://favicon.io/) was used to create a favicon image that was added to the website.
+
 ### DESIGN:-
 
 #### Font Awesome
