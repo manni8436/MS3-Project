@@ -100,10 +100,12 @@ def profile(user):
     grabs user from DB and redirects them to profile page after login.
     """
     if "user" in session:
-        user = mongo.db.users.find_one(
-            {"username": session["user"]})["username"]
-        my_recipes = list(mongo.db.recipes.find(
-            {"created_by": session["user"]}))
+        if user == session["user"]:
+            my_recipes = list(mongo.db.recipes.find(
+                {"created_by": session["user"]}))
+        else:
+            flash("Sorry, you are not authorised to see this page")
+            return redirect(url_for("recipes"))
     else:
         flash("Sorry, you are unable to do this, please log in")
         return redirect(url_for("login"))
