@@ -118,8 +118,7 @@ My overall colour scheme used throughout the site was the variety of colours in 
 
 ![site colours](static/docs/readme_images/site-colour.png)
 
-I chose these colours for my theme to add hints of brightness throughout the site as a wow factor while the user is visiting the site,
-while using the colour white for the content throughout the site.
+I chose these colours for my theme to add hints of brightness throughout the site as a wow factor, while using the colour white for the content throughout the site.
 
 [Back To Top](#for-the-love-of-food)
 
@@ -143,7 +142,7 @@ I have used the following features in this project:
 
 ### FUTURE IMPLEMENTATIONS
 
-This are a few ideas ive had and would like to implement in the future.
+These are a few ideas i've had and would like to implement in the future.
 
 * Admin user
 * Exclusive search
@@ -156,7 +155,7 @@ This are a few ideas ive had and would like to implement in the future.
 
 ![got to favourites](static/docs/bug_images/go_to_favourites_page_bug.png)
 
-After looking closely at the bug and the error that was provided above, I worked that I had to add `favourite_id=favourite_id` to the href below.
+After looking closely at the bug and the error that was provided above, I worked out that I had to add `favourite_id=favourite_id` to the href below.
 
 `<a href="{{ url_for ('delete_from_favourites', recipe_id=recipe._id) }}">remove from favourites<i class="material-icons right">favorite</i></a>`
 
@@ -206,7 +205,7 @@ I decided to contact tutor support, after a lengthy discussion with Kevin from t
 
 #### Git
 
-[Git](https://git-scm.com/) was used for version control by using the Gitpod terminal to add and commit to GIt and push to Github.
+[Git](https://git-scm.com/) was used for version control by using the Gitpod terminal to add and commit to Git and push to Github.
 
 #### GitPod
 
@@ -222,7 +221,7 @@ I decided to contact tutor support, after a lengthy discussion with Kevin from t
 
 #### Firefox Developer Tools
 
-[Firefox Developer](https://www.mozilla.org/en-GB/firefox/developer/) Tools was used for trouble shooting and trying new visual changes without it affecting the current code.
+[Firefox Developer](https://www.mozilla.org/en-GB/firefox/developer/) Tools was used for troubleshooting and trying new visual changes without it affecting the current code.
 
 [Favicon](https://favicon.io/) was used to create a favicon image that was added to the website.
 
@@ -240,6 +239,8 @@ I decided to contact tutor support, after a lengthy discussion with Kevin from t
 
 [Balsamiq](https://balsamiq.com/) was used in the initial design process to make wireframes.
 
+[Materialize CSS](https://materializecss.com/) was used for icons in some parts of my site.
+
 [Back To Top](#for-the-love-of-food)
 
 ### DATABASE
@@ -256,11 +257,11 @@ I decided to contact tutor support, after a lengthy discussion with Kevin from t
 
 #### jQuery
 
-[jQuery](https://developer.mozilla.org/en-US/docs/Glossary/jQuery) was used to initialisation of Materliazie CSS.
+[jQuery](https://developer.mozilla.org/en-US/docs/Glossary/jQuery) was used to initialise Materialize CSS.
 
 #### Flask
 
-[Flask](https://palletsprojects.com/p/flask/) was used for application framework.
+[Flask](https://palletsprojects.com/p/flask/) was used as the application framework.
 
 #### Werkzeug
 
@@ -299,10 +300,10 @@ This project was developed using [GitPod](https://gitpod.io) and pushed to [GitH
 3. `git add .` and `git commit -m` the new requirements and Procfile files and then `git push` them to the GitHub repository.
 4. Login or Sign up to [Heroku](https://www.heroku.com/).
 5. Create a new app upon Login by clicking the "New" button in your dashboard. Choose a unique name and set the region to the one closest to you.
-6. From the heroku dashboard of your newly created application, click on "Deploy" > "Deployment method" and select GitHub.
+6. From the Heroku dashboard of your newly created application, click on "Deploy" > "Deployment method" and select GitHub.
 7. Search for your GitHub repository and connect.
-8. In the heroku dashboard for the application, click on "settings" > "Reveal Config Vars".
-9. Set the folowing config vars:
+8. In the Heroku dashboard for the application, click on "settings" > "Reveal Config Vars".
+9. Set the following config vars:
 
 | Key | Value |
 | ----------|--------- |
@@ -311,7 +312,7 @@ This project was developed using [GitPod](https://gitpod.io) and pushed to [GitH
 | DEBUG | False |
 | MONGO_URI | USER_MONGODB_URI |
 | MONGO_DBNAME | USER_MONGODB_NAME |
-| Secret_Key | USER_SECRET_KEY |
+| SECRET_KEY | USER_SECRET_KEY |
 
 [Back To Top](#for-the-love-of-food)
 
@@ -335,7 +336,7 @@ If you need to make a clone:
 4. Choose if you want to close using HTTPS, SSH or GitHub CLI, then click the copy button to the right.
 5. Open Git Bash.
 6. Change the directory to where you want your clone to go.
-7. Type git clone and then paste the URL you copied in step 4.
+7. Type `git clone` and then paste the URL you copied in step 4.
 8. Press Enter to create your clone.
 
 [Back To Top](#for-the-love-of-food)
@@ -349,8 +350,8 @@ If you need to make a local clone:
 3. Here you can either Clone or Download the repository.
 4. You should close the repository using HTTPS, clicking on the icon to copy the link.
 5. Open Git Bash.
-6. Change the current working directory to the new locaiton, where you want the cloned directory to be.
-7. Type git clone and then paste the URL you copied in step 4.
+6. Change the current working directory to the new location, where you want the cloned directory to be.
+7. Type `git clone` and then paste the URL you copied in step 4.
 8. Press Enter, and your local clone will be created.
 
 [Back To Top](#for-the-love-of-food)
