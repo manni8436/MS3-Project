@@ -386,16 +386,15 @@ The W3C Markup Validator and W3C CSS Validator was used to validate my project t
 
 The only error that came up on the CSS validator was related to Materialize CSS code, which I do not have control over
 
-  * [Home Page](https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Ffor-the-love-of-food.herokuapp.com%2Fhome&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
-  * [Recipes Page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ffor-the-love-of-food.herokuapp.com%2Frecipes&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
-  * [Login Page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ffor-the-love-of-food.herokuapp.com%2Flogin&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
-  * [Register Page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ffor-the-love-of-food.herokuapp.com%2Fregister&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
-  * [Profile Page](https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Ffor-the-love-of-food.herokuapp.com%2Fprofile%2Fmanni84&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
-  * [Add Recipes Page](https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Ffor-the-love-of-food.herokuapp.com%2Fadd_recipes&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
-  * [Edit Recipes Page](https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Ffor-the-love-of-food.herokuapp.com%2Fedit_recipes%2F61841f92405dd976f8434400&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
-  * [Favourites Page](https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Ffor-the-love-of-food.herokuapp.com%2Ffavourites&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
-  * [Full Recipes Page](https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Ffor-the-love-of-food.herokuapp.com%2Ffull_recipes%2F6153663ef346ce776f3a5f86&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
-
+* [Home Page](https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Ffor-the-love-of-food.herokuapp.com%2Fhome&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+* [Recipes Page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ffor-the-love-of-food.herokuapp.com%2Frecipes&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+* [Login Page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ffor-the-love-of-food.herokuapp.com%2Flogin&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+* [Register Page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ffor-the-love-of-food.herokuapp.com%2Fregister&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+* [Profile Page](https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Ffor-the-love-of-food.herokuapp.com%2Fprofile%2Fmanni84&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+* [Add Recipes Page](https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Ffor-the-love-of-food.herokuapp.com%2Fadd_recipes&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+* [Edit Recipes Page](https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Ffor-the-love-of-food.herokuapp.com%2Fedit_recipes%2F61841f92405dd976f8434400&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+* [Favourites Page](https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Ffor-the-love-of-food.herokuapp.com%2Ffavourites&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+* [Full Recipes Page](https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Ffor-the-love-of-food.herokuapp.com%2Ffull_recipes%2F6153663ef346ce776f3a5f86&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
 * JSHint
   * ![JavaScript](static/docs/readme_images/JS-Code_validator.png)
