@@ -143,7 +143,7 @@ I have used the following features in this project:
 
 ### FUTURE IMPLEMENTATIONS
 
-These are a few ideas i've had and would like to implement in the future.
+These are a few ideas I've had and would like to implement in the future.
 
 * Admin user
 * Exclusive search
@@ -383,6 +383,9 @@ The W3C Markup Validator and W3C CSS Validator was used to validate my project t
   * [Full Recipes Page](https://validator.w3.org/nu/?doc=http%3A%2F%2Ffor-the-love-of-food.herokuapp.com%2Ffull_recipes%2F6153663ef346ce776f3a5f86)
 
 * W3C CSS Validator Results
+
+The only error that came up on the CSS validator was related to Materialize CSS code, which I do not have control over
+
   * [Home Page](https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Ffor-the-love-of-food.herokuapp.com%2Fhome&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
   * [Recipes Page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ffor-the-love-of-food.herokuapp.com%2Frecipes&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
   * [Login Page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ffor-the-love-of-food.herokuapp.com%2Flogin&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
