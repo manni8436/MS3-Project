@@ -496,6 +496,29 @@ The only error that came up on the CSS validator was related to Materialize CSS 
 
 [Back To Top](#for-the-love-of-food)
 
+### Code Credit
+
+I would like to thank stack overflow to allow me to use two codes that I have used from there website, I have added the code below.
+
+[pagination Code Link](https://stackoverflow.com/questions/66734992/flask-paginate-per-page-not-changing-the-amount-of-visible-items)
+
+* Pagination
+  * `page = int(request.args.get('page', 1))
+    per_page = 12
+    offset = (page - 1) * per_page`
+
+The following code below was used on my carousel.
+
+* `let autoplay = true;
+setInterval(function () {
+    if (autoplay) $('.carousel.carousel-slider').carousel('next');
+}, 5000);
+$('.quotes-panel').hover(function () {
+    autoplay = false;
+}, function () {
+    autoplay = true;
+});`
+
 ## ACKNOWLEDGEMENTS
 
 I would like to give a big thanks to [Chris Quinn](https://github.com/10xOXR) for all his help, effort, guidance
