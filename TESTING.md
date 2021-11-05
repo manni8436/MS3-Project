@@ -6,15 +6,13 @@
 * [**Testing**](#testing)
   * [**Navigation**](#navigation)
   * [**Buttons**](#buttons)
-  * [**Welcome Page**](#welcome-page)
+  * [**Home Page**](#home-page)
   * [**Register Page**](#register-page)
-  * [**Log In Page**](#log-in-page)
+  * [**Login Page**](#login-page)
+  * [**Favourites Page**](#favourites-page)
+  * [**Recipes Page**](#recipes-page)
   * [**Profile Page**](#profile-page)
-  * [**All Reviews Page**](#all-reviews-page)
-  * [**Book Review Page**](#book-review-page)
-  * [**Add Review Page**](#add-review-page)
-  * [**Edit/Delete Review Page**](#edit-delete-review-page)
-  * [**User Stories Testing**](#user-stories-testing)
+  * [**Full Recipes Page**](#full-recipes-page)
   
 # **Testing**
 
@@ -29,8 +27,7 @@
 | | Clicking Add Recipes takes user to Add Recipes page | Click Add Recipes | Redirected to Add Recipes page | Pass |
 | | Clicking Edit Recipes takes user to Edit Recipes page | Click Edit Recipes | Redirected to Edit Recipes page | Pass |
 | | Click Favourites takes user to Favourites | Click Favourites | Redirected to Favourites page | Pass |
-| | Click Log Out logs out the user | Click Log Out | User logged out and redirected to login Page| Pass |
-
+| | Click Logout logs out the user | Click Logout | User logged out and redirected to login Page| Pass |
 
 ### **Navigation**
     - all pages - User not logged in
@@ -39,12 +36,10 @@
 | ------------- |-------------| -----|  ---------- | :-----:|
 | Home button    | To redirect to home page| Click the home button | Button navigates to home | Pass |
 | Nav links | Clicking Recipes takes user to Recipes page | Click Recipes | Redirected to Recipes page | Pass |
-|  | Click Log In redirects to log in page | Click Log In | User redirected to Log In Page | Pass |
+|  | Click Login redirects to log in page | Click Log In | User redirected to Log In Page | Pass |
 |  | Click Not Yet registered link redirects to Register page | Click Not Yet registered link | User redirected to Register Page | Pass |
 |  | Click Register redirects to login page | Click Register | User redirected to Register Page | Pass |
 |  | Click Already Registered link redirects to login page | Click Already Registered link | User redirected to login Page | Pass |
-
-
 
 [Back to contents](#contents)
 
@@ -64,40 +59,34 @@
 | Quotes Carousel - on desktop | Play automatically | View carousel to make sure it moves automatically | carousel moves automatically | Pass |
 |  | Stop when hovered over  | hover mouse over to see if it stops  | carousel stops on mouse hover | Pass |
 
+[Back to contents](#contents)
+
 ### **Register Page**
 | Feature        | Expected           | Testing  | Result | Pass/Fail |
 | ------------- |-------------| -----|  ---------- | :-----:|
-| | Username and Password must be between 5 and 15 characters | Attempt to enter username and password with less than 5 characters | Pass |
+| | Username and Password must be between 5 and 15 characters | Attempt to enter username and password with less than 5 characters | Form restricts the user from using less than 5 characters  | Pass |
 | | Username and Password must be between 5 and 15 characters | Attempt to enter username and password with more than 20 characters | Form restricts the user from using more than 20 characters | Pass |
-| | Register with new user and password to be logged in and redirected to Profile page | username, password and click register | New account registered and Recipes page shown | Pass |
+| | Register with new user and password to be logged in and redirected to Recipes page | username, password and click register | New account registered and Recipes page shown | Pass |
 
 [Back to contents](#contents)
 
-### **Log In Page**
+### **Login Page**
 
 | Feature        | Expected           | Testing  | Result | Pass/Fail |
 | ------------- |-----------------| ----------|  ---------- | :----: |
-| Log in functionality | Correct user/pass combination directs user to their profile page with name displayed | Log in with correct username/password combination | Redirected to user profile with name displayed | Pass |
+| Login functionality | Correct user/pass combination directs user to their profile page with name displayed | Login with correct username/password combination | Redirected to user profile with name displayed | Pass |
 |   | Incorrect username/password combination | Error showing "incorrect username/password" | Flash message displays | Pass |
 | Link to Register | Redirect to Register page | Click link to register | Redirected to Register page | Pass |
-
-### **Profile Page**
-
-| Feature        | Expected           | Testing  | Result | Pass/Fail |
-| ------------- |-------------| -----|  ---------- | :----:|
-| Favourites | Favourites can be viewed and removed | Scroll down to Favourites section, click icon to remove from favourites | Upon clicking favourites the book review is removed from favourites for that [user](static/images/testing/favourite.png) | Pass |
-|  | If no reviews saved as a favourite there is a prompt to add one with link to all reviews | Scroll to Favourites section, see message prompt to click to look at reviews | No favourites added so message is displayed and clicking the link leads to the reviews page | Pass |
-
-[Back to contents](#contents)
 
 ### **Favourites Page**
 | Feature        | Expected           | Testing  | Result | Pass/Fail |
 | ------------- |-------------| -----|  ---------- | :----:|
-| Favourites | Favourites can be viewed and removed | Scroll down to Favourites section, click icon to remove from favourites | Upon clicking remove favourites is removed from favourites | Pass |
+| Favourites | Favourites can be viewed and removed | Click on Favourites nav link, click icon to remove from favourites | Upon clicking remove from favourites the recipe is removed from favourites | Pass |
+|  | If no recipes saved as a favourite there is a prompt to add one with link to all recipes | Click on Favourites nav link, click icon to remove from favourites, see message prompt to click to look at recipes | No favourites added so message is displayed and clicking the link leads to the reviews page | Pass |
 
 [Back to contents](#contents)
 
-### **All Recipes Page**
+### **Recipes Page**
     - user not logged in
 
 | Feature        | Expected           | Testing  | Result | Pass/Fail |
@@ -107,15 +96,20 @@
 
 [Back to contents](#contents)
 
-### **Edit/Delete Recipe Page**
+### **Profile Page**
 
 | Feature        | Expected           | Testing  | Result | Pass/Fail |
-| ------------- |-------------| -----|  ---------- | :-----: |
-| Edit functionality | Only admin or reviewer can edit reviews | Log in as admin, navigate to a book review page, click edit, edit review, click submit, view book review to check edit successful | Edit successful for admin user | Pass |
-| | Only admin or reviewer can edit reviews | Log in as standard user, create review, edit review, click submit, view book review to check edit successful | Edit successful for reviewer | Pass | 
-| | | Log in as different standard user, attempt to edit Recipe | Edit/Delete button not available | Pass |
-| Review info prepopulated on edit | Recipeshould be prepopulated on editing a Recipe | Pass | 
-| Delete functionality | Only Recipe creater can delete Recipe | Log in as admin, navigate to a Recipe review page, click delete, modal launch to confirm, click confirm | Delete successful for admin | Pass |
-| | | Log in as standard user, create Recipe, click delete | Delete successful | Pass | 
-| | | Log in as different standard user, attempt to edit Recipe | Edit button not available | Pass |
-| | | Log in as different standard user, attempt to delete Recipe | Delete button not available | Pass |
+| ------------- |-------------| -----|  ---------- | :----:|
+| Edit | Recipes created can be edited | Click on Profile nav link, click button to edit recipes | Upon clicking the button to edit recipes the page is redirected to edit recipes page | Pass |
+| Delete | Recipes created can be deleted | Click on Profile nav link, click button to Delete recipes | Upon clicking the button to Delete recipes the page will render a delete confirmation modal to delete recipes| Pass |
+| If no profile page shows no recipes | If no recipes added to profile there is a prompt to add one with link to add recipes | Click on Profiles nav link, click icon to add some recipes, see message prompt to click to add recipes | No recipes added message is displayed and clicking the link leads to the add recipes page | Pass |
+
+[Back to contents](#contents)
+
+### **Full Recipes Page**
+
+| Feature        | Expected           | Testing  | Result | Pass/Fail |
+| ------------- |-------------| -----|  ---------- | :----:|
+| Show full recipe of recipe clicked | Full recipe to be displayed | Click on full recipe button on recipes in recipes page, | Upon clicking the button to show full recipe the page is redirected to Show full recipe page | Pass |
+
+[Back to contents](#contents)
