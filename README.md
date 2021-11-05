@@ -162,9 +162,9 @@ After looking closely at the bug and the error that was provided above, I worked
 
 `<a href="{{ url_for ('delete_from_favourites', recipe_id=recipe._id) }}">remove from favourites<i class="material-icons right">favorite</i></a>`
 
-A second bug below was found while working on the same functionality mentioned above.
+2. A bug below was found while working on the same functionality mentioned above.
 
-![mulitple favourite heart and text bug](static/docs/bug_images/mulitple_favourite_heart_bug.png)
+![multiple favourite heart and text bug](static/docs/bug_images/multiple_favourite_heart_bug.png)
 
 After trying various ways to get the `add to favourites` functions to work, I have found a solution to this bug which has been added below.
 
@@ -183,7 +183,7 @@ The following steps have been taken during the process to solve the bug mentione
 
 In support of the changes that were made in the html template above a few steps were taken in the `app.py` which can be seen in the commit [368b140](https://github.com/manni8436/MS3-Project/commit/368b140d657b9403e13e1366fd869750875d2b50), this involved using an empty array in `users` document in the `users` collection.
 
-2. While working on my remove from favourites functionality, I found a bug with my favourites functionality. Adding the recipe to the favourites worked
+3. While working on my remove from favourites functionality, I found a bug with my favourites functionality. Adding the recipe to the favourites worked
 correctly. When I tried to remove the recipe while in the favourites page, it would give me the error below:
 
 ![delete from favourites bug](static/docs/bug_images/delete_from_favourties_url_not_found_bug.png)
