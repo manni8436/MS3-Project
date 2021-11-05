@@ -501,7 +501,7 @@ and patience he has provided during this project.
 
 I would also like to thank [Abi Harrison](https://github.com/Abibubble) for all her support, advice, guidance, the push to keep me motivated during stressful times, also for taking all the screenshots for me.
 
-I would also like to thank [Dave Harrocks](https://github.com/DaveyJH) for all his support, problems solving skills and all the logic thinking during our calls during this project.
+I would also like to thank [Dave Harrocks](https://github.com/DaveyJH) for all his support, problems solving skills, all the logic thinking, fun and laughs in our calls during this project.
 
 I would like to thank my fiancee for her support, patience and listening to me talking about my project nonstop throughout.
 
