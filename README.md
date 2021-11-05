@@ -426,6 +426,9 @@ The W3C Markup Validator and W3C CSS Validator was used to validate my project t
 
 * Images mainly provided by [BBC Food](https://www.bbc.co.uk/food), but a full list have been provided below:
 
+  * Generic Image If User Doesn't Upload a Image:
+    * [Stainless Steel Fork)](https://www.pexels.com/photo/stainless-steel-fork-beside-rolled-paper-towel-with-parsley-on-top-172491/)
+
   * Background Images:
     * [Home Page](https://unsplash.com/photos/eeqbbemH9-c)
     * [Recipes Page](https://www.pexels.com/photo/bowl-being-poured-with-yellow-liquid-33783/)
@@ -461,6 +464,33 @@ The W3C Markup Validator and W3C CSS Validator was used to validate my project t
 ### TEXT CONTENT
 
 * Text content on all Pages was copied and/or amended from the following sites:  
+
+  * Quotes Carousel:
+    * [Gordon Ramsay Quotes](https://upjourney.com/gordon-ramsay-quotes)
+    * [Heston Blumenthal Quotes](https://www.brainyquote.com/authors/heston-blumenthal-quotes)
+    * [Heston Blumenthal Quotes](https://www.brainyquote.com/authors/heston-blumenthal-quotes)
+    * [Jamie Oliver Quotes](https://www.inspiringquotes.us/author/4610-jamie-oliver)
+    * [Ainsley Harriott Quotes](https://www.brainyquote.com/authors/ainsley-harriott-quotes)
+    * [Gino D'Acampo Quotes](https://www.brainyquote.com/authors/gino-dacampo-quotes)
+
+  * Recipe Ingredients and Steps:
+    * [Bean and Rice Burrito](https://www.bbc.co.uk/food/recipes/bean_and_rice_burrito_33565)
+    * [Fish and Chips](https://www.bbc.co.uk/food/recipes/lighter_fish_and_chips_06976)
+    * [Spaghetti Bolognese](https://www.bbc.co.uk/food/recipes/easy_spaghetti_bolognese_93639)
+    * [Beef Burgers with Beetroot and Carrot Slaw](https://www.bbc.co.uk/food/recipes/beef_burger_with_98749)
+    * [Sausage and Mash](https://www.bbc.co.uk/food/recipes/bangers_and_mash_with_80175)
+    * [Beef and Ale Stew](https://www.bbc.co.uk/food/recipes/beef_and_ale_stew_76412)
+    * [Chicken Gyro](https://www.bbc.co.uk/food/recipes/chicken_gyro_22340)
+    * [Tzatziki](https://www.bbc.co.uk/food/recipes/tzatziki_13049)
+    * [Onigiri](https://www.bbc.co.uk/food/recipes/onigiri_39079)
+    * [Sushi](https://www.bbc.co.uk/food/recipes/quickandeasysushimak_67796)
+    * [Chocolate and Almond Ghriba](https://www.bbc.co.uk/food/recipes/chocolate_and_almond_62023)
+    * [Portuguese Custard Tarts](https://www.bbc.co.uk/food/recipes/brunos_portuguese_70548)
+    * [Caldo Verde (Portuguese Cabbage Soup)](https://www.bbc.co.uk/food/recipes/caldoverdeportuguese_73565)
+    * [Gazpacho Hispaniola)](https://www.bbc.co.uk/food/recipes/gazpacho_hispaniola_04615)
+    * [Gazpacho Shots with Pimenton and Caraway Seed Twists)](https://www.bbc.co.uk/food/recipes/gazpachoshotswithpim_93819)
+    * [Garlic Butter Twist Rolls)](https://www.buzztim.com/2021/10/garlic-butter-twist-rolls.html?fbclid=IwAR3rMc2QvndlMlzU_WsOz-cJlQICCIcmebMJYEfO2cWwly4nBlVWivWUz1M&m=1)
+    * [Vegetarian Thai Steamed Dumplings with Shiitake Mushrooms)](https://www.thespruceeats.com/vegetarian-thai-steamed-dumplings-recipe-3217756)
 
 [Back To Top](#for-the-love-of-food)
 
