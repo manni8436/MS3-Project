@@ -137,6 +137,7 @@ I have used the following features in this project:
 * Add recipes to site
 * Add to favourites
 * Pagination
+* A inclusive search
 
 [Back To Top](#for-the-love-of-food)
 
@@ -146,6 +147,8 @@ These are a few ideas i've had and would like to implement in the future.
 
 * Admin user
 * Exclusive search
+* Add recipes page to be able to accept image files
+* Edit recipes page to be able to accept jpeg and png image files
 
 [Back To Top](#for-the-love-of-food)
 
@@ -422,7 +425,13 @@ The W3C Markup Validator and W3C CSS Validator was used to validate my project t
 
 ## ACKNOWLEDGEMENTS
 
-<!-- I would like to give a big thanks to [Chris Quinn](https://github.com/10xOXR) for all his help, effort, guidance
+I would like to give a big thanks to [Chris Quinn](https://github.com/10xOXR) for all his help, effort, guidance
 and patience he has provided during this project.
 
-I would also like to thank [Abi Harrison](https://github.com/Abibubble) for all her support, advice and explaining things to me when I did not understand. -->
+I would also like to thank [Abi Harrison](https://github.com/Abibubble) for all her support, advice, guidance, the push to keep me motivated during stressful times, also for taking all the screenshots for me.
+
+I would also like to thank [Dave Harrocks](https://github.com/DaveyJH) for all his support, problems solving skills and all the logic thinking during our calls during this project.
+
+I would like to thank my fiancee for her support, patience and listening to me talking about my project nonstop throughout.
+
+And lastly I would also like to thank [Suzy Bennett](https://github.com/suzybee1987) and [Jonathan Swift](https://github.com/swiftcoder2020) for all the support, motivation given to me during the tough times, sharing bad jokes during these times and being my cheerleaders.
