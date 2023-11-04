@@ -5,10 +5,10 @@
 ![GitHub language count](https://img.shields.io/github/languages/count/manni8436/MS3-Project)
 ![GitHub top language](https://img.shields.io/github/languages/top/manni8436/MS3-Project)
 
-[Here is a link to the final project](https://for-the-love-of-food.herokuapp.com/)
+[Here is a link to the final project](https://for-the-love-of-food.onrender.com)
 
 ## INITIAL DESIGN
-
+https://for-the-love-of-food.onrender.com
 * My initial idea for this project was to create a recipe site about food from around the world. My target audience is anyone
 who is interested in cooking and all aspects of food, this can cover a huge spectrum of ages, genders and skill levels.
 This ranges from children who want to learn how to cook, to anyone who wants to use the site for recipe ideas to create at home.
